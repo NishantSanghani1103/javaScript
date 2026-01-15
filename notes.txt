@@ -1,0 +1,213 @@
+=>notes:
+-javascript object never compared
+-All string methods return a new string. They don't modify the original string.
+-Strings are immutable: Strings cannot be changed, only replaced.
+-In Array,Adding elements with high indexes can create undefined "holes" in an array
+-new Array(40) creates an array with length 40 and empty slots, not a value.
+-new Array(40, 100) creates an array containing the values 40 and 100.
+-Strict mode in JavaScript is a way to run your code under stricter rules to help you write safer, cleaner, and less error-prone code.
+
+
+1.undefined:- it is a like plceholder which is kept inside the varible.
+2.laxical environemt:
+=>it is created when global execution created
+=>is local memory along with it's (+) laxical environment of it's parent.
+=> it is also known as scope chain.
+3.scope:
+=>it is specify the limit of the varible where we can access them.
+4.varibles:
+=>let and const varibles are hoisted.
+=>let and const both are block scope variables.
+    I.let:redeclaration not allowed.reInistialize allowed.
+    II.const:both are not allowed
+    III.var:both are allowed
+
+5.Web Apis:following all the features are not part of JS.it is a part of web browser
+=>setTimeOut()
+=>Dom Api
+=>fetch()
+=>localstorage
+=>console
+=>location
+
+6.microtaskQueue:it is similar to callback queue but it has higher priority as compare to callBackQueue.
+=>all the call back function which is comes through promises it will move to the microTaskQueue.
+
+7.call method:
+=>it is used when we want to access the method of 1st object in 2nd object.
+
+8.String Methods:
+
+    I.length:
+
+    II.charAt():-The charAt() method returns the character at a specified index (position) in a string:
+
+    III.charCodeAt():-return the UTF-16 code unit
+
+    IV.concate():-joins two or more strings:
+
+    V.slice(start, end):-
+
+    VI.substr():-is similar to slice().The difference is that the second parameter specifies the length of the extracted part.
+
+    VII.trim():-The trim() method removes whitespace from both sides of a string:
+
+    VIII.padStart():-The padStart() method pads a string from the start. (430)
+
+    IX.padEnd():-The padStart() method pads a string from the end. (430)
+
+    X.replace():-The replace() method does not change the string it is called on.The replace() method returns a new string.The replace() method replaces only the first match
+
+    XI.replaceAll():-The replaceAll() method replaces all the match
+
+=>for convert String to Array:-
+
+    split():-A string can be converted to an array with the split() method (439)
+
+=>for String Search:-
+
+    I.indexOf():-The indexOf() method returns the index (position) of the first occurrence of a string in a string, or it returns -1 if the string is not found. (446)
+
+    II.lastIndexOf():-The lastIndexOf() method returns the index of the last occurrence of a specified text in a string,or it returns -1 if the string is not found. (446)
+
+    III.match():-The match() method returns an array containing the results of matching a string against a string (or a regular expression).
+
+    IV.matchAll():-The matchAll() method returns an iterator containing the results of matching a string against a string (or a regular expression).(452)
+
+    V.include():-The includes() method returns true if a string contains a specified value.Otherwise it returns false.
+
+    =>text.includes("world", 12) Check if a string includes "world". Start at position 12
+
+    VI.startsWith():-The startsWith() method returns true if a string begins with a specified value.Otherwise it returns false
+
+    =>text.startsWith("world", 5):-A start position for the search can be specified if world start at position 5 then it will return true otherwise return false.
+
+    VII.endsWith():-The endsWith() method returns true if a string ends with a specified value.Otherwise it returns false.
+
+    =>text.endsWith("world", 5):-A End position for the search can be specified if world End at position 5 then it will return true otherwise return false.
+
+
+9.Array Methods:-
+    I.toString():-convert array to String.
+
+    II.push():-add element add the last index
+
+    III.pop():-remove last element from the last index
+
+    IV.at():-The at() method returns an indexed element from an array.
+
+    V.join():-The join() method also joins all array elements into a string.It behaves just like toString(), but in addition you can specify the separator (471)
+
+    VI.shift():-The shift() method removes the first array element and "shifts" all other elements to a lower index.
+
+    VII.unshift():-he unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
+
+    VIII.concat():-The concat() method creates a new array by merging (concatenating) existing arrays. (476)
+    =>The concat() method does not change the existing arrays. It always returns a new array. (476)
+
+=>Flattening an Array:-Flattening is useful when you want to convert a multi-dimensional array into a one-dimensional array.
+
+    I.flate():-it is used to create new array single dimensional array from multi dimensional array. (493)
+
+    II.flateMap():- flatMap having a call back function where we can modify the elements of an array (499)
+
+=>Splicing and Slicing Arrays
+
+    I.splice():- The splice() method add/remove items to an array. (511)
+    =>The first parameter defines the position where new elements should be added (spliced in).
+    =>The second parameter defines how many elements should be removed.
+    =>The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+
+    II.toSpliced():- The difference between the new toSpliced() method and the old splice() method is that the new method creates a new array, keeping the original array unchanged, while the old method altered the original array.
+
+    III.slice():-The slice() method slices out a piece of an array into a new array. (517)
+    =>The slice() method creates a new array.
+    =>The slice() method does not remove any elements from the source array.
+    =>The slice() method can take two arguments like slice(1, 3).
+    =>The method then selects elements from the start argument, and up to (but not including) the end argument.
+
+=>Array Search
+
+    I.indexOf():-The indexOf() method searches an array for an element value and returns its position.
+    => returns -1 if the item is not found.
+
+    II.lastIndexOf():-Array.lastIndexOf() is the same as Array.indexOf(), but returns the position of the last occurrence of the specified element.
+
+    III.includes():-This allows us to check if an element is present in an array or not
+
+    IV.find():-The find() method returns the value of the first array element that passes a test function. (532)
+
+    V.findIndex():-The findIndex() method returns the index of the first array element.
+
+    VI.findLast():-the findLast() method that will start from the end of an array and return the value of the first element that satisfies a condition.
+
+    VII.findLastIndex():-The findLastIndex() method finds the index of the last element that satisfies a condition.
+
+=> Array Sort:
+
+    I.sort():-The sort() method sorts an array alphabetically and creates a new array.
+    =>and in number if value is possitive then swap and if nagative then no swap (544)
+
+    II.reverse():-The reverse() method reverses the elements in an array:
+
+    III.toSorted():-The difference between toSorted() and sort() is that the first method creates a new array, keeping the original array unchanged, while the last method alters the original array.
+
+=> Array Iteration:
+
+    I.map()
+
+    II.filter()
+
+    III.reduce():-The reduce() method runs a function on each array element to produce a single value. (552)
+
+    IV.reduceRight():-reduceRight() works exactly like reduce(), but it processes the array from right to left.
+    =>Starts from the last element
+    =>Moves toward the first element
+    =>Combines all values into one single result
+
+    V.every():-The every() method checks if all array values pass a test. (558)
+
+    VI.some():-The some() method checks if some array values pass a test.
+
+    VII.keys():-get an iterator of array indexes (565)
+
+    VIII.entries():-iterate over index + value
+
+10.datatypes:-
+    =>A JavaScript variable can hold 8 types of data
+    I. string
+    II. Boolean
+    III. Number
+    IV. Bigint
+    V. Symbol
+    VI. Null
+    VII. Undefined
+    VIII. Object
+
+11. this keyword:-In JavaScript, the this keyword refers to an object
+    =>The this keyword refers to different objects depending on how it is used
+    =>Alone, this refers to the global object.
+    =>In a function, this refers to the global object.
+    =>In a function, in strict mode, this is undefined.
+    =>In an object method, this refers to the object.
+    =>In an event, this refers to the element that received the event.
+
+12. Function:-
+
+    I. Function Expressions: A function expression stores a function inside a variable.
+    =>The function can be anonymous (without a name).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

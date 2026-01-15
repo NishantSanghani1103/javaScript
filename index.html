@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <button id="btn">Click Here !</button>
+</body>
+<script src="script.js"></script>
+<script>
+    const input = document.querySelector("input")
+    let timeOut
+    input.addEventListener("keyup", () => {
+        clearTimeout(timeOut);
+
+        // Start a new timer for 1 minute (60000ms)
+        timeout = setTimeout(() => {
+            console.log("User stopped typing. Input value:", input.value);
+        }, 60000); // 1 minute
+        console.log(timeOut);
+        
+    })
+</script>
+
+</html>

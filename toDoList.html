@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" name="task">
+        <button>Save</button>
+    </form>
+
+    <ul>
+
+    </ul>
+</body>
+<script>
+    const form = document.querySelector("form")
+    const ul = document.querySelector("ul")
+    let task = JSON.parse(localStorage.getItem("TODO")) ?? []
+    form.addEventListener("submit", (event) => {
+        event.preventDefault()
+        if (event.target.task.value == "") {
+            alert("please enter the task")
+        }
+        else {
+            task.push(event.target.task.value)
+            console.log(task);
+            localStorage.setItem("TODO", JSON.stringify(task))
+            // console.log(task);
+            showList()
+            event.target.reset()
+        }
+    })
+    const showList = () => {
+        let items = ""
+        task.forEach((value, index) => {
+            items += `<li onClick="deleteList(${index})">${value} &times;</li>`
+        })
+        ul.innerHTML = items
+    }
+    showList()
+    const deleteList = (index) => {
+        task.splice(index, 1)
+        localStorage.setItem("TODO", JSON.stringify(task))
+        showList()
+    }
+</script>
+
+</html>

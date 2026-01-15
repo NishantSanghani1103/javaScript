@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .main {
+            width: 400px;
+            height: 400px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 0px 4px 2px #ccc;
+            text-align: center;
+        }
+
+        .main h2 {
+            text-align: center;
+        }
+
+        form input {
+            width: 90%;
+            margin: 10px 0px;
+        }
+        form button{
+            background-color: black;
+            color: white;
+            margin: 10px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h2>Login</h2>
+        <form action="">
+            <input type="text" name="name" placeholder="Enter Name">
+            <input type="text" placeholder="Enter Email" name="eml">
+            <input type="text" placeholder="Enter Phone " name="ph">
+            <button>Save</button>
+        </form>
+    </div>
+    <div>
+        <table border="2" >
+            <thead>
+                <tr>
+                    <td>id</td>
+                    <td>name</td>
+                    <td>Email</td>
+                    <td>Phone</td>
+                </tr>
+            </thead>
+            <tbody>
+          
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>

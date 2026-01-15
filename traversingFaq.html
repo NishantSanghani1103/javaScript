@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            max-width: 1320px;
+            margin: 0px auto;
+        }
+
+        .faq {}
+
+        .faq h3 {
+            background-color: aqua;
+            padding: 20px 5px;
+            cursor: pointer;
+        }
+
+        .faq p {
+            padding: 5px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="main">
+        <div class="faq">
+            <h3>Why Full Stack Development ?</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus quidem aperiam error provident sit
+                tempora impedit facere mollitia illum asperiores modi quos fugit fugiat voluptates amet, eos itaque,
+                eaque recusandae.
+            </p>
+        </div>
+
+        <div class="faq">
+            <h3>Why Full Stack ?</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus quidem aperiam error provident sit
+                tempora impedit facere mollitia illum asperiores modi quos fugit fugiat voluptates amet, eos itaque,
+                eaque recusandae.
+            </p>
+        </div>
+
+        <div class="faq">
+            <h3>Why Full Stack Development ?</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus quidem aperiam error provident sit
+                tempora impedit facere mollitia illum asperiores modi quos fugit fugiat voluptates amet, eos itaque,
+                eaque recusandae.
+            </p>
+        </div>
+
+        <div class="faq">
+            <h3>Why Full Stack Development ?</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus quidem aperiam error provident sit
+                tempora impedit facere mollitia illum asperiores modi quos fugit fugiat voluptates amet, eos itaque,
+                eaque recusandae.
+            </p>
+        </div>
+
+        <div class="faq">
+            <h3>Why Full Stack Development ?</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus quidem aperiam error provident sit
+                tempora impedit facere mollitia illum asperiores modi quos fugit fugiat voluptates amet, eos itaque,
+                eaque recusandae.
+            </p>
+        </div>
+    </section>
+</body>
+<script>
+    // const btn = document.querySelector("button")
+    // btn.addEventListener("click", () => {
+    //     btn.previousElementSibling.innerText = "Hello World"
+    //     btn.parentElement.style.background = "yellow"
+    //     btn.nextElementSibling.value="Nishant"
+    // })
+
+    const h3 = document.querySelectorAll(".faq h3")
+    h3.forEach((value, index) => {
+        value.addEventListener("click", () => {
+            console.log(index);
+            h3.forEach((val, i) => {
+                console.log(i);
+                if (index != i) {
+                    val.nextElementSibling.style.display = "none"
+                }
+                else {
+                    val.nextElementSibling.style.display = "block" 
+                }
+            })
+        })
+    })
+
+</script>
+
+</html>
