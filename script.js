@@ -23,7 +23,6 @@
 // function a() {
 //     function c() {
 //         console.log(b);
-
 //     }
 //     c()
 // }
@@ -117,11 +116,11 @@
 // }
 
 // function outer() {
-//     let count = 0;
-//     return function inner() {
-//         count++;
-//         return count;
-//     };
+//   let count = 0;
+//   return function inner() {
+//     count++;
+//     return count;
+//   };
 // }
 
 // const fn = outer();
@@ -275,6 +274,30 @@
 //     })
 
 
+// 5. Promise.withResolvers();
+// const p1 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("p1 Resolved")
+//   }, 2000)
+// })
+
+// const p2 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     reject("p2 rejected")
+//   }, 1000)
+// })
+// const p3 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("p3 Resolved")
+//   }, 0)
+// })
+
+// Promise.withResolvers([p1, p2, p3])
+//   .then((res) => {
+//     console.log(res);
+//   })
+
+
 // clouser example are following:
 
 // function outer() {
@@ -387,7 +410,7 @@
 // outer()
 
 
-//1.call method
+//1.call/apply/bind method
 
 // const student1 = {
 //     name: "Nishant",
@@ -401,6 +424,22 @@
 // }
 // student1.printName.call(student2)
 
+
+// const obj1 = {
+//   fname: "Nishant",
+//   lname: "Sanghani"
+// }
+// const obj2 = {
+//   fname: "Virat",
+//   lname: "kohli"
+// }
+// function details(age, city, state) {
+//   console.log(this.fname + " " + this.lname + " Is " + age + " year old and from " + city + " Sate Of " + state);
+// }
+// details.call(obj1, 22, "amreli", "gujarat")
+// details.apply(obj2, [55, "Delhi", "UP"])
+// let bind = details.bind(obj1, 22, "bind", "rajkot")
+// bind()
 
 // for of example
 
@@ -453,6 +492,8 @@
 // let m = text.match("ain");
 // let ml = text.matchAll("stays");
 // let op = Array.from(ml);
+// console.log(op);
+
 // console.log(m);
 // console.log(ml);
 
@@ -528,6 +569,12 @@
 // console.log(revAry);
 // const revStr = revAry.join("")
 // console.log(revStr);
+// let txt = ""
+// for (let i = str.length; i >= 0; i--){
+//   txt+=str.charAt(i)
+// }
+// console.log(txt);
+
 
 // const ary=[5,10,28,18,20,25]
 // const age=ary.find((value)=>value>=18)
@@ -538,7 +585,7 @@
 // console.log(age);
 
 // const ary=[5,10,28,18,20,7]
-// const age=ary.findLastIndex((value)=>value>=18)
+// const age=ary.findLast((value)=>value>=18)
 // console.log(age);
 
 // const ary = [10, 5, 7, 20]
@@ -609,15 +656,362 @@
 // person.greet()
 
 
-function showThis() {
-  return this;
-}
-console.log(showThis());
+// function showThis() {
+//   return this;
+// }
+// console.log(showThis());
+
+// using async/await function must be executed before previos function executed.
+
+// const abc = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("setTimeout")
+//       resolve()
+//     }, 2000)
+//   })
+// }
+// const xyz = () => {
+//   console.log("normal function called");
+
+// }
+// const promise = async () => {
+//   await abc()
+//   xyz()
+// }
+// promise()
+
+// using promise then catch
+
+// const abc = () => {
+//   const p1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("Promise Resolved")
+//       resolve()
+//     }, 2000)
+//   }).then(() => {
+//     xyz()
+//   }).catch(() => {
+//     bcd()
+//   })
+// }
+// const xyz = () => {
+//   console.log("normal function");
+// }
+// const bcd = () => {
+//   console.log("Not Resoled");
+
+// }
+// abc()
+
+// obj example
+
+// const obj = {
+//   fnm: "Nishant",
+//   lnm: "Sanghani",
+//   age: 22,
+//   details: function () {
+//     return (`${this.fnm} ${this.lnm} Is ${this.age} Years Old`).toUpperCase();
+
+//   }
+// }
+// console.log(obj.details());
+
+// const abc = {
+//   fnm: "Nishant",
+//   lnm: "Sanghani",
+//   age: 22,
+// }
+// let txt = " "
+// for (let x in abc) {
+//   txt += abc[x] + " "
+// }
+// console.log(txt);
+
+
+// values
+
+// const person = {
+//   name: "John",
+//   age: 30,
+//   city: "New York"
+// };
+
+// const myArray = Object.values(person);
+// console.log(myArray);
+// console.log(myArray.toString());
+
+
+// entires
+
+// const person = {
+//   name: "John",
+//   age: 30,
+//   city: "New York"
+// };
+
+// const myArray = Object.entries(person);
+// console.log(myArray);
+// // console.log(myArray.toString());
+// let txt = ""
+// for (let [key, value] of myArray) {
+//   txt += `${key} : ${value} `
+// }
+// console.log(txt);
+
+// JSON.stringify()
+
+// const person = {
+//   name: "John",
+//   age: 30,
+//   city: "New York"
+// };
+
+// const myJson = JSON.stringify(person);
+// console.log(myJson);
+
+// console.log(a);
+// abc()
+// function abc(){
+//   console.log("abs");
+
+// }
+// var a = 10
+
+
+// const abc = () => {
+//   setInterval(() => {
+//     console.log("nishant");
+//   }, 2000)
+// }
+// abc()
+
+
+// let p1 = new Promise((resolve, reject) => {
+//   let status = true
+//   if (status) {
+//     setTimeout(()=>{
+//       resolve("promise Resolved")
+//     },2000)
+//   }
+//   else {
+//     reject("Promise Rejected")
+//   }
+// }).then((res) => {
+//   console.log(res);
+// }).catch((error) => {
+//   console.log(error);
+// })
 
 
 
+// const p = document.querySelector(".demo")
+// let pq = new Promise((resolve, reject) => {
+//   let status = false
+//   p.innerText = "Waiting For 2 Sec";
+//   if (status) {
+//     setTimeout(() => {
+//       resolve("Success")
+//     }, 2000)
+//   }
+//   else {
+//     setTimeout(() => {
+//       reject("Error")
+//     }, 2000)
+//   }
+// }).then((res) => {
+//   p.innerText = res
+// }).catch((error) => {
+//   console.log(error);
+//   p.innerText=error
+// })
 
 
+// const p = document.querySelector(".demo")
+// const abc = () => {
+//   return new Promise((resolve, reject) => {
+//     let status = true
+//     if (status) {
+//       setTimeout(() => {
+//         resolve("success")
+//       }, 1000)
+//     }
+//     else {
+//       setTimeout(() => {
+//         reject("error")
+//       }, 1000)
+//     }
+//   })
+// }
+// const res = async () => {
+//   p.innerText = "waiting..."
+//   try {
+//     const ans = await abc()
+//     p.innerText = ans
+//   } catch (error) {
+//     p.innerText = error
+//   }
+// }
+// res()
+
+// async function myDisplay() {
+//   let myPromise = new Promise(function (resolve, reject) {
+//     let status = true
+//     if (status) {
+//       resolve("Promise Resolved...!!")
+//     }
+//     else {
+//       reject("Promise Rejected...!!");
+//     }
+//   });
+//   try {
+//     const ans = await myPromise
+//     console.log(ans);
+//   }
+//   catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// myDisplay();
+
+
+// let x = 5;
+// try {
+//   x = y + 1;
+// } catch(err) {
+//   console.log(err);
+
+//   let text = err.name  + err.message;
+//   console.log(text);
+
+// }
+
+
+
+// const abc = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("promise Resolved")
+//     }, 2000)
+//   })
+// }
+// const xyz = () => {
+//   console.log("xyz function");
+// }
+// async function res() {
+//   const res = await abc()
+//   console.log(res);
+//   xyz()
+// }
+// res()
+
+// const letter = new Set(["a", "b", "c", "d"])
+// const val = letter.entries()
+// console.log(val);
+
+// for (const [index, value] of val) {
+//   console.log(index,value);
+// }
+
+// const A = new Set(["b", "c", "d", "x"]);
+// const B = new Set(["a", "b", "c", "y"]);
+
+// const val = A.difference(B)
+// console.log(val);
+
+// const A = new Set([1, 2, 3]);
+// const B = new Set([3, 4, 5, 1, 2]);
+// const val = A.isSubsetOf(B)
+// console.log(val);
+
+
+// let person = {
+//   firstname: "John",
+//   lastname: "Doe",
+// }
+// let text = person.toString();
+// console.log(text);
+
+
+// const ary = [2, 4, 6, 8]
+// for (const a in ary) {
+//   console.log(a);
+
+// }
+
+
+// let a = 10
+// function outer() {
+//   function Inner() {
+//     function child() {
+//       function InnerChild() {
+//         console.log(a);
+//       }
+//       InnerChild()
+//     }
+//     child()
+//   }
+//   Inner()
+// }
+// outer()
+
+
+
+// const abc = () => {
+//   const p1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       let status = true
+//       if (status) {
+//         resolve("promise Resolved")
+//       }
+//       else {
+//         reject("promise Rejected")
+//       }
+//     }, 2000)
+//   })
+//   return p1
+// }
+
+// const n = () => {
+//   console.log("Nishant Sanghani");
+// }
+// const res = async () => {
+//   try {
+//     const ans = await abc()
+//     console.log(ans);
+//     n()
+
+//   } catch (error) {
+//     console.log(error);
+
+//   }
+// }
+// res()
+
+
+// const res = async () => {
+//   let p = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       let status = false
+//       if (status) {
+//         resolve("Promise Resolved")
+//       }
+//       else {
+//         reject("promise Rejected")
+//       }
+//     }, 2000)
+//   })
+//   try {
+//     const res = await p
+//     console.log(res);
+
+//   } catch (error) {
+//     console.log(error);
+
+//   }
+// }
+// res()
 
 
 
