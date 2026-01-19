@@ -527,11 +527,11 @@
 
 // flate
 
-const ary = [[1, 2], [3, 4,[5,6,7,8]], [5, 6]]
+// const ary = [[1, 2], [3, 4, [5, 6, 7, 8]], [5, 6]]
 // const ary = [[1, 2], [3, 4], [5, 6]]
-const singleAry=ary.flat(Infinity)
+// const singleAry = ary.flat(Infinity)
 // const singleAry=ary.flat()
-console.log(singleAry);
+// console.log(singleAry);
 
 // flateMap
 
@@ -902,6 +902,8 @@ console.log(singleAry);
 // }
 // res()
 
+
+
 // const letter = new Set(["a", "b", "c", "d"])
 // const val = letter.entries()
 // console.log(val);
@@ -968,7 +970,6 @@ console.log(singleAry);
 //   })
 //   return p1
 // }
-
 // const n = () => {
 //   console.log("Nishant Sanghani");
 // }
@@ -980,7 +981,6 @@ console.log(singleAry);
 
 //   } catch (error) {
 //     console.log(error);
-
 //   }
 // }
 // res()
@@ -1004,7 +1004,6 @@ console.log(singleAry);
 
 //   } catch (error) {
 //     console.log(error);
-
 //   }
 // }
 // res()
@@ -1069,6 +1068,37 @@ console.log(singleAry);
 // }
 // const a = abc(10,20)
 // a()
+
+
+
+// console.log([] + {});
+// const ary = [2, 4, 8, 10]
+// let modify = ary.map((value) => value * 2)
+// console.log(modify);
+
+// ary.forEach((value, index) => {
+//     console.log(value, index);
+
+// })
+// let status = {} ?? ""
+// console.log(status);
+
+const res = `const fatchData = async () => {
+    let apiUrl = "https://jsonplaceholder.typicode.com/todos"
+
+    let res = await fetch(apiUrl)
+
+    let data = await res.json()
+
+    console.log(data);
+}`
+res()
+    (async () => {
+        await fatchData()
+    })()
+console.log('Done');
+
+
 
 
 

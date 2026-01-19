@@ -37,7 +37,7 @@
     II.const: both are not allowed
     III.var: both are allowed
 
-5.Web Apis:following all the features are not part of JS.it is a part of web browser
+5.Web Apis :- following all the features are not part of JS.it is a part of web browser
 =>setTimeOut()
 =>Dom Api
 =>fetch()
@@ -241,7 +241,6 @@ Calls the function immediately and passes arguments one by one
     III. return - exits from a function
     IV. throw - jumps to error handling
 
-
 16.sets:-
 =>sets method are following:
     I. union()
@@ -265,7 +264,6 @@ Calls the function immediately and passes arguments one by one
     VIII. Math.abs(x) returns the absolute (positive) value of x
     IX. Math.min() find minimum value
     X. Math.max() find maximum value
-
 
 18.Map:-A JavaScript Map is an object that can store collections of key-value pairs, similar to a dictionary in other programming languages.
 
