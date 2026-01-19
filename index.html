@@ -18,13 +18,11 @@
     let timeOut
     input.addEventListener("keyup", () => {
         clearTimeout(timeOut);
-
         // Start a new timer for 1 minute (60000ms)
         timeout = setTimeout(() => {
             console.log("User stopped typing. Input value:", input.value);
-        }, 60000); // 1 minute
+        }, 2000); // 1 minute
         console.log(timeOut);
-        
     })
 </script>
 

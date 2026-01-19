@@ -1,11 +1,18 @@
 =>notes:
 -javascript object never compared
+
 -All string methods return a new string. They don't modify the original string.
+
 -Strings are immutable: Strings cannot be changed, only replaced.
+
 -In Array,Adding elements with high indexes can create undefined "holes" in an array
+
 -new Array(40) creates an array with length 40 and empty slots, not a value.
+
 -new Array(40, 100) creates an array containing the values 40 and 100.
+
 -Strict mode in JavaScript is a way to run your code under stricter rules to help you write safer, cleaner, and less error-prone code.
+
 -Objects are objects
 -Maths are objects
 -Functions are objects
@@ -19,16 +26,16 @@
 1.undefined:- it is a like plceholder which is kept inside the varible.
 2.laxical environemt:
 =>it is created when global execution created
-=>is local memory along with it's (+) laxical environment of it's parent.
-=> it is also known as scope chain.
+=>it is local memory along with it's (+) laxical environment of it's parent.
+=>it is also known as scope chain.
 3.scope:
 =>it is specify the limit of the varible where we can access them.
 4.varibles:
 =>let and const varibles are hoisted.
 =>let and const both are block scope variables.
-    I.let:redeclaration not allowed.reInistialize allowed.
-    II.const:both are not allowed
-    III.var:both are allowed
+    I.let: redeclaration not allowed.reInistialize allowed.
+    II.const: both are not allowed
+    III.var: both are allowed
 
 5.Web Apis:following all the features are not part of JS.it is a part of web browser
 =>setTimeOut()
@@ -62,9 +69,13 @@ Calls the function immediately and passes arguments one by one
 
     V.slice(start, end):-
 
-    VI.substr():-is similar to slice().The difference is that the second parameter specifies the length of the extracted part.
+    VI.substr():-it is similar to slice().
+    The difference is:
+    => the second parameter specifies the length of the extracted part.
+    => can't support nagative index.
+    => support nagative index
 
-    VII.trim():-The trim() method removes whitespace from both sides of a string:
+    VII.trim():-The trim() method removes whitespace from both sides of a string.
 
     VIII.padStart():-The padStart() method pads a string from the start. (430)
 
@@ -121,7 +132,7 @@ Calls the function immediately and passes arguments one by one
 
 =>Flattening an Array:-Flattening is useful when you want to convert a multi-dimensional array into a one-dimensional array.
 
-    I.flate():-it is used to create new array single dimensional array from multi dimensional array. (493)
+    I.flate():-it is used to create new array single dimensional array from multi dimensional array.and remove nesting of array (493)
 
     II.flateMap():- flatMap having a call back function where we can modify the elements of an array (499)
 
@@ -168,9 +179,9 @@ Calls the function immediately and passes arguments one by one
 
 => Array Iteration:
 
-    I.map()
+    I.map() 
 
-    II.filter()
+    II.filter() 
 
     III.reduce():-The reduce() method runs a function on each array element to produce a single value. (552)
 
@@ -254,6 +265,9 @@ Calls the function immediately and passes arguments one by one
     VIII. Math.abs(x) returns the absolute (positive) value of x
     IX. Math.min() find minimum value
     X. Math.max() find maximum value
+
+
+18.Map:-A JavaScript Map is an object that can store collections of key-value pairs, similar to a dictionary in other programming languages.
 
 
 

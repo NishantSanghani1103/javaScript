@@ -8,8 +8,6 @@
 //     console.log(x);
 // }
 
-
-
 // 2. scope
 
 // function a(){
@@ -232,13 +230,13 @@
 
 // const p2 = new Promise((resolve, reject) => {
 //     setTimeout(() => {
-//         reject("p2 reject")
+//         resolve("p2 resolved")
 //     }, 1000)
 // })
 // const p3 = new Promise((resolve, reject) => {
 //     setTimeout(() => {
 //         resolve("p3 Resolved")
-//     }, 0)
+//     }, 3000)
 // })
 
 // Promise.any([p1, p2, p3])
@@ -252,14 +250,14 @@
 
 // const p1 = new Promise((resolve, reject) => {
 //     setTimeout(() => {
-//         resolve("p1 Resolved")
+//         reject("p1 Rejected")
 //     }, 2000)
 // })
 
 // const p2 = new Promise((resolve, reject) => {
 //     setTimeout(() => {
-//         resolve("p2 rejected")
-//     }, 1000)
+//         resolve("p2 Resolved")
+//     }, 5000)
 // })
 // const p3 = new Promise((resolve, reject) => {
 //     setTimeout(() => {
@@ -275,27 +273,23 @@
 
 
 // 5. Promise.withResolvers();
-// const p1 = new Promise((resolve, reject) => {
-//   setTimeout(() => {
-//     resolve("p1 Resolved")
-//   }, 2000)
-// })
 
-// const p2 = new Promise((resolve, reject) => {
-//   setTimeout(() => {
-//     reject("p2 rejected")
-//   }, 1000)
-// })
-// const p3 = new Promise((resolve, reject) => {
-//   setTimeout(() => {
-//     resolve("p3 Resolved")
-//   }, 0)
-// })
+// let { promise, resolve, reject } = Promise.withResolvers()
 
-// Promise.withResolvers([p1, p2, p3])
-//   .then((res) => {
+// setTimeout(() => {
+//     let status = false
+//     if (status) {
+//         resolve("Promise Resolved...!!")
+//     }
+//     else {
+//         reject("Promise Rejected...!!")
+//     }
+// }, 2000)
+// promise.then((res) => {
 //     console.log(res);
-//   })
+// }).catch((error) => {
+//     console.log(error);
+// })
 
 
 // clouser example are following:
@@ -479,7 +473,7 @@
 // let ary = a.split(",")
 // let ary = a.split(" ")
 // let ary = a.split("")
-// console.log(ary[0]);
+// console.log(ary[1]);
 
 
 // let text = "Please locate where 'locate' occurs!";
@@ -533,14 +527,16 @@
 
 // flate
 
+const ary = [[1, 2], [3, 4,[5,6,7,8]], [5, 6]]
 // const ary = [[1, 2], [3, 4], [5, 6]]
+const singleAry=ary.flat(Infinity)
 // const singleAry=ary.flat()
-// console.log(singleAry);
+console.log(singleAry);
 
 // flateMap
 
-// const ary = [1, 2, 3, 4, 5]
-// const mapAry = ary.flatMap((value) => value * 10)
+// const ary = [[1, 2], [3, 4, 5]]
+// const mapAry = ary.flatMap((value) => value.map((x)=>x*10))
 // console.log(mapAry);
 
 // OR
@@ -1014,12 +1010,65 @@
 // res()
 
 
+// const promise = async () => {
+//     const p1 = new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             let status = false
+//             if (status) {
+//                 resolve("Promise Resolved")
+//             }
+//             else {
+//                 reject("Promise Rejected")
+//             }
+//         }, 2000)
+//     })
+//     try {
+//         const res = await p1
+//         console.log(res);
+//         abc()
+
+
+//     } catch (error) {
+//         console.log(error);
+
+//     }
+// }
+// const abc = () => {
+//     console.log("Normal Function");
+
+// }
+// promise()
 
 
 
+// const p1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         let status = true
+//         if (status) {
+//             resolve("Promise Resolved....!!")
+//         }
+//         else {
+//             reject("Promise Rejected...!!")
+//         }
+//     }, 2000)
+// }).then((res) => {
+//     console.log(res);
+//     abc()
+// }).catch((error) => {
+//     console.log(error);
+
+// })
 
 
-
+// function abc(x, y) {
+//     let ans = 0
+//     return function xyz() {
+//         ans = x + y
+//         console.log(ans);
+//     }
+// }
+// const a = abc(10,20)
+// a()
 
 
 
