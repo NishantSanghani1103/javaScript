@@ -1,4 +1,10 @@
+Q1.api qustion:-(1101)
+    1. we need to use type module in script.
+    2. we can use then and catch for the promises.
+
 =>notes:
+-new Function() creates a new function at runtime
+
 -javascript object never compared
 
 -All string methods return a new string. They don't modify the original string.

@@ -1083,25 +1083,54 @@
 // let status = {} ?? ""
 // console.log(status);
 
-const res = `const fatchData = async () => {
-    let apiUrl = "https://jsonplaceholder.typicode.com/todos"
+// const res = `const fatchData = async () => {
+//     let apiUrl = "https://jsonplaceholder.typicode.com/todos"
 
-    let res = await fetch(apiUrl)
+//     let res = await fetch(apiUrl)
 
-    let data = await res.json()
+//     let data = await res.json()
 
-    console.log(data);
-}`
-res()
-    (async () => {
-        await fatchData()
-    })()
-console.log('Done');
+//     console.log(data);
+// }`
+// res()
+//     (async () => {
+//         await fatchData()
+//     })()
+// console.log('Done');
+
+// const fetchData = async() => {
+//     let apiUrl = "https://jsonplaceholder.typicode.com/todos"
+//     let res = await fetch(apiUrl)
+
+//     let data = await res.json()
+
+//     console.log(data);
+// }
+// fetchData().then(() => {
+//     console.log("done");
+// })
+
+// const fetchData = async() => {
+//     let apiUrl = "https://jsonplaceholder.typicode.com/todos"
+//     let res = await fetch(apiUrl)
+
+//     let data = await res.json()
+
+//     console.log(data);
+// }
+// await fetchData()
+// console.log("demo");
 
 
+// const res = `const fatchData = async () => {
+//     let apiUrl = "https://jsonplaceholder.typicode.com/todos"
 
+//     let res = await fetch(apiUrl)
 
+//     let data = await res.json()
 
-
-
-
+//     console.log(data);
+// }`
+// const fn = new Function(res + "; return fatchData;")
+// const d = fn()
+// d()
