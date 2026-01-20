@@ -1,8 +1,36 @@
 Q1.api qustion:-(1101)
     1. we need to use type module in script.
     2. we can use then and catch for the promises.
+    3.using invoke function
+
+
+Q2. how to execute function as a String:(1153)
+=> 1. using new Function we can execute the function
+      const fn = new Function(res + "; fatchData();")
+=>how it will work ?
+    step1:- new Function create function at the runtime which is anonymous function.
+    step2:- The string is treated as the function body
+    step3:-fatchData() acts an function which is wrape inside the anonymous function and it will return function.
+    step4:-when we call function then our function should be called
+
+=> 2. using eval():-(1165)
+      eval() used for execute string of javaScript at run time.
+      
+      used for dynamic evaluation of function expression or code.
 
 =>notes:
+-console.log([]) it will return blank string
+
+-type="module" is a modern JavaScript feature introduced with ES6 that enables modular, scoped, and advanced JavaScript development.
+
+-type="module" tells to browser to enable ES6 features like enabling scoped variables, strict mode, async features like top-level await
+
+-it's enable top-level await
+
+-Top-level await means using await outside of an async function, which is allowed only in ES modules.
+
+-When a JavaScript file is a module, you are allowed to use await directly at the top of the file, without wrapping it inside an async function.
+
 -new Function() creates a new function at runtime
 
 -javascript object never compared
@@ -272,6 +300,9 @@ Calls the function immediately and passes arguments one by one
     X. Math.max() find maximum value
 
 18.Map:-A JavaScript Map is an object that can store collections of key-value pairs, similar to a dictionary in other programming languages.
+
+19.eval():- executes a string of JavaScript code at runtime.
+=> used for dynamic evaluation of expressions, code, or functions
 
 
 

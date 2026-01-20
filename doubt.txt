@@ -1,3 +1,23 @@
 1.matchAll
 2.copyWithin
 3.Promise.withResolvers();
+
+const arr = [{ x: 1 }, { x: 2 }];
+
+const ans = arr.filter((value) => {
+    return value.x > 1
+})
+ans[0].x = 99
+console.log(arr[1].x);
+
+
+ const fetchData = async() => {
+     let apiUrl = "https://jsonplaceholder.typicode.com/todos"
+     let res = await fetch(apiUrl)
+
+     let data = await res.json()
+
+     console.log(data);
+ }
+fetchData()
+console.log("demo");
