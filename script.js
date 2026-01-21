@@ -1148,19 +1148,19 @@
 //     console.log("Done");
 // })
 
-const fetchData = async () => {
-    let apiUrl = `https://jsonplaceholder.typicode.com/todos`
+// const fetchData = async () => {
+//     let apiUrl = `https://jsonplaceholder.typicode.com/todos`
 
-    let res = await fetch(apiUrl)
+//     let res = await fetch(apiUrl)
 
-    let data = await res.json()
+//     let data = await res.json()
 
-    console.log(data);
-}
-(async () => {
-    await fetchData()
-    console.log("done");
-})()
+//     console.log(data);
+// }
+// (async () => {
+//     await fetchData()
+//     console.log("done");
+// })()
 
 // const ans = `const fatchData=async()=>{
 //         let apiUrl="https://jsonplaceholder.typicode.com/todos"
@@ -1187,31 +1187,8 @@ const fetchData = async () => {
 // eval(ans + "; fatchData()")
 
 
-// console.log([] + []);
-// console.log("10" + 1 - 2);
-// console.log([0] == false);
-// console.log([null] == 0);
-// console.log(0.1 + 0.2 === 0.3);
-
-// console.log(""==0);
-// console.log(0.1==0.1);
-
-// console.log([] + 1 + 2);
-
-// console.log(1 + 2 + []);
-// console.log("5" - "3" + 1);
-// console.log(true + true + false);
-// console.log(null + 1);
 
 
-
-
-// console.log([2] > [10]);
-// console.log(undefined + 1);
-// console.log(!!"false" == !!"true");
-
-// console.log(+"1" + +"2" + "3");
-// console.log([]["push"] + []);
 
 // const arr = [{ x: 1 }, { x: 2 }];
 
@@ -1220,6 +1197,19 @@ const fetchData = async () => {
 // })
 // ans[0].x = 99
 // console.log(arr[1].x);
+
+const fatchData = async () => {
+    let apiUrl = `https://jsonplaceholder.typicode.com/todos`
+    let res = await fetch(apiUrl)
+    let data = await res.json()
+    console.log(data);
+}
+(async () => {
+    await fatchData()
+    console.log("Done");
+})()
+
+
 
 
 
