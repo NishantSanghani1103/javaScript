@@ -3,7 +3,6 @@ Q1.api qustion:-(1101)
     2. we can use then and catch for the promises.
     3.using invoke function
 
-
 Q2. how to execute function as a String:(1153)
 => 1. using new Function we can execute the function
       const fn = new Function(res + "; fatchData();")
@@ -47,6 +46,10 @@ Q2. how to execute function as a String:(1153)
 
 -Strict mode in JavaScript is a way to run your code under stricter rules to help you write safer, cleaner, and less error-prone code.
 
+-The arguments object is a local variable that contains the arguments passed to the function when called. 
+
+-in arrow function it will gives an error.That's because the arguments variable does not exist in arrow functions.
+
 -Objects are objects
 -Maths are objects
 -Functions are objects
@@ -54,6 +57,9 @@ Q2. how to execute function as a String:(1153)
 -Arrays are objects
 -Maps are objects
 -Sets are objects
+
+-   JSON.stringify() → object to string
+    JSON.parse() → string to object
 
 - promise example (761-808)
 
@@ -92,7 +98,6 @@ Calls the function immediately and passes arguments one by one
 =>bind:-Does NOT call immediately — returns a new function
 
 8.String Methods:
-
     I.length:
 
     II.charAt():-The charAt() method returns the character at a specified index (position) in a string:
@@ -159,7 +164,7 @@ Calls the function immediately and passes arguments one by one
 
     VI.shift():-The shift() method removes the first array element and "shifts" all other elements to a lower index.
 
-    VII.unshift():-he unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
+    VII.unshift():-The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
 
     VIII.concat():-The concat() method creates a new array by merging (concatenating) existing arrays. (476)
     =>The concat() method does not change the existing arrays. It always returns a new array. (476)
@@ -173,7 +178,7 @@ Calls the function immediately and passes arguments one by one
 =>Splicing and Slicing Arrays
 
     I.splice():- The splice() method add/remove items to an array. (511)
-    =>The first parameter defines the position where new elements should be added (spliced in).
+    =>The first parameter defines the position where Perfom The Action.
     =>The second parameter defines how many elements should be removed.
     =>The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
 
@@ -188,13 +193,14 @@ Calls the function immediately and passes arguments one by one
 =>Array Search
 
     I.indexOf():-The indexOf() method searches an array for an element value and returns its position.
+
     => returns -1 if the item is not found.
 
     II.lastIndexOf():-Array.lastIndexOf() is the same as Array.indexOf(), but returns the position of the last occurrence of the specified element.
 
     III.includes():-This allows us to check if an element is present in an array or not
 
-    IV.find():-The find() method returns the value of the first array element that passes a test function. (532)
+    IV.find():-The find() method returns the value of the first array element that passes a test function.and find() have a callBack function (532)
 
     V.findIndex():-The findIndex() method returns the index of the first array element.
 
@@ -209,7 +215,8 @@ Calls the function immediately and passes arguments one by one
 
     II.reverse():-The reverse() method reverses the elements in an array:
 
-    III.toSorted():-The difference between toSorted() and sort() is that the first method creates a new array, keeping the original array unchanged, while the last method alters the original array.
+    III.toSorted():-The difference between toSorted() and sort() is that the sort() method can't create new array it will alter the elements of an array, while the toSorted() method creates a new array keeping the orignal array unchanged.
+
 
 => Array Iteration:
 
@@ -276,13 +283,35 @@ Calls the function immediately and passes arguments one by one
     IV. throw - jumps to error handling
 
 16.sets:-
+=>A JavaScript Set is a collection of unique values.
+=>Each value can only occur once in a Set.
+=>The values can be of any type, primitive values or objects.
+
+
 =>sets method are following:
     I. union()
+
     II.intersection()
+
     III.difference():-return the element whose included in A but not in B.
+
     IV.symmetricDifference():- return all the unique elements from the both sets.
-    V. isSubsetOf():-check what if all the elements of A is present in B or not.
-    VI.isDisjointFrom():-it will return true if elements of A is not present in B.it means B set contains unique element. 
+
+    V. isSubsetOf():-check what if all the elements of A is present in B or not and gives Boolean value true or false.
+
+    VI.isDisjointFrom():-it will return true if elements of A is not present in B.it means B set contains unique element.
+
+    VII. has():-The has() method returns true if a specified value exists in a set.(1360)
+
+    VIII.values()/keys():-(1364)
+    =>The values() and keys() are same in sets it will returns an Iterator object with the values in a Set.
+
+    IX.entries():-(1364)
+    =>it will return and Iterator which contains [value value]
+
+=>A JavaScript WeakSet is a collection of values where the values must be objects.
+
+
 
 17.math:-The JavaScript Math object allows you to perform mathematical tasks.
     I. Math.round(x) returns the nearest integer.
@@ -304,17 +333,8 @@ Calls the function immediately and passes arguments one by one
 19.eval():- executes a string of JavaScript code at runtime.
 => used for dynamic evaluation of expressions, code, or functions
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+20. localstorage/sessionStorage/cookies:-
+    =>localStorage → remember forever
+    =>sessionStorage → remember until tab closes
+    =>cookies → remember + send to server
 

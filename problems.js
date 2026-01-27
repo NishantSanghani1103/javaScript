@@ -141,6 +141,7 @@
 // console.log([] + 1 + 2);  // 1. ""+1="1" 2. "1"+2 = "12"
 
 // console.log(1 + 2 + []);  //1. 3+""="3"
+
 // console.log("5" - "3" + 1); // 1. 2+1= 3 
 // console.log(true + true + false); // 1. 1+1+0=2
 // console.log(null + 1); // 0+1=1
@@ -149,11 +150,14 @@
 
 
 // console.log([2] > [10]);  // 1. "2">"10" 2. true
+
 // console.log(undefined + 1);  // NAN
+
 // console.log(!!"false" == !!"true"); 
 
 // console.log(+"1" + +"2" + "3"); // 1. +"1"==>1 + +"2"=>2 2. 1+2=3 3. 3+"3"="33"
-// // console.log([]["push"] + []);
+
+// console.log([]["push"] + []);
 
 
 // console.log([1] + [2]);  // 1. "1"+"2"="12"

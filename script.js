@@ -88,7 +88,7 @@
 
 // a()
 // console.log(b);
-
+// b()
 // function a() {
 //     console.log("hello");
 // }
@@ -151,7 +151,7 @@
 //    console.log(fn());
 
 // const ary = undefined
-// console.log(typeof (ary));
+// // console.log(typeof (ary));
 
 
 
@@ -181,6 +181,7 @@
 //         resolve("p2 resolve")
 //     }, 3000)
 // })
+
 // const p3 = new Promise((resolve, reject) => {
 //     setTimeout(() => {
 //         resolve("p3 Resolved")
@@ -241,8 +242,7 @@
 
 // Promise.any([p1, p2, p3])
 //     .then((res) => {
-//         console.log(res);
-
+//         console.log(res);S
 //     })
 
 
@@ -350,24 +350,23 @@
 //     setTimeout(() => {
 //         resolve("p1 resolved")
 //     }, 2000)
+//     console.log("Fatching Data 1....");
 // })
 // p1.then((res) => {
-//     console.log("Fatching Data 1....");
 //     console.log(res);
-//     const p2 = new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve("p2 resolved")
-//         }, 2000)
-//     })
-//     p2.then((res) => {
+//     return new Promise((resolve, reject) => {
 //         console.log("Fatching Data2...");
+//         setTimeout(() => {
+//             reject("p2 rejected")
+//         }, 2000)
+//     }).then((res) => {
 //         console.log(res);
-//         const p3 = new Promise((resolve, reject) => {
+//         return new Promise((resolve, reject) => {
+//             console.log("Fatching Data3....");
 //             setTimeout(() => {
 //                 resolve("p3 Resolved")
 //             }, 2000)
 //         }).then((res) => {
-//             console.log("Fatching Data3....");
 //             console.log(res);
 //         }).catch((error) => {
 //             console.log(error);
@@ -376,6 +375,36 @@
 // }).catch((error) => {
 //     console.log(error);
 // })
+
+// OR
+
+// function abc() {
+//     return new Promise((resolve, reject) => {
+//         console.log("Fatching Data From Promise 1...");
+//         setTimeout(() => {
+//             resolve("P1 Resolved...!!")
+//         }, 2000)
+//     })
+// }
+// function xyz() {
+//     console.log("Fatching Data From Promise 2...");
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             reject("P2 Rejected...!!")
+//         }, 2000)
+//     })
+// }
+// (async () => {
+//     try {
+//         const res1 = await abc()
+//         console.log(res1);
+//         const res2 = await xyz()
+//         console.log(res2);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// })()
+
 
 // const stud = {
 //     name: "Nishant",
@@ -492,8 +521,8 @@
 // console.log(ml);
 
 // let ary = []
-// let arry = new Array()
-// console.log(typeof (ary));
+let arry = new Array()
+console.log(typeof (arry));
 
 // let fruits = ["mango", "banana", "kiwi"]
 // let txt = " "
@@ -584,9 +613,11 @@
 // const age=ary.findLast((value)=>value>=18)
 // console.log(age);
 
-// const ary = [10, 5, 7, 20]
-// const sortedAryAcending = ary.sort((a, b) => a - b)
+// const ary1 = [10, 5, 7, 20]
+// const sortedAryAcending = ary1.toSorted((a, b) => a - b)
 // console.log(sortedAryAcending);
+// console.log(ary1);
+
 // const sortingDecending = ary.sort((a, b) => b - a)
 // console.log(sortingDecending);
 
@@ -1131,9 +1162,9 @@
 
 //     console.log(data);
 // }`
-// const fn = new Function(res + "; return fatchData;")
-// const d = fn()
-// d()
+// // const fn = new Function(res + "; return fatchData();")
+// // fn()
+// const ans = eval(res + "; fatchData()")
 
 // const fetchData = async () => {
 //     let apiUrl = `https://jsonplaceholder.typicode.com/todos`
@@ -1187,9 +1218,6 @@
 // eval(ans + "; fatchData()")
 
 
-
-
-
 // const arr = [{ x: 1 }, { x: 2 }];
 
 // const ans = arr.filter((value) => {
@@ -1198,16 +1226,161 @@
 // ans[0].x = 99
 // console.log(arr[1].x);
 
-const fatchData = async () => {
-    let apiUrl = `https://jsonplaceholder.typicode.com/todos`
-    let res = await fetch(apiUrl)
-    let data = await res.json()
-    console.log(data);
+// const fatchData = async () => {
+//     let apiUrl = `https://jsonplaceholder.typicode.com/todos`
+//     let res = await fetch(apiUrl)
+//     let data = await res.json()
+//     console.log(data);
+// }
+// (async () => {
+//     await fatchData()
+//     console.log("Done");
+// })()
+
+// const outer = () => {
+//     console.log(arguments);
+// }
+// outer("Nishant", "Sanghani")
+
+// function outer() {
+//     let a = 10
+//     function inner() {
+//         console.log(a);
+//     }
+//     a = 20
+//     return inner
+// }
+// const ans = outer()
+// ans()
+
+
+// for (let i = 1; i <= 5; i++) {
+//     setTimeout(() => {
+//         console.log(i);
+//     }, i * 1000)
+// }
+
+// globalThis.num = 10
+// console.log(num);
+
+// const res = (a, b, c) => {
+//     console.log(this.num + a + b + c);
+
+// }
+// res(10,20,30)
+
+
+// const obj = {
+//     name: "Nishant",
+//     print() {
+//         const abc = () => {
+//             let that = this
+//             function xyz() {
+//                 console.log(that);
+//             }
+//             xyz()
+//         }
+//         abc()
+//     }
+// }
+// obj.print()
+
+
+// const obj = {
+//     fName: "Nishant",
+//     lName: "Sanghani",
+//     fullName(city, state) {
+//         console.log(`My Name Is ${this.fName} ${this.lName} My City Is ${city} State Of ${state}`);
+//     }
+// }
+// const obj2 = {
+//     fName: "Virat",
+//     lName: "Kohli",
+// }
+// const res = obj.fullName.apply(obj2, ["Dhari", "Gujarat"])
+
+// const userInfo = { name: "Harshil", age: 22 };
+// const preferences = { theme: "dark", lang: "en" }
+
+// const info=userInfo
+// console.log(info);
+
+// const res = ary.map((value) => value.toUpperCase())
+// console.log(res);
+// console.log(ary[-1]);
+
+// const ary = ["read", ["write"], [["read"]]]
+// delete ary[1]
+// console.log(ary);
+// console.log(ary.length);
+// const res = ary.copyWithin(1, 0, 1)
+// console.log(res);
+// const res = ary.flat(Infinity)
+// console.log(res);
+
+// const product = [
+//     { name: "watch", price: 1000, qty: 7 },
+//     { name: "tshirt", price: 500, qty: 5 }
+// ]
+// const result = product.sort((a, b) => a.price * a.qty - b.price * b.qty)
+// console.log(result);
+
+// const num = [2, 4, 6, 8, 10]
+// const ress = num.reduce((acc, cuu) => acc < cuu ? acc : cuu)
+// console.log(ress);
+
+// const pName = product.flatMap((value) => value.name)
+// console.log(pName);
+
+// const nm = "nishant"
+// const ans = [...nm].reduce((acc, ch) => ch + acc, "")
+// console.log(ans);
+
+const original = {
+    name: 'Alice',
+    details: {
+        age: {
+            city: {
+                state: "gujarat"
+            }
+        }
+    }
+};
+// const shallowCopy = Object.assign({}, original)
+// shallowCopy.details.age.city.state = "Mp"
+// console.log(shallowCopy);
+// console.log(original);
+// const deepCopy = structuredClone(original)
+// OR
+// const deepCopy = JSON.parse(JSON.stringify(original));
+// deepCopy.details.age.city.state = "Mp"
+// console.log(deepCopy);
+// console.log(original);
+
+// const letter = new Set(["a", "b", "c", "d"])
+// const res = letter.has("a")
+// console.log(res);
+
+const letters = new Set(["a", "b", "c"]);
+const myIterator = letters.entries();
+const iterator = letters.keys()
+const i1 = letters.values()
+for (const x of i1) {
+    console.log(x);
 }
-(async () => {
-    await fatchData()
-    console.log("Done");
-})()
+for (const x of iterator) {
+    console.log(x);
+}
+for (const [v, k] of myIterator) {
+    console.log(v, k);
+}
+
+
+
+
+
+
+
 
 
 
