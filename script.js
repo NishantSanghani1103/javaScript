@@ -522,7 +522,7 @@
 
 // let ary = []
 let arry = new Array()
-console.log(typeof (arry));
+console.log(typeof(arry));
 
 // let fruits = ["mango", "banana", "kiwi"]
 // let txt = " "
@@ -1361,31 +1361,51 @@ const original = {
 // const res = letter.has("a")
 // console.log(res);
 
-const letters = new Set(["a", "b", "c"]);
-const myIterator = letters.entries();
-const iterator = letters.keys()
-const i1 = letters.values()
-for (const x of i1) {
-    console.log(x);
-}
-for (const x of iterator) {
-    console.log(x);
-}
-for (const [v, k] of myIterator) {
-    console.log(v, k);
-}
+// const letters = new Set(["a", "b", "c"]);
+// const myIterator = letters.entries();
+// const iterator = letters.keys()
+// const i1 = letters.values()
+// for (const x of i1) {
+//     console.log(x);
+// }
+// for (const x of iterator) {
+//     console.log(x);
+// }
+// for (const [v, k] of myIterator) {
+//     console.log(v, k);
+// }
 
+// const set = new WeakSet()
+// const obj = {
+//     fName: "Nishant",
+//     lName: "Sanghani"
+// }
+// set.add(obj)
+// const ans = set.has(obj)
+// console.log(ans);
 
+// const set = new WeakSet()
+// const obj = {
+//     fName: "Nishant",
+//     lName: "Sanghani"
+// }
+// set.add(obj)
+// set.delete(obj)
+// const ans = set.has(obj)  // it will gives a false
+// console.log(ans);
 
+// let set = new WeakSet()
+// const obj = {
+//     fName: "Nishant",
+//     lName: "Sanghani"
+// }
+// set.add(obj)
+// set = null
+// const ans = set.has(obj)
+// console.log(ans);
 
+const d = new Date()
+const d1 = new Date("2022-03-25");
 
-
-
-
-
-
-
-
-
-
-
+console.log(d);
+console.log(d1);

@@ -309,8 +309,16 @@ Calls the function immediately and passes arguments one by one
     IX.entries():-(1364)
     =>it will return and Iterator which contains [value value]
 
-=>A JavaScript WeakSet is a collection of values where the values must be objects.
+=>WeakSet():-
+-A JavaScript WeakSet is a collection of values where the values must be objects.
+-You cannot iterate over the values with for loops, forEach(), or values().
+-You cannot access the size. WeakSets have no size property.
 
+=>Methods:-
+    I. new WeakSet():- Creates a new WeakSet object
+    II. add(obj):-	Adds an Object to a WeakSet
+    III. delete(obj):- Removes a WeakSet object
+    IV. has(obj) :- Returns true if an object exists in a WeakSet
 
 
 17.math:-The JavaScript Math object allows you to perform mathematical tasks.
@@ -330,6 +338,9 @@ Calls the function immediately and passes arguments one by one
 
 18.Map:-A JavaScript Map is an object that can store collections of key-value pairs, similar to a dictionary in other programming languages.
 
+=> Map Characteristics:
+
+
 19.eval():- executes a string of JavaScript code at runtime.
 => used for dynamic evaluation of expressions, code, or functions
 
@@ -338,3 +349,4 @@ Calls the function immediately and passes arguments one by one
     =>sessionStorage → remember until tab closes
     =>cookies → remember + send to server
 
+=>Garbage Collection:-JavaScript employs a memory management mechanism known as Garbage Collection.
