@@ -522,7 +522,7 @@
 
 // let ary = []
 let arry = new Array()
-console.log(typeof(arry));
+console.log(typeof (arry));
 
 // let fruits = ["mango", "banana", "kiwi"]
 // let txt = " "
@@ -1299,63 +1299,32 @@ console.log(typeof(arry));
 // }
 // const res = obj.fullName.apply(obj2, ["Dhari", "Gujarat"])
 
-// const userInfo = { name: "Harshil", age: 22 };
-// const preferences = { theme: "dark", lang: "en" }
 
-// const info=userInfo
-// console.log(info);
+                                // SHALLOW COPY / DEEP COPY
 
-// const res = ary.map((value) => value.toUpperCase())
-// console.log(res);
-// console.log(ary[-1]);
 
-// const ary = ["read", ["write"], [["read"]]]
-// delete ary[1]
-// console.log(ary);
-// console.log(ary.length);
-// const res = ary.copyWithin(1, 0, 1)
-// console.log(res);
-// const res = ary.flat(Infinity)
-// console.log(res);
-
-// const product = [
-//     { name: "watch", price: 1000, qty: 7 },
-//     { name: "tshirt", price: 500, qty: 5 }
-// ]
-// const result = product.sort((a, b) => a.price * a.qty - b.price * b.qty)
-// console.log(result);
-
-// const num = [2, 4, 6, 8, 10]
-// const ress = num.reduce((acc, cuu) => acc < cuu ? acc : cuu)
-// console.log(ress);
-
-// const pName = product.flatMap((value) => value.name)
-// console.log(pName);
-
-// const nm = "nishant"
-// const ans = [...nm].reduce((acc, ch) => ch + acc, "")
-// console.log(ans);
-
-const original = {
-    name: 'Alice',
-    details: {
-        age: {
-            city: {
-                state: "gujarat"
-            }
-        }
-    }
-};
+// const original = {
+//     name: 'Alice',
+//     details: {
+//         age: {
+//             city: {
+//                 state: "gujarat"
+//             }
+//         }    
+//     }
+// };
+// const shallowCopy={...original}
 // const shallowCopy = Object.assign({}, original)
 // shallowCopy.details.age.city.state = "Mp"
 // console.log(shallowCopy);
 // console.log(original);
+
 // const deepCopy = structuredClone(original)
 // OR
 // const deepCopy = JSON.parse(JSON.stringify(original));
 // deepCopy.details.age.city.state = "Mp"
-// console.log(deepCopy);
 // console.log(original);
+// console.log(deepCopy);
 
 // const letter = new Set(["a", "b", "c", "d"])
 // const res = letter.has("a")
@@ -1404,8 +1373,173 @@ const original = {
 // const ans = set.has(obj)
 // console.log(ans);
 
-const d = new Date()
-const d1 = new Date("2022-03-25");
 
-console.log(d);
-console.log(d1);
+                                    // DATES
+
+// const d = new Date()
+
+// const d1 = new Date("2022-03-25");
+
+// const d2 = new Date(2004, 2, 12, 10, 10, 20, 0)
+
+// const d3 = new Date(2025, 2, 33);
+
+// const d4 = new Date(98,11)
+
+// console.log(d);
+// console.log(d1);
+// console.log(d2);
+// console.log(d3);
+// console.log(d4);
+
+// let msec = Date.parse("2012-03-12");
+
+// const d = new Date(msec);
+
+// console.log(d);
+
+// const d = new Date(2004, 2, 12, 10, 10, 50)
+// console.log(d);
+
+// console.log(d.getFullYear());
+// console.log(d.getUTCFullYear());
+
+// console.log(d.getMonth());
+// console.log(d.getUTCMonth());
+
+// console.log(d.getDay());
+// console.log(d.getUTCDay());  // gives a same
+
+// console.log(d.getDate());
+// console.log(d.getUTCDate());  // both same
+
+// console.log(d.getHours());
+// console.log(d.getUTCHours());  // -5
+
+// console.log(d.getMinutes());
+// console.log(d.getUTCMinutes());  // -30
+
+// console.log(d.getSeconds());
+// console.log(d.getUTCSeconds());  // second is same UTC and normal.
+
+// console.log(d.getMilliseconds());
+// console.log(d.getUTCMilliseconds());  // same in UTC and normal
+
+// console.log(d.getTime());
+
+// const now = Date.now()
+// console.log(now);  // Returns millisecond from jan 1 1970
+
+// const normalTime = new Date()
+// console.log(normalTime);
+// console.log(normalTime.toUTCString());
+
+// console.log(normalTime.getTimezoneOffset() / 60); // difference between utc and local timing. gives in minutes.
+
+
+// const d1 = new Date()
+// d1.setFullYear(2020)
+// d1.setHours(5)
+// d1.setDate(d1.getDate())
+// d1.setHours(8)
+// console.log(d1.toISOString());
+// console.log(d1.toUTCString());
+
+// const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+// const d1 = new Date("2021-03-25");
+// let month = months[d1.getMonth()];
+// console.log(month);
+
+// const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+// const d2 = new Date()
+// console.log(days[d2.getDay()]);
+
+
+// MAP
+
+// const f = new Map()
+
+// f.set("apples", 500)
+// f.set("banana", 1500)
+// f.set("kiwi", 2500)
+
+//  OR
+
+const f = new Map([
+    ["apples", 500],
+    ["banana", 1500],
+    ["banana", 1500],
+    ["banana", 1500],
+    ["kiwi", 2500]
+])
+// f.set("apples", 100)
+// f.set("pineapple", 20)
+// f.delete("apples")
+// f.clear()
+// console.log(f.has("banana"));
+
+// console.log(f);
+// f.forEach((value, key) => console.log(
+//     value + key))
+
+// for (const key of f.values()) {
+//     console.log(key);
+// }
+
+// const array = [
+//     {
+//         name: "Nishant",
+//         age: 22
+//     },
+//     {
+//         name: "Tushar",
+//         age: 22
+//     },
+//     {
+//         name: "Karan",
+//         age: 50
+//     },
+//     {
+//         name: "virat",
+//         age: 35
+//     }
+// ]
+
+// const group = Object.groupBy(array, a => a.age)
+// console.log(group);
+
+// const array = [
+//     {
+//         name: "Nishant",
+//         age: 22
+//     },
+//     {
+//         name: "Tushar",
+//         age: 22
+//     },
+//     {
+//         name: "Karan",
+//         age: 50
+//     },
+//     {
+//         name: "virat",
+//         age: 35
+//     }
+// ]
+// const res = Map.groupBy(array, o => o.age > 35)
+// console.log(res);
+
+// const map = new WeakMap()
+// const obj = {
+//     fname: "John",
+//     lname: "Doe"
+// }
+
+// const res = map.set(obj, "secret")
+// console.log(res.get(obj));
+// const ans = res.has(obj)
+// res.delete(obj)
+// console.log(res);
+
+// console.log(ans);

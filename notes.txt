@@ -18,6 +18,7 @@ Q2. how to execute function as a String:(1153)
       used for dynamic evaluation of function expression or code.
 
 =>notes:
+
 -console.log([]) it will return blank string
 
 -type="module" is a modern JavaScript feature introduced with ES6 that enables modular, scoped, and advanced JavaScript development.
@@ -62,6 +63,13 @@ Q2. how to execute function as a String:(1153)
     JSON.parse() → string to object
 
 - promise example (761-808)
+
+-Date Formula:
+const minute = 1000 * 60;
+const hour = minute * 60;
+const day = hour * 24;
+const year = day * 365;
+let years = Math.round(Date.now() / year)
 
 1.undefined:- it is a like plceholder which is kept inside the varible.
 2.laxical environemt:
@@ -283,12 +291,13 @@ Calls the function immediately and passes arguments one by one
     IV. throw - jumps to error handling
 
 16.sets:-
+
 =>A JavaScript Set is a collection of unique values.
 =>Each value can only occur once in a Set.
 =>The values can be of any type, primitive values or objects.
 
-
 =>sets method are following:
+
     I. union()
 
     II.intersection()
@@ -338,7 +347,30 @@ Calls the function immediately and passes arguments one by one
 
 18.Map:-A JavaScript Map is an object that can store collections of key-value pairs, similar to a dictionary in other programming languages.
 
-=> Map Characteristics:
+=> Map Methods:
+
+- get():-You get the value of a key in a map with the get() method
+
+- set():-The set() method can also be used to change existing map values:
+
+- size:-The size property returns the number of elements in a map:
+
+- delete():-The delete() method removes a map element:
+
+- clear():- The clear() method removes all the elements from a map
+
+- has():-The has() method returns true if a key exists in a map
+
+- entries():-method returns an iterator object with the [key,values] in a map
+
+- keys():-The keys() method returns an iterator object with the keys in a map
+
+- values():-The values() method returns an iterator object with the values in a map
+
+=>WeakMap():-
+
+- A JavaScript WeakMap is a collection of key/value pairs where the keys must be objects.
+
 
 
 19.eval():- executes a string of JavaScript code at runtime.
@@ -350,3 +382,118 @@ Calls the function immediately and passes arguments one by one
     =>cookies → remember + send to server
 
 =>Garbage Collection:-JavaScript employs a memory management mechanism known as Garbage Collection.
+
+21.Date():-
+
+=>There are 9 ways to create a new date object:-
+
+    new Date()
+    new Date(date string)
+    new Date(year,month)
+    new Date(year,month,day)
+    new Date(year,month,day,hours)
+    new Date(year,month,day,hours,minutes)
+    new Date(year,month,day,hours,minutes,seconds)
+    new Date(year,month,day,hours,minutes,seconds,ms)
+    new Date(milliseconds)
+
+=>You cannot omit month. If you supply only one parameter it will be treated as milliseconds.
+
+=>One and two digit years will be interpreted as 19xx:
+
+=>UTC stands for Coordinated Universal Time. (For India IST=UTC+5:30)
+    toUTCString():- used for fatch UTC time. (1454)
+
+=>UTC is the world’s main reference clock
+
+=>UTC provides one consistent time
+
+=>UTC time is the global “zero time” that everyone converts to their local time.
+
+=>GMT stands for Greenwich Mean Time.
+
+=>The toISOString() method converts a date to a string using the ISO standard 
+
+=>There are generally 3 types of JavaScript date input formats:-
+
+I.   ISO Date :	"2015-03-25" (The International Standard)
+II.  Short Date:"03/25/2015"
+III. Long Date: "Mar 25 2015" or "25 Mar 2015"
+
+=> Date.parse() :-
+-returns the number of milliseconds between the date and January 1, 1970.
+
+=> Date.now():
+-returns the number of milliseconds since January 1, 1970.
+
+=> Date Get Methods :-
+
+    getFullYear()	    Get year as a four digit number (yyyy)
+
+    getMonth()	        Get month as a number (0-11)
+
+    getDate()	        Get day as a number (1-31)
+
+    getDay()	        Get weekday as a number (0-6).start from Sunday
+
+    getHours()	        Get hour (0-23)
+
+    getMinutes()	    Get minute (0-59)
+
+    getSeconds()	    Get second (0-59)
+
+    getMilliseconds()	Get millisecond (0-999)
+
+    getTime()	        Get time return numbers of milliseconds since January 1,1970
+                        (milliseconds since January 1, 1970)
+
+    getTimezoneOffset() Gives a difference (in minutes) between the utc time and local time 
+                        (1457)
+
+=> Date to Methods :-
+
+- toDateString()	Converts the date portion of a Date object into a readable string
+
+- toGMTString()	Deprecated. Use the toUTCString() method instead
+
+- toISOString()	Returns the date as a string, using the ISO standard formate        (2026-01-28T06:30:00.000Z)
+
+- toJSON()	Returns the date as a string, formatted as a JSON date
+
+- toLocaleDateString()	Returns the date portion in formate of DD//MM//YYYY
+
+- toLocaleTimeString()	Returns the time portion in 24 hour in formate of 13:15:20
+
+- toLocaleString()	Converts a Date object to a string such as 28/01/2026, 13:19:37
+
+- toString()	Converts a Date object to a string
+
+- toTimeString() Converts the time portion of a Date object to a string UTC
+
+- toUTCString()	Converts a Date object to a string, according to universal time
+
+=> Date Set Methods :-
+
+=>Set Date methods are used for setting a part of a date.
+
+- setDate()	            Set the day as a number (1-31)
+
+- setFullYear()	        Set the year (yyyy)
+
+- setHours()	        Set the hour (0-23)
+
+- setMilliseconds()	    Set the milliseconds (0-999)
+
+- setMinutes()	        Set the minutes (0-59)
+
+- setMonth()	        Set the month (0-11)
+
+- setSeconds()	        Set the seconds (0-59)
+
+- setTime()	            Set the time (milliseconds since January 1, 1970)
+
+
+
+    
+    
+
