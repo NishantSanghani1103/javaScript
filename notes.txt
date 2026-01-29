@@ -51,6 +51,7 @@ Q2. how to execute function as a String:(1153)
 
 -in arrow function it will gives an error.That's because the arguments variable does not exist in arrow functions.
 
+
 -Objects are objects
 -Maths are objects
 -Functions are objects
@@ -70,6 +71,9 @@ const hour = minute * 60;
 const day = hour * 24;
 const year = day * 365;
 let years = Math.round(Date.now() / year)
+
+-Garbage collection = JavaScript automatically cleans up memory you’re no longer using.
+=>You don’t manually free memory in JS.
 
 1.undefined:- it is a like plceholder which is kept inside the varible.
 2.laxical environemt:
@@ -271,6 +275,7 @@ Calls the function immediately and passes arguments one by one
     =>The function can be anonymous (without a name).
 
 13. Object:-
+    
     =>(660)
     I. Object.values():-creates an array from the property values.(687)
     II. Object.entries():-it is used to convert an object into an array of key–value pairs (706)
@@ -383,6 +388,7 @@ Calls the function immediately and passes arguments one by one
 
 =>Garbage Collection:-JavaScript employs a memory management mechanism known as Garbage Collection.
 
+
 21.Date():-
 
 =>There are 9 ways to create a new date object:-
@@ -456,7 +462,7 @@ III. Long Date: "Mar 25 2015" or "25 Mar 2015"
 
 - toGMTString()	Deprecated. Use the toUTCString() method instead
 
-- toISOString()	Returns the date as a string, using the ISO standard formate        (2026-01-28T06:30:00.000Z)
+- toISOString()	Returns the date as a string, using the ISO standard formate (2026-01-28T06:30:00.000Z)
 
 - toJSON()	Returns the date as a string, formatted as a JSON date
 

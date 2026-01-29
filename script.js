@@ -1300,7 +1300,7 @@ console.log(typeof (arry));
 // const res = obj.fullName.apply(obj2, ["Dhari", "Gujarat"])
 
 
-                                // SHALLOW COPY / DEEP COPY
+// SHALLOW COPY / DEEP COPY
 
 
 // const original = {
@@ -1374,7 +1374,7 @@ console.log(typeof (arry));
 // console.log(ans);
 
 
-                                    // DATES
+// DATES
 
 // const d = new Date()
 
@@ -1543,3 +1543,107 @@ const f = new Map([
 // console.log(res);
 
 // console.log(ans);
+
+// const d = new Date(2025, 11, 31, 10, 15, 30)
+// console.log("Local Time Is : " + d); // Wed Dec 31 2025 13:00:00 GMT+0530 (India Standard Time)
+
+// // to METHODS
+
+// console.log("UTC Time Is : " + d.toUTCString()); // Wed, 31 Dec 2025 07:30:00 GMT
+
+// console.log(d.toISOString()); // 2025-12-31T07:30:00.000Z
+// console.log(d.toJSON());   // 2025-12-31T07:30:00.000Z
+// console.log(d.toString());  // Wed Dec 31 2025 13:00:00 GMT+0530 (India Standard Time)
+// console.log(d.toLocaleString());  // 31/12/2025, 13:00:00
+// console.log(d.toDateString()); // Wed Dec 31 2025
+// console.log(d.toLocaleDateString()); // 31/12/2025
+// console.log(d.toLocaleTimeString()); // 13:00:00
+// console.log(d.toTimeString());  //13:00:00 GMT+0530 (India Standard Time)
+
+
+// get METHODS
+
+// console.log(d.getDate());
+// console.log(d.getUTCDate());
+
+// console.log(d.getDay());
+// console.log(d.getUTCDay());
+
+// console.log(d.getFullYear());
+// console.log(d.getUTCFullYear());
+
+// console.log(d.getHours());
+// console.log(d.getUTCHours());
+
+// console.log(d.getMilliseconds());
+// console.log(d.getUTCMilliseconds());
+
+// console.log(d.getTime());
+
+// console.log(d.getMinutes());
+// console.log(d.getUTCMinutes());
+
+// console.log(d.getMonth());
+// console.log(d.getUTCMonth());
+
+// console.log(d.getSeconds());
+// console.log(d.getUTCSeconds());
+
+
+// console.log(d.getTimezoneOffset());
+
+// d.getVarDate
+
+
+// set methods
+
+// const d1 = new Date()
+// console.log(d1);
+// console.log(d1.toUTCString());
+// d1.setDate(31)
+// d1.setFullYear(2024)
+// d1.setHours(12)
+// d1.setMinutes(30)
+// d1.setSeconds(50)
+// d1.setMonth(11)
+
+
+// console.log(d1.getTime());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
