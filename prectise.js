@@ -182,23 +182,44 @@ let p = {
 
 // console.log(wm.get(user));
 
+// "use strict";
+// const obj = {
+//     firstName: "Nishant",
+//     lastName: "Sanghani",
+//     language: "English",
+// }
+// Object.preventExtensions(obj)
+
+// try {
+//     obj.age = 25
+//     console.log(obj);
+// } catch (error) {
+//     console.log(error);
+// }
+
+// function abc(a, b) {
+//     console.log(arguments.length);
+
+// }
+// abc(1,2)
 
 
 
-let person = {
-    firstName: "John",
-    lastName: "Doe",
-    age: 50, eyeColor: "blue"
-}
-let x = person;
-x = null
 
-console.log(person);
+// function bark() {
+//   console.log('Woof!');
+// }
+
+// bark.animal = 'dog';
 
 
 
-// x.age = 10;
-// console.log(person);
+
+// a[c] = 456;
+
+// console.log(a[b]);
+
+
 
 
 

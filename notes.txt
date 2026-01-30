@@ -75,13 +75,26 @@ let years = Math.round(Date.now() / year)
 -Garbage collection = JavaScript automatically cleans up memory you’re no longer using.
 =>You don’t manually free memory in JS.
 
+=> Objects are mutable: They are addressed by reference, not by value.
+    const x = person;
+
+- If person is an object, the following statement will not create a copy of person.
+- The object x is not a copy of person. The object x is person
+- The object x and the object person share the same memory address.
+- Any changes to x will also change person
+
+=> A falsy value is a value that becomes false when JavaScript tries to convert it to a boolean.
+
+
 1.undefined:- it is a like plceholder which is kept inside the varible.
 2.laxical environemt:
 =>it is created when global execution created
 =>it is local memory along with it's (+) laxical environment of it's parent.
 =>it is also known as scope chain.
+
 3.scope:
 =>it is specify the limit of the varible where we can access them.
+
 4.varibles:
 =>let and const varibles are hoisted.
 =>let and const both are block scope variables.
@@ -280,6 +293,53 @@ Calls the function immediately and passes arguments one by one
     I. Object.values():-creates an array from the property values.(687)
     II. Object.entries():-it is used to convert an object into an array of key–value pairs (706)
     III. JSON.stringify():-it is used to convert a JavaScript object into a JSON string.(715)
+
+    => Object Method:-
+
+        1. Object.assign(target, source)
+        => Copies properties from a source object to a target object
+
+        2. Object.create(object)
+        => Creates an object from an existing object
+
+        3. Object.entries(object)
+        => Returns an array of the key/value pairs of an object
+
+        4. Object.fromEntries()
+        => Creates an object from a list of keys/values
+
+        5. Object.keys(object)
+        => Returns an array of the keys of an object
+
+        6. Object.values(object)
+        => Returns an array of the property values of an object
+
+        7. Object.groupBy(object, callback)
+        => Groups object elements according to a function
+
+        8. Object.freeze(object) 
+        => We Can't modify the value in object or array using Object.freeze() if we try to modify then it will throws the error.
+
+        9. Object.isFrozen()
+        => it will return true or false.check whether the object is freeze or not.
+
+        10. Object.preventExtensions()
+        => used to method prevents adding properties to an object.
+
+        11. Object.isExtensible()
+        => used to check if an object is extensible.
+
+        12. Object.seal()
+        => used to prevents additions or deletions of new properties.
+
+        13. Object.isSealed()
+        => used to check if an object is sealed.
+
+        14. Object.defineProperties()
+        => Adds or changes properties
+
+        15. defineProperty()
+        => Adds or changes a property
 
 14.scope:-
     =>JavaScript variables have 3 types of scope:

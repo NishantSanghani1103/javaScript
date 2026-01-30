@@ -23,17 +23,17 @@ fetchData()
 console.log("demo");
 
 
-const apples = { name: 'Apples' };
-const bananas = { name: 'Bananas' };
-const oranges = { name: 'Oranges' };
+String.prototype.giveLydiaPizza = () => {
+  return 'Just give Lydia pizza already!';
+};
+const name = 'Lydia';
+console.log(name.giveLydiaPizza())
 
-const map = new Map()
 
-map.set(apples, 500)
-console.log(map);
 
-for (const [key, value] of map) {
-    console.log(key, value);
-
-}
-console.log(map.get(apples));
+const a = {};
+const b = { key: 'b' };
+const c = { key: 'c' };
+a[b] = 123;
+a[c] = 456;
+console.log(a[b]);

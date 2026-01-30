@@ -1,3 +1,4 @@
+
 // 1. hoisting
 
 // let a = 10
@@ -1611,39 +1612,188 @@ const f = new Map([
 // console.log(d1.getTime());
 
 
+// Object Methods:-
+
+// let person = {
+//     firstName: "John",
+//     lastName: "Doe",
+//     age: 50, eyeColor: "blue"
+// }
+// Object.freeze(person)
+// person.firstName = "Nishant"
+// console.log(person);
+
+// const ary = [2, 45, 8, 62, 3]
+
+// console.log(Object.isFrozen(ary));
+
+// ary.push(5)
+// console.log(ary);
+
+
+// const x = person
+// Object.assign(x, person)
+// const x = Object.create(person)
+// console.log(x);  // it will gives a blanck object {}
+// console.log(x.lastName);
+// x.age = 10;
+// console.log(person);
+
+
+
+
+// const fruits = [
+//     ["apples", 300],
+//     ["pears", 900],
+//     ["bananas", 500]
+// ];
+// const res=Object.fromEntries(fruits)
+// console.log(res);
+// const obj = Object.entries(fruits)
+// console.log(obj);
+// for (const [key, value] of obj) {
+//     console.log(key, value);
+
+// }
+
+// const obj = {
+//     firstName: "Nishant",
+//     lastName: "Sanghani",
+//     get print() {
+//         console.log(this.firstName + this.lastName);
+//     }
+// }
+// obj.print
+
+
+// const obj = {
+//     firstName: "Nishant",
+//     lastName: "Sanghani",
+//     language: "English",
+//     set lan(lan) {
+//         this.language = lan.toUpperCase()
+//     }
+// }
+// obj.lan = "Hindi"
+// console.log(obj);
+
+
+// const obj = {
+//     counter: 0
+// }
+// Object.defineProperty(obj, "add", {
+//     set(value) {
+//         this.counter += value
+//     }
+// })
+// Object.defineProperty(obj, "increment", {
+//     get() {
+//         this.counter++
+//     }
+// })
+// Object.defineProperty(obj, "decrement", {
+//     get() {
+//         this.counter--
+//     }
+// })
+// Object.defineProperty(obj, "reset", {
+//     get() {
+//         this.counter = 0
+//     }
+// })
+// Object.defineProperty(obj, "language", {
+//     value: "English"
+// })
+
+// obj.add = 5
+// console.log(obj);
+// obj.increment
+// console.log(obj);
+// obj.decrement
+// console.log(obj);
+// obj.reset
+// console.log(obj);
+
+// const obj = {
+//     firstName: "Nishant",
+//     lastName: "Sanghani",
+//     language: "English",
+// }
+// Object.preventExtensions(obj)
+// console.log(Object.isExtensible(obj));
+
+// console.log(obj);
+
+// const ary = [2, 5, 8, 9, 2, 0, 68]
+// // Object.freeze(ary)
+// // console.log(Object.isFrozen(ary));
+// Object.preventExtensions(ary)
+// console.log(Object.isExtensible());
+
+// ary.push(10)
+// console.log(ary);
+
+// const obj = {
+//     firstName: "Nishant",
+//     lastName: "Sanghani",
+//     language: "English",
+// }
+
+// Object.seal(obj)
+
+// console.log(obj);
+
+// const ary = [2, 5, 8, 9, 2, 0, 68]
+// Object.seal(ary)
+// ary.unshift(56)
+// console.log(ary);
+
+
+
+// const obj = {
+//     firstName: "Nishant",
+//     lastName: "Sanghani",
+// }
+// Object.defineProperties(obj, {
+//     language: { value: "English" },
+//     age: { value: 22 }
+// })
+// console.log(obj);
+
+// const desc = Object.getOwnPropertyDescriptor(obj, "language")
+// const desc1 = Object.getOwnPropertyDescriptors(obj)
+// const desc2 = Object.getOwnPropertyNames(obj)
+// console.log(desc);
+// console.log(desc1);
+// console.log(desc2);
+
+
+
+const apples = { name: 'Apples' };
+const bananas = { name: 'Bananas' };
+const oranges = { name: 'Oranges' };
+
+const map = new Map()
+
+map.set(apples, 500)
+console.log(map);
+
+
+// for (const [key, value] of map) {
+//     console.log(key, value);
+
+// }
+// console.log(map.get(apples));
 
 
 
 
 
+const person = { name: 'Lydia' };
 
+Object.defineProperty(person, 'age', { value: 21 });
+console.log(Object.keys(person));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(person);
 
 
