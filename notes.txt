@@ -63,6 +63,20 @@ Q2. how to execute function as a String:(1153)
 -   JSON.stringify() → object to string
     JSON.parse() → string to object
 
+- Everything Without a "Value" is False
+
+    0 is false
+
+    "" is false
+
+    undefined is false
+
+    null is false
+
+    NaN is false
+
+    false is false
+
 - promise example (761-808)
 
 -Date Formula:
@@ -175,6 +189,8 @@ Calls the function immediately and passes arguments one by one
     X.replace():-The replace() method does not change the string it is called on.The replace() method returns a new string.The replace() method replaces only the first match
 
     XI.replaceAll():-The replaceAll() method replaces all the match
+
+    XII. repeat():- string.repeat(count) where count is Required The number of copies wanted.
 
 =>for convert String to Array:-
 

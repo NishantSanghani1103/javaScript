@@ -140,10 +140,10 @@
 
 const set = new Set([1, 2, 3, 4, 5])
 const set1 = new Set([5, 6, 7, 8, 9])
-// set.add(6)
-// set.delete(6)
-// console.log(set);
-// console.log(set.has(6));
+    // set.add(6)
+    // set.delete(6)
+    // console.log(set);
+    // console.log(set.has(6));
 
 // for (const elements of set.keys()) {
 //     console.log(elements);
@@ -366,9 +366,6 @@ let p = {
 // console.log(Object.getPrototypeOf(obj));
 
 
-
-
-
 // const person = {
 //     firstName: "John",
 //     sayHello: function () {
@@ -378,8 +375,3 @@ let p = {
 
 // let hello = person.sayHello();
 // console.log(hello());
-
-
-
-
-

@@ -1,4 +1,3 @@
-
 // 1. hoisting
 
 // let a = 10
@@ -523,7 +522,7 @@
 
 // let ary = []
 let arry = new Array()
-console.log(typeof (arry));
+console.log(typeof(arry));
 
 // let fruits = ["mango", "banana", "kiwi"]
 // let txt = " "
@@ -1468,17 +1467,17 @@ console.log(typeof (arry));
 //  OR
 
 const f = new Map([
-    ["apples", 500],
-    ["banana", 1500],
-    ["banana", 1500],
-    ["banana", 1500],
-    ["kiwi", 2500]
-])
-// f.set("apples", 100)
-// f.set("pineapple", 20)
-// f.delete("apples")
-// f.clear()
-// console.log(f.has("banana"));
+        ["apples", 500],
+        ["banana", 1500],
+        ["banana", 1500],
+        ["banana", 1500],
+        ["kiwi", 2500]
+    ])
+    // f.set("apples", 100)
+    // f.set("pineapple", 20)
+    // f.delete("apples")
+    // f.clear()
+    // console.log(f.has("banana"));
 
 // console.log(f);
 // f.forEach((value, key) => console.log(
@@ -1823,8 +1822,9 @@ const obj = {
 
 const dob = new Date()
 console.log(dob.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+console.log(dob.toISOString());
 
-console.log(dob.toISOString().split("T")[0]);
+console.log(dob.toISOString().split("T"));
 
 // console.log(dob.getTime());
 // console.log(Date.parse("January 26 2025")); 
