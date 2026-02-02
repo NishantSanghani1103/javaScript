@@ -1769,14 +1769,15 @@ const f = new Map([
 
 
 
-const apples = { name: 'Apples' };
-const bananas = { name: 'Bananas' };
-const oranges = { name: 'Oranges' };
+// const apples = { name: 'Apples' };
+// const bananas = { name: 'Bananas' };
+// const oranges = { name: 'Oranges' };
 
-const map = new Map()
+// const map = new Map()
 
-map.set(apples, 500)
-console.log(map);
+// map.set(apples, 500)
+// console.log(map);
+
 
 
 // for (const [key, value] of map) {
@@ -1789,11 +1790,57 @@ console.log(map);
 
 
 
-const person = { name: 'Lydia' };
+// const person = { name: 'Lydia' };
 
-Object.defineProperty(person, 'age', { value: 21 });
-console.log(Object.keys(person));
+// Object.defineProperty(person, 'age', { value: 21 });
+// console.log(Object.keys(person));
 
-console.log(person);
+// console.log(person);
 
 
+
+
+
+
+
+const obj = {
+    name: "nishant",
+    age: 22,
+    details: {
+        address: {
+            city: "Rajkot"
+        }
+    }
+}
+
+// const res = structuredClone(obj)
+// res.details.address.city = "Amreli"
+// console.log(obj);
+
+
+// const d = Date.UTC(2026, 1, 1)
+// console.log(d);
+
+const dob = new Date()
+console.log(dob.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+
+console.log(dob.toISOString().split("T")[0]);
+
+// console.log(dob.getTime());
+// console.log(Date.parse("January 26 2025")); 
+
+
+
+
+
+// console.log(d.getFullYear() - dob.getFullYear());
+// console.log(dob.getFullYear());
+
+
+
+
+
+
+function abc() {
+    return
+}

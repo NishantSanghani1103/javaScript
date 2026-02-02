@@ -66,6 +66,7 @@ Q2. how to execute function as a String:(1153)
 - promise example (761-808)
 
 -Date Formula:
+=> 1000 Ms=1 Minute
 const minute = 1000 * 60;
 const hour = minute * 60;
 const day = hour * 24;
@@ -85,6 +86,32 @@ let years = Math.round(Date.now() / year)
 
 => A falsy value is a value that becomes false when JavaScript tries to convert it to a boolean.
 
+=>  Primitives are copied by value
+    Objects are copied by reference
+
+=> If I change an object then it will affect the original object.
+=> If I change a nested object property, it will affect the original object.
+
+=> Primitive Data Type :-
+    1. String
+    2. Number   
+    3. Boolean
+    4. undefined
+    5. null   
+    6. Symbol
+    7. bigint 
+
+=> Object Data Type :-
+    1. Object
+    2. Array
+    3. Function
+    4. Date
+    5. RegExp
+    6. Map
+    7. WeakMap
+    8. Set
+    9. WeakSet
+    10.Error
 
 1.undefined:- it is a like plceholder which is kept inside the varible.
 2.laxical environemt:

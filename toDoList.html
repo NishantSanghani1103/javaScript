@@ -19,34 +19,46 @@
 </body>
 <script>
     const form = document.querySelector("form")
+    let oldValue = JSON.parse(localStorage.getItem("TODO")) ?? []
     const ul = document.querySelector("ul")
-    let task = JSON.parse(localStorage.getItem("TODO")) ?? []
     form.addEventListener("submit", (event) => {
         event.preventDefault()
-        if (event.target.task.value == "") {
-            alert("please enter the task")
+        let taskData = event.target.task.value
+        if (!taskData.trim()) {
+            alert("Please Fill The Task...!!")
         }
         else {
-            task.push(event.target.task.value)
-            console.log(task);
-            localStorage.setItem("TODO", JSON.stringify(task))
-            // console.log(task);
-            showList()
-            event.target.reset()
+            if (!oldValue.includes(taskData.trim())) {
+                oldValue.push(taskData.trim())
+                console.log(oldValue);
+                localStorage.setItem("TODO", JSON.stringify(oldValue))
+                showList()
+                event.target.reset()
+            }
+            else {
+                alert("Task Already Added...!!")
+            }
         }
     })
+
     const showList = () => {
         let items = ""
-        task.forEach((value, index) => {
-            items += `<li onClick="deleteList(${index})">${value} &times;</li>`
-        })
+        oldValue.length == 0
+            ?
+            items += ` <li>Data Not Found</li>`
+            :
+            oldValue.forEach((value, index) => {
+                items += ` <li onClick="deleteList(${index})" style="cursor:pointer"> ${value} &times;</li>`
+            })
         ul.innerHTML = items
     }
     showList()
     const deleteList = (index) => {
-        task.splice(index, 1)
-        localStorage.setItem("TODO", JSON.stringify(task))
-        showList()
+        if (confirm("Are You Want To Delete Task ? ")) {
+            oldValue.splice(index, 1)
+            localStorage.setItem("TODO", JSON.stringify(oldValue))
+            showList()
+        }
     }
 </script>
 

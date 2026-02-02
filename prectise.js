@@ -220,6 +220,165 @@ let p = {
 // console.log(a[b]);
 
 
+// const array = {
+//     fName: "Nishant",
+//     lName: "Sanghani",
+//     age: 22,
+//     get fullName() {
+//         console.log(this.fName + this.lName);
+//     },
+//     set lan(value) {
+//         this.language = value
+//     }
+// }
+// array.fullName
+// array.lan = "English"
+// console.log(array);
+
+
+// let obj = {
+//     name: "Nishant",
+//     age: 22,
+//     city: "Amreli"
+// }
+// let wm = new WeakMap()
+// wm.set(obj, "secret")
+// console.log(wm);
+// const val = wm.get(obj)
+// console.log(val);
+
+// console.log(wm.has(obj));
+// obj = null
+// console.log(wm.has(obj));
+
+// const person = {
+//     fName: "Nishant",
+//     lName: "Sanghani",
+//     details: {
+//         address: {
+//             city: "Amreli"
+//         }
+//     }
+// }
+
+// const person2 = {}
+
+// Object.assign(person2, person)
+// console.log(person2);
+// person2.lName = "Dhari"
+// console.log(person);
+
+// console.log(person);
+
+
+// const obj = {
+//     name: "Nishant",
+//     address: {
+//         city: "Amreli"
+//     }
+// }
+// const obj2 = {}
+// Object.assign(obj2, obj)
+
+// obj2.address.city = "Ahmedabad"
+// console.log(obj.address.city)
+// console.log(obj);
+
+
+
+// let obj = {
+//     name: "Nishant",
+//     age: 22,
+//     city: "Amreli",
+//     get details() {
+//         console.log(this.name + " " + this.age + " " + this.city);
+//     },
+//     set cty(val) {
+//         this.city = val
+//     }
+
+// }
+// obj.details
+// obj.cty = "Dhari"
+// console.log(obj);
+
+
+// const d = new Date()
+// console.log(d);
+// console.log(d.toString());
+// const d1 = new Date("October 13, 2014 11:13:00")
+// console.log(d1);
+// const d2 = new Date("2022-03-25");
+// console.log(d2);
+// const d3 = new Date(2018, 11, 24, 10, 33, 30, 0);
+// console.log();
+// console.log(d.getDate());
+// console.log(d.getUTCDate());
+
+// console.log(d.getDay());
+// console.log(d.getUTCDay());
+
+// console.log(d.getHours());
+// console.log(d.getUTCHours());
+
+// console.log(d.getFullYear());
+// console.log(d.getUTCFullYear());
+
+// console.log(d.getMilliseconds());
+// console.log(d.getUTCMilliseconds());
+
+// console.log(d.getMinutes());
+// console.log(d.getUTCMinutes());
+
+// console.log(d.getMonth());
+// console.log(d.getUTCMonth());
+
+// console.log(d.getTimezoneOffset());
+
+// console.log(d);
+
+
+// console.log(d.setDate(25));
+// console.log(d.setFullYear(2027));
+// console.log(d.setHours(22));
+// console.log(d.setMinutes(30));
+// console.log(d.setSeconds(30));
+// console.log(d.setMonth(2));
+// console.log(d.setTime());
+
+// console.log(d.toString());
+// console.log(d.toUTCString());
+
+// const d2 = new Date()
+// console.log(d2.toString());
+
+// console.log(d2.getMilliseconds());
+// console.log(d2.setTime);
+// console.log(d2);
+
+
+// Object.defineProperty(obj, "city", {
+//     value: "Dhari"
+// })
+
+// console.log(obj);
+
+// console.log(Object.getPrototypeOf(obj));
+
+
+
+
+
+// const person = {
+//     firstName: "John",
+//     sayHello: function () {
+//         return () => this.firstName;
+//     }
+// };
+
+// let hello = person.sayHello();
+// console.log(hello());
+
 
 
 
