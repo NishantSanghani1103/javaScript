@@ -94,7 +94,6 @@
 // }
 // var b = function () {
 //     console.log("World");
-
 // }
 
 // function abc() {
@@ -191,7 +190,6 @@
 // Promise.all([p1, p2, p3])
 //     .then((res) => {
 //         console.log(res);
-
 //     })
 
 
@@ -225,7 +223,7 @@
 
 // const p1 = new Promise((resolve, reject) => {
 //     setTimeout(() => {
-//         resolve("p1 Resolved")
+//         reject("p1 Resolved")
 //     }, 2000)
 // })
 
@@ -242,7 +240,7 @@
 
 // Promise.any([p1, p2, p3])
 //     .then((res) => {
-//         console.log(res);S
+//         console.log(res);
 //     })
 
 
@@ -250,7 +248,7 @@
 
 // const p1 = new Promise((resolve, reject) => {
 //     setTimeout(() => {
-//         reject("p1 Rejected")
+//         resolve("p1 Resolved")
 //     }, 2000)
 // })
 
@@ -268,7 +266,6 @@
 // Promise.race([p1, p2, p3])
 //     .then((res) => {
 //         console.log(res);
-
 //     })
 
 
@@ -521,8 +518,8 @@
 // console.log(ml);
 
 // let ary = []
-let arry = new Array()
-console.log(typeof(arry));
+// let arry = new Array()
+// console.log(typeof(arry));
 
 // let fruits = ["mango", "banana", "kiwi"]
 // let txt = " "
@@ -557,9 +554,9 @@ console.log(typeof(arry));
 // flate
 
 // const ary = [[1, 2], [3, 4, [5, 6, 7, 8]], [5, 6]]
-// const ary = [[1, 2], [3, 4], [5, 6]]
+// // const ary = [[1, 2], [3, 4], [5, 6]]
 // const singleAry = ary.flat(Infinity)
-// const singleAry=ary.flat()
+// // const singleAry=ary.flat()
 // console.log(singleAry);
 
 // flateMap
@@ -637,10 +634,10 @@ console.log(typeof(arry));
 
 // keys()
 
-// const fruits = [5,7,9,22,365,8];
-// const keys = fruits.keys();
-// for(const v of keys){
-//     console.log(v);
+// const fruits = [5, 7, 9, 22, 365, 8];
+// const keys = fruits.entries();
+// for (const [k,v] of keys) {
+//     console.log(k,v);
 // }
 
 
@@ -1214,8 +1211,14 @@ console.log(typeof(arry));
 //         let data=await res.json()
 
 //         console.log(data)
-//     }`
-// eval(ans + "; fatchData()")
+//     }`;
+
+
+// (async () => {
+//    await eval(ans + "; fatchData()");
+//     console.log("Done");
+
+// })()
 
 
 // const arr = [{ x: 1 }, { x: 2 }];
@@ -1467,17 +1470,17 @@ console.log(typeof(arry));
 //  OR
 
 const f = new Map([
-        ["apples", 500],
-        ["banana", 1500],
-        ["banana", 1500],
-        ["banana", 1500],
-        ["kiwi", 2500]
-    ])
-    // f.set("apples", 100)
-    // f.set("pineapple", 20)
-    // f.delete("apples")
-    // f.clear()
-    // console.log(f.has("banana"));
+    ["apples", 500],
+    ["banana", 1500],
+    ["banana", 1500],
+    ["banana", 1500],
+    ["kiwi", 2500]
+])
+// f.set("apples", 100)
+// f.set("pineapple", 20)
+// f.delete("apples")
+// f.clear()
+// console.log(f.has("banana"));
 
 // console.log(f);
 // f.forEach((value, key) => console.log(
@@ -1802,15 +1805,15 @@ const f = new Map([
 
 
 
-const obj = {
-    name: "nishant",
-    age: 22,
-    details: {
-        address: {
-            city: "Rajkot"
-        }
-    }
-}
+// const obj = {
+//     name: "nishant",
+//     age: 22,
+//     details: {
+//         address: {
+//             city: "Rajkot"
+//         }
+//     }
+// }
 
 // const res = structuredClone(obj)
 // res.details.address.city = "Amreli"
@@ -1820,14 +1823,14 @@ const obj = {
 // const d = Date.UTC(2026, 1, 1)
 // console.log(d);
 
-const dob = new Date()
-console.log(dob.toLocaleString('en-US', { timeZone: 'America/New_York' }));
-console.log(dob.toISOString());
+// const dob = new Date()
+// console.log(dob.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+// console.log(dob.toISOString());
 
-console.log(dob.toISOString().split("T"));
+// console.log(dob.toISOString().split("T")[0]);
 
 // console.log(dob.getTime());
-// console.log(Date.parse("January 26 2025")); 
+// console.log(Date.parse("January 26 2025"));
 
 
 
@@ -1841,6 +1844,3 @@ console.log(dob.toISOString().split("T"));
 
 
 
-function abc() {
-    return
-}

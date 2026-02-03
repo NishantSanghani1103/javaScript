@@ -176,7 +176,7 @@ Calls the function immediately and passes arguments one by one
 
     VI.substr():-it is similar to slice().
     The difference is:
-    => the second parameter specifies the length of the extracted part.
+    => the second parameter specifies the length of the  part.
     => can't support nagative index.
     => support nagative index
 

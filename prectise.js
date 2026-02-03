@@ -138,8 +138,8 @@
 // console.log(map.get(apples));
 
 
-const set = new Set([1, 2, 3, 4, 5])
-const set1 = new Set([5, 6, 7, 8, 9])
+// const set = new Set([1, 2, 3, 4, 5])
+// const set1 = new Set([5, 6, 7, 8, 9])
     // set.add(6)
     // set.delete(6)
     // console.log(set);
@@ -375,3 +375,4 @@ let p = {
 
 // let hello = person.sayHello();
 // console.log(hello());
+
