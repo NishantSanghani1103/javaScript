@@ -1306,21 +1306,21 @@
 // SHALLOW COPY / DEEP COPY
 
 
-// const original = {
-//     name: 'Alice',
-//     details: {
-//         age: {
-//             city: {
-//                 state: "gujarat"
-//             }
-//         }    
-//     }
-// };
-// const shallowCopy={...original}
-// const shallowCopy = Object.assign({}, original)
-// shallowCopy.details.age.city.state = "Mp"
-// console.log(shallowCopy);
-// console.log(original);
+const original = {
+    name: 'Alice',
+    details: {
+        age: {
+            city: {
+                state: "gujarat"
+            }
+        }
+    }
+};
+const shallowCopy = { ...original }
+shallowCopy.details.age.city.state = "Mp"
+shallowCopy.name = "Nishant"
+console.log(shallowCopy);
+console.log(original);
 
 // const deepCopy = structuredClone(original)
 // OR
@@ -1840,7 +1840,68 @@ const f = new Map([
 // console.log(dob.getFullYear());
 
 
+// const obj = {};
+// console.log(obj);
+// console.log(obj);
+// console.log(obj["1"]);
 
 
 
 
+// const obj = {
+//     name: "JS",
+//     getName() {
+//         return this.name;
+//     }
+// };
+
+// const fn = obj.getName;
+// console.log(fn());
+
+// const obj = { a: 1 };
+// const copy = Object.assign({}, obj);
+// console.log(copy);
+
+// copy.a = 5;
+// console.log(copy);
+
+// console.log(obj.a);
+
+// const obj = {
+//     a: 1,
+//     getA() {
+//         return this.a;
+//     }
+// };
+
+// setTimeout(obj.getA, 0);
+
+
+// const parent = { a: 1 };
+// const child = Object.create(parent);
+// child.a = 2;
+// delete child.a;
+// console.log(child.a);
+
+
+// const obj = {
+//     a: 1,
+//     getA() {
+//         return this.a;
+//     }
+// };
+
+// const fn = obj.getA;
+// console.log(fn.call(null));
+
+
+
+// const obj = {
+//     a: 1
+// };
+
+// (function (o) {
+//     o = { a: 2 };
+// })(obj);
+
+// console.log(obj.a);

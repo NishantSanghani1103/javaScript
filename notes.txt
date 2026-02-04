@@ -331,6 +331,9 @@ Calls the function immediately and passes arguments one by one
     =>The function can be anonymous (without a name).
 
 13. Object:-
+
+    Reference copy → changes are shared
+    Value copy → changes are NOT shared
     
     =>(660)
     I. Object.values():-creates an array from the property values.(687)
