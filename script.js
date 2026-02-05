@@ -1306,21 +1306,21 @@
 // SHALLOW COPY / DEEP COPY
 
 
-const original = {
-    name: 'Alice',
-    details: {
-        age: {
-            city: {
-                state: "gujarat"
-            }
-        }
-    }
-};
-const shallowCopy = { ...original }
-shallowCopy.details.age.city.state = "Mp"
-shallowCopy.name = "Nishant"
-console.log(shallowCopy);
-console.log(original);
+// const original = {
+//     name: 'Alice',
+//     details: {
+//         age: {
+//             city: {
+//                 state: "gujarat"
+//             }
+//         }
+//     }
+// };
+// const shallowCopy = { ...original }
+// shallowCopy.details.age.city.state = "Mp"
+// shallowCopy.name = "Nishant"
+// console.log(shallowCopy);
+// console.log(original);
 
 // const deepCopy = structuredClone(original)
 // OR
@@ -1905,3 +1905,36 @@ const f = new Map([
 // })(obj);
 
 // console.log(obj.a);
+
+// function Person(name) {
+//     this.name = name;
+//     return { name: "Override" };
+// }
+// const p1 = new Person("Alex");
+// console.log(p1.name);
+
+// class Test {
+//     a = 10;
+//     show = () => {
+//         console.log(this.a);
+//     };
+// }
+// const t = new Test();
+// const fn = t.show;
+// fn();
+
+
+// var a = 5;
+// const obj = {
+//     a: 10,
+//     test() {
+//         console.log(this.a);
+//         (() => {
+//             console.log(this.a);
+//         })();
+//     }
+// };
+// obj.test();
+
+
+

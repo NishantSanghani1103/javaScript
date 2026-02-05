@@ -631,7 +631,7 @@
 // }
 
 // foo();
-// console.log(x); 
+// console.log(x);
 
 
 
@@ -683,6 +683,8 @@
 // };
 // let cloneUserDetails = { ...userDetails };
 // userDetails.age = 22;
+// console.log(userDetails);
+
 // userDetails.address.city = "Banglore";
 // console.log(cloneUserDetails.age);
 // console.log(cloneUserDetails.address.city);
@@ -696,7 +698,15 @@
 //     obj = { name: "New Object" };
 // }
 // reassign(person);
-// console.log(person.name); 
+// console.log(person.name);
+
+
+// const value = {
+//     number: 10
+// }
+// const x = { ...value }
+// x.number = x.number * 2
+// console.log(x.number);
 
 // let a = {
 //     x: 1,
@@ -706,7 +716,7 @@
 //     }
 // };
 // let b = { ...a };
-// b.x = 101;
+// b.x = 10
 // b.y.alpha = 1001;
 // console.log(a.x);
 // console.log(a.y.alpha);
@@ -727,7 +737,6 @@
 // const copy = Object.assign({}, obj);
 // copy.a = 10;
 // copy.b.c = 20;
-
 // console.log(obj.a);
 // console.log(obj.b.c);
 
@@ -836,11 +845,12 @@
 
 // console.log(copy2.b.c);
 
-const ary = [
-    { name: "Nishant", age: 22, branch: "MCA" },
-    { name: "Sachin", age: 40, branch: "MBA" },
-    { name: "Virat", age: 30, branch: "BBA" }
-]
+// const ary = [
+//     { name: "Nishant", age: 22, branch: "MCA" },
+//     { name: "Sachin", age: 40, branch: "MBA" },
+//     { name: "Virat", age: 30, branch: "BBA" }
+// ]
+
 // const res = ary.map((value) => value.name.toUpperCase())
 // console.log(res);
 
@@ -848,12 +858,7 @@ const ary = [
 // console.log(res);
 
 
-let c = {
-    greeting: "hey"
-}
-let d = c
-d.greeting = "hello"
-console.log(c.greeting);
+//
 
 // let obj1 = {
 //     val: 1
@@ -924,15 +929,127 @@ console.log(c.greeting);
 
 // console.log(obj.items[0].x);
 
-const obj = {
-    n: "nishant",
-    a: {
-        b: {
-            c: 1
-        }
-    }
-};
+// const obj = {
+//     n: "nishant",
+//     a: {
+//         b: {
+//             c: 1
+//         }
+//     }
+// };
 
-const copy = { ...obj };
-obj.n = 100;
-console.log(copy.n);
+// const copy = obj;
+// obj.n = 100;
+// console.log(copy.n);
+
+// let person = { name: "Nishant" }
+// const member = [person]
+// // console.log(member);
+// person.name = "sanghani"
+// console.log(member);
+
+
+// const value = {
+//     number: 10
+// }
+// const x = { ...value }
+// x.number = x.number * 2
+// console.log(x.number);
+
+
+// console.log(multiply(5, 10));
+// var multiply = function (a, b) { return a * b };
+
+
+// const obj = {
+//     a: 10,
+//     test() {
+//         setTimeout(function () {
+//             console.log(this.a);
+//         }, 100);
+//     }
+// };
+// obj.test();
+
+// const obj1 = {
+//     a: 10,
+//     test() {
+//         console.log(this.a);
+//     }
+// };
+
+// const obj2 = { a: 20 };
+// obj2.test = obj1.test;
+// obj2.test();
+
+
+
+// var a = 5;
+// const obj = {
+//     a: 10,
+//     test() {
+//         console.log(this.a);
+//         (() => {
+//             console.log(this.a);
+//         })();
+//     }
+// };
+// obj.test();
+
+
+
+// const obj = {
+//     a: 10,
+//     test() {
+//         return function () {
+//             console.log(this.a);
+//         };
+//     }
+// };
+// obj.test()();
+
+// const obj = {
+//     a: 10,
+//     test() {
+//         return () => {
+//             console.log(this.a);
+//         };
+//     }
+// };
+// obj.test()();
+
+
+// const person = {
+//     firstName: "John",
+//     sayHello: function () {
+//         return () => this.firstName;
+//     }
+// };
+
+// let hello = person.sayHello();
+// hello();
+
+
+
+
+
+
+// (function () {
+//     f = second = 10
+// })()
+// console.log(second);
+// console.log(f);
+
+console.log("a");
+async function abc() {
+    console.log("b");
+    let res = await Promise.resolve("c")
+    console.log(res);
+
+}
+(async () => {
+    await abc()
+    console.log("d");
+})()
+
+
