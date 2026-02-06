@@ -604,6 +604,75 @@ III. Long Date: "Mar 25 2015" or "25 Mar 2015"
 
 - setTime()	            Set the time (milliseconds since January 1, 1970)
 
+22. RegExp:-
+
+- RegExp Stand For Regular Expressions.
+
+- RegExp are be used for:-Text searching,Text replacing,Text validation.
+
+=> RexExp Alternation (OR) :- (1952)
+
+- In a regular expression an alternation is denoted with a vertical line character |.
+
+- An alternation matches any of the alternatives separated with |.
+
+=> JavaScript Regex Flags :-
+
+- Regular expression flags are parameters that can modify how a pattern is used.
+     
+     I. /g : 
+        it Performs a global match (find all) in array.
+
+    II. /i :
+        The /i flag makes a match case-insensitive: /abc/i matches "abc", "AbC", "ABC".
+
+    III. /s :
+         The /s flag allows the . (dot) metacharacter to match newline characters (\n) in addition to any other character.
+         
+
+- Metacharacters are characters with a special meaning.
+
+- They can be used to match digits, words, spaces, and more.
+
+    I. \d : (1960)
+        The \d metacharacter return first occurrence digit.
+
+
+    II. \w : 
+        The \w metacharacter matches word characters.
+        A word character is a character a-z, A-Z, 0-9, including _ (underscore).
+
+    III. ^ : 
+        Matches the beginning of a string.
+
+    IV. $ :
+        Matches the end of a string.
+
+    V. \b : 
+        Matches the beginning or end of a word.
+
+=> JavaScript RegExp Character Classes : 
+- Character Classes are characters enclosed in square brackets [].
+
+- A character class matches any character from a set within brackets
+
+    I. [a]	
+        Matches the character between the brackets.
+
+    II. [abc]	
+        Matches all characters between the brackets
+        
+    III.[a-z]	
+        Matches all characters in the range from a to z
+
+    IV. [0-9]	
+        Matches all characters in the range from 0 to 9
+
+
+
+    
+
+
 
 
     

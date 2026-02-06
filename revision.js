@@ -1040,16 +1040,47 @@
 // console.log(second);
 // console.log(f);
 
-console.log("a");
-async function abc() {
-    console.log("b");
-    let res = await Promise.resolve("c")
-    console.log(res);
+// console.log("a");
+// async function abc() {
+//     console.log("b");
+//     let res = await Promise.resolve("c")
+//     console.log(res);
 
-}
-(async () => {
-    await abc()
-    console.log("d");
-})()
+// }
+// (async () => {
+//     await abc()
+//     console.log("d");
+// })()
+
+
+// function abc(name, email, login) {
+//     this.name = name
+//     this.email = email
+//     this.login = login
+// }
+// const res = new abc("Nishant", "nishantsanghani09@gmail.com", true)
+// console.log(res);
+
+// class Car {
+//     constructor(brand, model) {
+//         this.brand = brand
+//         this.model = model
+//     }
+//     get brand() {
+//         return this._brand
+//     }
+//     set brand(val) {
+//         this._brand = val
+//     }
+// }
+// const obj = new Car("Toyota", "Fortuner")
+// console.log(obj.brand);\
+
+
+
+
+
+
+
 
 

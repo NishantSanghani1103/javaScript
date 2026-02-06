@@ -1937,4 +1937,78 @@ const f = new Map([
 // obj.test();
 
 
+// let text = "Visit W3Schools";
+// let n = text.search(/w3schools/i);
+// console.log(n);
+
+// let text = "Visit W3Schools";
+// let n = text.match(/W3Schools/i);
+// console.log(n);
+
+// let text = "Visit Microsoft!";
+// let result = text.replace(/microsoft/i, "w3Schools")
+// console.log(result);
+
+// let text = "Black, white, Green,Red,  Blue, yellow.";
+// let n=text.match(/red|green|blue|white/i)
+// console.log(n);
+
+// let text = "Nishant"
+// let res = text.match(/n/gi)
+// console.log(res);
+
+// let text = "Nishant ,1062#ee"
+// let res = text.match(/\d/g)
+// console.log(res);
+
+
+// let text = "Give 100%!";
+// let res = text.match(/\w/g)
+// console.log(res);
+
+// let text = "1, 100 or 1000?";
+// let res = text.match(/10?/g)
+// console.log(res);
+
+// let text = "W3Schools Tutorial";
+// let res = text.match(/^w3schools/i)
+// console.log(res);
+
+
+// let txt = "More than 89630 times"
+// let res=txt.match(/[0-9]/g)
+// console.log(res);
+
+
+// let text = "Line$Line.";
+// let res=text.match(/line./sgi)
+// console.log(res);
+
+
+
+// let text = "abc def ghi";
+// let res = text.match(/\w+/gy)
+// console.log(res);
+
+// let txt = "abc def ghi"
+// let ptn = /abc (?=def)/
+// let res = ptn.test(txt)
+// console.log(res);
+
+// let txt = "abc def ghi"
+// let ptn = /abc (?!def)/
+// let res = ptn.test(txt)
+// console.log(res);
+
+// let txt = "abc def ghi"
+// let ptn = /(?<=abc) def/  // looksbackword / behind
+// let res = ptn.test(txt)
+// console.log(res);
+
+// let txt = "abc def ghi"
+// let ptn = /(?<!abc) def/  // looksbackword not / behind not
+// let res = ptn.test(txt)
+// console.log(res);
+
+
 
