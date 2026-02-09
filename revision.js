@@ -680,7 +680,7 @@
 //         country: "India",
 //     },
 // };
-// let cloneUserDetails = { ...userDetails };
+// let cloneUserDetails = {...userDetails };
 // userDetails.age = 22;
 // console.log(userDetails);
 
@@ -746,7 +746,7 @@
 //     }
 // };
 
-// const copy = { ...obj };
+// const copy = {...obj };
 // copy.a.b.c = 100;
 
 // console.log(obj.a.b.c);
@@ -756,7 +756,7 @@
 //     arr: [1, 2, 3]
 // };
 
-// const copy = { ...obj };
+// const copy = {...obj };
 // copy.arr.push(4);
 // console.log(obj.arr.length);
 
@@ -785,18 +785,28 @@
 //         c: 2
 //     }
 // };
+<<<<<<< Updated upstream
 // const copy = { ...obj };
+=======
+
+// const copy = {...obj };
+>>>>>>> Stashed changes
 // copy.b = { c: 100 };
 // console.log(obj.b.c);
 
 
 // const obj = {
-//   items: [
-//     { x: 1 },
-//     { x: 2 }
-//   ]
+//     items: [
+//         { x: 1 },
+//         { x: 2 }
+//     ]
 // };
+<<<<<<< Updated upstream
 // const copy = { ...obj };
+=======
+
+// const copy = {...obj };
+>>>>>>> Stashed changes
 // copy.items[0].x = 100;
 // console.log(obj.items[0].x);
 
@@ -931,7 +941,7 @@
 // const value = {
 //     number: 10
 // }
-// const x = { ...value }
+// const x = {...value }
 // x.number = x.number * 2
 // console.log(x.number);
 
@@ -943,12 +953,13 @@
 // const obj = {
 //     a: 10,
 //     test() {
-//         setTimeout(function () {
+//         setTimeout(function() {
 //             console.log(this.a);
 //         }, 100);
 //     }
 // };
 // obj.test();
+
 
 // const obj1 = {
 //     a: 10,
@@ -980,7 +991,7 @@
 // const obj = {
 //     a: 10,
 //     test() {
-//         return function () {
+//         return function() {
 //             console.log(this.a);
 //         };
 //     }
@@ -1000,7 +1011,7 @@
 
 // const person = {
 //     firstName: "John",
-//     sayHello: function () {
+//     sayHello: function() {
 //         return () => this.firstName;
 //     }
 // };
@@ -1049,6 +1060,7 @@
 //     }
 // }
 // const obj = new Car("Toyota", "Fortuner")
+<<<<<<< Updated upstream
 // console.log(obj.brand);
 
 
@@ -1060,3 +1072,6 @@
 
 
 
+=======
+// console.log(obj.brand);
+>>>>>>> Stashed changes
