@@ -205,13 +205,44 @@
 
 // }
 
-const users = [
-    { id: 1, name: "Amit" },
-    { id: 2, name: "Neha" },
-    { id: 1, name: "Amit" },   // duplicate
-    { id: 3, name: "Rahul" },
-    { id: 2, name: "Neha" }    // duplicate
-];
+// const users = [
+//     { id: 1, name: "Amit" },
+//     { id: 2, name: "Neha" },
+//     { id: 1, name: "Amit" }, // duplicate
+//     { id: 3, name: "Rahul" },
+//     { id: 2, name: "Neha" } // duplicate
+// ];
+
+
+// const res = users.filter((value, index, arr) => {
+//     console.log(index);
+//     return index == arr.findIndex((val) => val.id == value.id)
+
+// })
+// console.log(res);
+
+// const set = new Set()
+// const newUser = users.filter((value, index) => {
+//     if (set.has(value.id)) {
+//         return false
+//     }
+//     set.add(value.id)
+//     return true
+
+// })
+// console.log(newUser);
+
+
+// const map = new Map()
+
+// map.set(users)
+// console.log(map);
+// const res = users
+
+
+
+
+// const map = new Map()
 // const s = new Set()
 // console.log(s);
 // const newSet = users.filter((value, index) => {
@@ -224,7 +255,7 @@ const users = [
 // })
 // console.log(newSet);
 
-const map = new Map()
+
 // const newMap = users.filter((value, index) => {
 //     if (map.has(value.id)) {
 //         return false
@@ -234,27 +265,62 @@ const map = new Map()
 // })
 // console.log(newMap);
 
-for (const [key, val] of map.entries()) {
-        
-}
+// for (const [key, val] of map.entries()) {
 
-const newMap = users.filter((value, index) => {
-    if (map.has(value.id)) {
-        return false
-    }
-    map.set(value.id)
-    return true
-})
-console.log(newMap);
+// }
+
+// const newMap = users.filter((value, index) => {
+//     if (map.has(value.id)) {
+//         return false
+//     }
+//     map.set(value.id)
+//     return true
+// })
+// console.log(newMap);
 
 
 // users.map((value, index) => {
 //     if (value.id == )
 // })
 
+// const users = [
+//     { id: 1, name: "Amit", active: true },
+//     { id: 2, name: "Neha", active: false },
+//     { id: 3, name: "Rahul", active: true }
+// ];
 
+// const activeUser = users.filter((value, index) => {
+//     return value.active == true
+// })
+// console.log(activeUser);
 
+const logs = [{
+        userId: 1,
+        name: "Amit",
+        loginTime: "09:00",
+        activities: ["login", "view"]
+    },
+    {
+        userId: 2,
+        name: "Neha",
+        loginTime: "09:10",
+        activities: ["login"]
+    },
+    {
+        userId: 1,
+        name: "Amit",
+        loginTime: "08:50",
+        activities: ["login", "purchase"]
+    },
+    {
+        userId: 2,
+        name: "Neha",
+        loginTime: "09:30",
+        activities: ["view"]
+    }
+];
 
-
-
-
+const newLogs = logs.filter((value, index, array) => {
+    return index == array.findIndex((val) => val.userId == value.userId)
+}).map((value, index, array) => array.sort((a, b) => a.loginTime - b.loginTime))
+console.log(newLogs);
