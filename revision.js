@@ -289,10 +289,10 @@
 
 // const obj = { a: 1 };
 // const copy = Object.assign({}, obj);
-// console.log(copy);
+// // console.log(copy);
 
 // copy.a = 5;
-// console.log(copy);
+// // console.log(copy);
 
 // console.log(obj.a);
 
@@ -312,7 +312,6 @@
 
 // const obj = { a: 1 };
 // const keys = Object.keys(obj);
-
 // obj.b = 2;
 // console.log(keys.length);
 
@@ -724,7 +723,6 @@
 // let x = ["a", "b", "c"];
 // let y = ["a", "b", "c"];
 // let z = y;
-
 // console.log(x == y);
 // console.log(z == y);
 // console.log(z == x);
@@ -760,17 +758,14 @@
 
 // const copy = { ...obj };
 // copy.arr.push(4);
-
 // console.log(obj.arr.length);
 
 // const obj = {
 //     a: 1,
 //     b: { c: 2 }
 // };
-
 // const copy = JSON.parse(JSON.stringify(obj));
 // copy.b.c = 10;
-
 // console.log(obj.b.c);
 
 // const obj = {
@@ -779,10 +774,8 @@
 //         c: { d: 2 }
 //     }
 // };
-
 // const copy = Object.assign({}, obj);
 // copy.a = 99;
-
 // console.log(obj.a);
 
 
@@ -792,10 +785,8 @@
 //         c: 2
 //     }
 // };
-
 // const copy = { ...obj };
 // copy.b = { c: 100 };
-
 // console.log(obj.b.c);
 
 
@@ -805,20 +796,16 @@
 //     { x: 2 }
 //   ]
 // };
-
 // const copy = { ...obj };
 // copy.items[0].x = 100;
-
 // console.log(obj.items[0].x);
 
 // const obj = {
 //     a: 1,
 //     b: { c: 2 }
 // };
-
 // Object.freeze(obj);
 // obj.b.c = 50;
-
 // console.log(obj.b.c);
 
 // const obj = {
@@ -826,23 +813,18 @@
 //     b: 1
 //   }
 // };
-
 // Object.freeze(obj);
 // Object.freeze(obj.a);
 // obj.a.b = 100;
-
 // console.log(obj.a.b);
 
 // const obj = {
 //     a: 1,
 //     b: { c: 2 }
 // };
-
 // const copy1 = { ...obj };
 // const copy2 = { ...obj };
-
 // copy1.b.c = 999;
-
 // console.log(copy2.b.c);
 
 // const ary = [
@@ -923,10 +905,8 @@
 //         { x: 2 }
 //     ]
 // };
-
 // const copy = { ...obj };
 // copy.items[0].x = 100;
-
 // console.log(obj.items[0].x);
 
 // const obj = {
@@ -937,7 +917,6 @@
 //         }
 //     }
 // };
-
 // const copy = obj;
 // obj.n = 100;
 // console.log(copy.n);
@@ -1030,10 +1009,6 @@
 // hello();
 
 
-
-
-
-
 // (function () {
 //     f = second = 10
 // })()
@@ -1074,7 +1049,8 @@
 //     }
 // }
 // const obj = new Car("Toyota", "Fortuner")
-// console.log(obj.brand);\
+// console.log(obj.brand);
+
 
 
 

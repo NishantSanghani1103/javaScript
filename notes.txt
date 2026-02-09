@@ -237,6 +237,13 @@ Calls the function immediately and passes arguments one by one
     VIII.concat():-The concat() method creates a new array by merging (concatenating) existing arrays. (476)
     =>The concat() method does not change the existing arrays. It always returns a new array. (476)
 
+    IX.copyWithin():-used to copy value in array.
+    => 3 parameter can be passed.
+    -   target  Start replacing at index
+    -   start   Copy from index
+    -   end     Stop before index 3   
+
+
 =>Flattening an Array:-Flattening is useful when you want to convert a multi-dimensional array into a one-dimensional array.
 
     I.flate():-it is used to create new array single dimensional array from multi dimensional array.and remove nesting of array (493)
@@ -306,6 +313,10 @@ Calls the function immediately and passes arguments one by one
     VII.keys():-get an iterator of array indexes (565)
 
     VIII.entries():-iterate over index + value
+
+=> Array Reference 
+
+
 
 10.datatypes:-
     =>A JavaScript variable can hold 8 types of data

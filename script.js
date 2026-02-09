@@ -2012,3 +2012,15 @@ const f = new Map([
 
 
 
+// const d = new Date("January 25,2025")
+// console.log(d);
+// const d1 = Date.now()
+// const d3 = Date.parse("2026-02-08")
+// // console.log(d3);
+
+// console.log(Math.floor(Math.floor(Math.floor((d1 - d3) / 1000) / 60) / 60));
+
+
+
+
+
