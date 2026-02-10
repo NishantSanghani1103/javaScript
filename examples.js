@@ -294,33 +294,54 @@
 // })
 // console.log(activeUser);
 
-const logs = [{
-        userId: 1,
-        name: "Amit",
-        loginTime: "09:00",
-        activities: ["login", "view"]
-    },
-    {
-        userId: 2,
-        name: "Neha",
-        loginTime: "09:10",
-        activities: ["login"]
-    },
-    {
-        userId: 1,
-        name: "Amit",
-        loginTime: "08:50",
-        activities: ["login", "purchase"]
-    },
-    {
-        userId: 2,
-        name: "Neha",
-        loginTime: "09:30",
-        activities: ["view"]
-    }
+// const logs = [{
+//         userId: 1,
+//         name: "Amit",
+//         loginTime: "09:00",
+//         activities: ["login", "view"]
+//     },
+//     {
+//         userId: 2,
+//         name: "Neha",
+//         loginTime: "09:10",
+//         activities: ["login"]
+//     },
+//     {
+//         userId: 1,
+//         name: "Amit",
+//         loginTime: "08:50",
+//         activities: ["login", "purchase"]
+//     },
+//     {
+//         userId: 2,
+//         name: "Neha",
+//         loginTime: "09:30",
+//         activities: ["view"]
+//     }
+// ];
+
+// const newLogs = logs.filter((value, index, array) => {
+//     return index == array.findIndex((val) => val.userId == value.userId)
+// }).map((value, index, array) => array.sort((a, b) => a.loginTime - b.loginTime))
+// console.log(newLogs);
+
+
+const users = [
+    { id: 1, name: "Amit" },
+    { id: 2, name: "Neha" },
+    { id: 1, name: "Amit" }, // duplicate
+    { id: 3, name: "Rahul" },
+    { id: 2, name: "Neha" } // duplicate
 ];
 
-const newLogs = logs.filter((value, index, array) => {
-    return index == array.findIndex((val) => val.userId == value.userId)
-}).map((value, index, array) => array.sort((a, b) => a.loginTime - b.loginTime))
-console.log(newLogs);
+const set = new Set()
+
+
+
+
+
+
+
+
+
+

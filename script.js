@@ -2024,3 +2024,12 @@ const f = new Map([
 
 
 
+
+// const users = [
+//     { name: "Amit", role: "developer", exp: 4, salary: 50000 },
+//     { name: "Neha", role: "tester", exp: 5, salary: 40000 }
+// ];
+
+// const userGroup = Object.groupBy(users, (value) => value.role == "developer" && value.exp > 3)
+// console.log(userGroup);
+
