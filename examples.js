@@ -326,18 +326,24 @@
 // console.log(newLogs);
 
 
-const users = [
-    { id: 1, name: "Amit" },
-    { id: 2, name: "Neha" },
-    { id: 1, name: "Amit" }, // duplicate
-    { id: 3, name: "Rahul" },
-    { id: 2, name: "Neha" } // duplicate
-];
+// const users = [
+//     { id: 1, name: "Amit" },
+//     { id: 2, name: "Neha" },
+//     { id: 1, name: "Amit" }, // duplicate
+//     { id: 3, name: "Rahul" },
+//     { id: 2, name: "Neha" } // duplicate
+// ];
 
-const set = new Set()
+// const set = new Set()
+
+const str = "Nishant"
+const res = str.split("").map((value, index) => index == 0 ? value.at(0) : value.replace(value, "*")).join("")
+console.log(res);
 
 
-
+const ary = ["read", "write", "listen"]
+const result = ary.copyWithin(0, 1, 2)
+console.log(result);
 
 
 

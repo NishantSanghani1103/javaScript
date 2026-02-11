@@ -464,5 +464,393 @@
 
 
 
+// const users = [
+//     { name: "Alice", age: 22 },
+//     { name: "Bob", age: 17 },
+//     { name: "Charlie", age: 25 }
+// ];
+// const ary = []
+// for (const val of users) {
+//     ary.push(val.name)
+// }
+// console.log(ary);
 
+// const name = users.filter((value) => value.name == "Bob")
+// console.log(name);
+
+// const ageCount = users.reduce((acc, cuu) => {
+//     acc = acc + cuu.age
+//     return acc
+// }, 0)
+// console.log(ageCount);
+
+// const sortAge = users.sort((a, b) => a.age - b.age)
+// console.log(sortAge);
+
+// const products = [
+//     { name: "Laptop", category: "Electronics" },
+//     { name: "Shirt", category: "Clothing" },
+//     { name: "Phone", category: "Electronics" }
+// ];
+
+// const group = Object.groupBy(products, (val) => val.category)
+// console.log(group);
+
+
+
+// const items = [
+//     { id: 1, name: "Pen" },
+//     { id: 2, name: "Pencil" },
+//     { id: 1, name: "Pen" }
+// ];
+// const set = new Set()
+// const unique = items.filter((value, index) => {
+//     if (set.has(value.id)) {
+//         return false
+//     }
+//     set.add(value.id)
+//     return true
+// })
+// console.log(unique);
+// console.log(items);
+
+
+// const users = [
+//     { name: "Alice", age: 22 },
+//     { name: "Bob", age: 17 },
+//     { name: "Charlie", age: 25 }
+// ];
+
+// const alinceAgeUpdate = users.map((val, index, arr) => {
+//     return val.name == "Alice"
+//         ?
+//         { ...val, age: 30 }
+//         :
+//         val
+
+// })
+// console.log(alinceAgeUpdate);
+
+
+// const updatedUsers = users.map(user =>
+//     user.name === "Alice"
+//         ? { ...user, age: 30 }
+//         : { ...user }
+// );
+
+// console.log(updatedUsers);
+
+// const employees = [
+//     { name: "A", salary: 5000 },
+//     { name: "B", salary: 7000 },
+//     { name: "C", salary: 6000 }
+// ];
+
+// const sort = employees.sort((a, b) => a.salary - b.salary)[1]
+// console.log(sort);
+
+// const orders = [
+//     { id: 1, amount: 250, status: "completed" },
+//     { id: 2, amount: 100, status: "pending" },
+//     { id: 3, amount: 400, status: "completed" }
+// ];
+
+// const filter = orders.filter((val) => val.status == "completed").reduce((total, cuu) => total + cuu.amount, 0)
+// console.log(filter);
+
+// const totalCompletedAmount = orders.reduce((total, order) => {
+//   return order.status === "completed"
+//     ? total + order.amount
+//     : total;
+// }, 0);
+
+// console.log(totalCompletedAmount);
+
+// const tasks = [
+//     { user: "Alice", completed: true },
+//     { user: "Bob", completed: false },
+//     { user: "Alice", completed: true },
+//     { user: "Bob", completed: true }
+// ];
+
+
+// const grp = Map.groupBy(tasks, (val) => val.completed)
+// console.log(grp);
+
+// const students = [
+//     { name: "John", marks: [80, 90, 70] },
+//     { name: "Jane", marks: [60, 75, 85] }
+// ];
+// const map = new Map()
+// for (const val of students) {
+//     const total = val.marks.reduce((total, v) => total + v, 0)
+//     const avg = (total / val.marks.length).toFixed(2)
+//     map.set(val.name, {
+//         name: val.name,
+//         average: avg
+//     })
+// }
+// console.log(map);
+
+// const products = [
+//     { name: "Laptop", price: 50000, quantity: 2 },
+//     { name: "Phone", price: 20000, quantity: 3 }
+// ];
+// const map = new Map()
+
+// for (const val of products) {
+//     const total = val.price * val.quantity
+//     map.set(val.name, {
+//         name: val.name,
+//         totalPrice: total
+//     })
+
+// }
+// console.log(map);
+
+
+// const employees = [
+//     { name: "A", salary: 5000 },
+//     { name: "B", salary: 7000 }
+// ];
+
+// const map = new Map()
+// for (const val of employees) {
+//     const sal = val.salary + (val.salary * 10) / 100
+//     map.set(val.name, {
+//         name: val.name,
+//         salary: sal
+//     })
+// }
+// console.log(map);
+
+
+// const order = [
+//     { orderId: 101, customer: "Alice", amount: 250, status: "Delivered" },
+//     { orderId: 102, customer: "Bob", amount: 450, status: "Pending" },
+//     { orderId: 103, customer: "Alice", amount: 150, status: "Delivered" },
+//     { orderId: 104, customer: "Charlie", amount: 3000, status: "Cancelled" },
+// ]
+
+// const ans = order.reduce((acc, cuu) => {
+//     acc[cuu.customer] = (acc[cuu.customer || 0]) + cuu.amount
+//     return acc
+// })
+// console.log(ans);
+
+// const map = new Map()
+// for (const v of order) {
+//     if (map.has(v.customer)) {
+//         const existing = map.get(v.customer);
+//         existing.amount += v.amount;
+//     }
+//     else {
+//         map.set(v.customer, {
+//             amount: v.amount
+//         })
+//     }
+// }
+// console.log(map);
+
+// const users = [
+//     { id: 1, name: "Alice" },
+//     { id: 2, name: "Bob" }
+// ];
+
+// const orders = [
+//     { userId: 1, amount: 250 },
+//     { userId: 2, amount: 300 }
+// ];
+// const ary = []
+// const map = new Map()
+// for (const userValue of users) {
+//     for (const orderValue of orders) {
+//         if (userValue.id == orderValue.userId) {
+//             ary.push({
+//                 ...userValue,
+//                 amount: orderValue.amount
+//             })
+
+//             //or
+
+//             // map.set(userValue.id, {
+//             //     id: userValue.id,
+//             //     name: userValue.name,
+//             //     amount: orderValue.amount
+//             // })
+//         }
+//     }
+// }
+// console.log(ary);
+
+// console.log(Array.from(map));
+
+
+// add object into Array
+
+// const products = [
+//     { id: 1, name: "Laptop", price: 1000, category: "Electronics" },
+//     { id: 2, name: "Shirt", price: 40, category: "Clothing" },
+//     { id: 3, name: "Phone", price: 800, category: "Electronics" },
+//     { id: 4, name: "Shoes", price: 60, category: "Clothing" }
+// ];
+
+// const obj = { id: 5, name: "Watch", price: 200, category: "Accessories" }
+
+// const set = new Set()
+
+
+
+// for (const val of products) {
+//     if (!set.has(val.id)) {
+//         set.add(val)
+//     }
+//     set.add(obj)
+
+// }
+// console.log(set);
+
+
+
+
+// const orders = [
+//     {
+//         id: 1,
+//         customer: "Alice",
+//         items: [
+//             { name: "Laptop", price: 1000 },
+//             { name: "Mouse", price: 50 }
+//         ]
+//     },
+//     {
+//         id: 2,
+//         customer: "Bob",
+//         items: [
+//             { name: "Phone", price: 800 },
+//             { name: "Charger", price: 20 },
+//         ]
+//     }
+// ];
+
+
+// const map = new Map()
+// for (const val of orders) {
+//     const total = val.items.reduce((acc, cuu) => acc + cuu.price, 0)
+
+//     map.set(val.id, {
+//         id: val.id,
+//         customer: val.customer,
+//         items: val.items.map((val) => (val)),
+//         total: total
+//     })
+// }
+// console.log(Array.from(map));
+
+// const items = [
+//     { name: "Phone", price: 800 },
+//     { name: "Charger", price: 20 }
+// ]
+// const res = items.map((val) => val)
+// console.log(res);
+
+
+// const set = new Set()
+// for (const val of orders) {
+//     val.items.forEach((value, index) => {
+//         set.add(value.name)
+//     })
+// }
+// console.log(Array.from(set));
+
+// const max = orders.flatMap((value) => value.items).reduce((acc, cuu) => acc += cuu.price > acc ? cuu : acc, 0)
+// console.log(max);
+
+
+
+
+
+//  1. Intermediate: Transformation & Logic
+
+// Task 1:- Add a new property isExpensive: true to every product that costs more than 200.
+
+// const products = [
+//     { name: 'Laptop', price: 1000, category: 'Electronics' },
+//     { name: 'Shirt', price: 50, category: 'Apparel' },
+//     { name: 'Phone', price: 500, category: 'Electronics' }
+// ];
+// const addProperty = products.map((value, index) => {
+//     return value.price > 200
+//         ?
+//         { ...value, isExpensive: true }
+//         :
+//         value
+
+// })
+// console.log(addProperty);
+
+// Task 2 :- Sort the products by price in descending order (highest to lowest).
+
+// const products = [
+//     { name: 'Laptop', price: 1000, category: 'Electronics' },
+//     { name: 'Shirt', price: 50, category: 'Apparel' },
+//     { name: 'Phone', price: 500, category: 'Electronics' }
+// ];
+// const highestToLowest = products.sort((a, b) => b.price - a.price)
+// console.log(highestToLowest);
+
+
+// 2.  Formatting & Quick Lookups
+
+// Task 1:- Create an array of strings formatted like "Student John has not graduated" or "Student Jane has graduated" using the map() method.
+
+
+// const students = [
+//     { name: 'John', scores: [80, 90, 85], graduated: false },
+//     { name: 'Jane', scores: [95, 92, 88], graduated: true },
+//     { name: 'Doe', scores: [70, 75, 80], graduated: false }
+// ];
+
+// const graduated = students.map((value, index) => {
+//     return value.graduated
+//         ?
+//         `${value.name} has Graduated`
+//         :
+//         `${value.name} not Graduated`
+// })
+// console.log(graduated);
+
+// Task 2:- Find the first student who has not graduated using find().
+
+// const students = [
+//     { name: 'John', scores: [80, 90, 85], graduated: true },
+//     { name: 'Jane', scores: [95, 92, 88], graduated: false },
+//     { name: 'Doe', scores: [70, 75, 80], graduated: false }
+// ];
+
+// const firstNotGraduated = students.find((value, index) => !value.graduated)
+// console.log(firstNotGraduated);
+
+
+// Task 3 :- Use the some() method to check if any student has a score exactly equal to 100.
+
+// const students = [
+//     { name: 'John', scores: [80, 90, 85], graduated: false },
+//     { name: 'Jane', scores: [95, 92], graduated: true },
+//     { name: 'Doe', scores: [70, 75, 80], graduated: false }
+// ];
+
+// const scoresMoreThan100 = students.some((value) => value.scores.includes(100))
+// console.log(scoresMoreThan100);
+
+
+// Intermediate: Data Aggregation
+
+// Task:- 1 Use reduce() to calculate the final balance (deposits add to the total, withdrawals subtract).
+
+const transactions = [
+    { id: 't1', amount: 50, type: 'deposit' },
+    { id: 't2', amount: 20, type: 'withdrawal' },
+    { id: 't3', amount: 100, type: 'deposit' },
+    { id: 't4', amount: 30, type: 'withdrawal' }
+];
 

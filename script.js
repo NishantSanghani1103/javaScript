@@ -2033,3 +2033,36 @@ const f = new Map([
 // const userGroup = Object.groupBy(users, (value) => value.role == "developer" && value.exp > 3)
 // console.log(userGroup);
 
+const orders = [
+    {
+        id: 1,
+        customer: "Alice",
+        items: [
+            { name: "Laptop", price: 1000 },
+            { name: "Mouse", price: 50 }
+        ]
+    },
+    {
+        id: 2,
+        customer: "Bob",
+        items: [
+            { name: "Phone", price: 800 },
+            { name: "Charger", price: 20 }
+        ]
+    }
+];
+
+// const map = new Map()
+// for (const val of orders) {
+//     const total = val.items.reduce((acc, cuu) => acc + cuu.price, 0)
+
+//     map.set(val.id, {
+//         id: val.id,
+//         customer: val.customer,
+//         items: val.items.map((val) => (val)),
+//         total: total
+//     })
+// }
+// console.log(Array.from(map));
+
+

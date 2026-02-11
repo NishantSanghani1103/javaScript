@@ -88,6 +88,7 @@ const year = day * 365;
 let years = Math.round(Date.now() / year)
 
 -Garbage collection = JavaScript automatically cleans up memory you’re no longer using.
+
 =>You don’t manually free memory in JS.
 
 => Objects are mutable: They are addressed by reference, not by value.
