@@ -847,10 +847,108 @@
 
 // Task:- 1 Use reduce() to calculate the final balance (deposits add to the total, withdrawals subtract).
 
-const transactions = [
-    { id: 't1', amount: 50, type: 'deposit' },
-    { id: 't2', amount: 20, type: 'withdrawal' },
-    { id: 't3', amount: 100, type: 'deposit' },
-    { id: 't4', amount: 30, type: 'withdrawal' }
-];
+// const transactions = [
+//     { id: 't1', amount: 50, type: 'deposit' },
+//     { id: 't2', amount: 20, type: 'withdrawal' },
+//     { id: 't3', amount: 100, type: 'deposit' },
+//     { id: 't4', amount: 30, type: 'withdrawal' }
+// ];
+
+// const res = transactions.reduce((acc, cuu) => {
+//     cuu.type == "deposit"
+//         ?
+//         acc += cuu.amount
+//         :
+//         acc -= cuu.amount
+//     return acc
+// }, 0)
+// console.log(res);
+
+
+
+// Q.1  The Filter Challenge
+
+// const products = [
+//     { id: 1, name: "Laptop", price: 1000, inStock: true },
+//     { id: 2, name: "Phone", price: 500, inStock: false },
+//     { id: 3, name: "Watch", price: 200, inStock: true },
+//     { id: 4, name: "Tablet", price: 800, inStock: true }
+// ];
+
+// Task 1. Create a new array containing only the products that are in stock and cost more than 300.
+
+// const filterProduct = products.filter((value, index) => {
+//     if (value.price > 300 && value.inStock) {
+//         return true
+//     }
+//     return false
+
+// })
+
+// console.log(filterProduct);
+
+
+// Task 2. Create an array of strings that only contains the names of all products.
+
+// const onlyName = products.map((value) => value.name)
+// console.log(onlyName);
+
+
+// Task 3. You just got a shipment! Update the "Phone" object so that inStock becomes true.
+
+// const phoneStatus = products.map((value, index) => {
+//     return value.name == "Phone"
+//         ?
+//         { ...value, inStock: true }
+//         :
+//         { ...value }
+// })
+// console.log(phoneStatus);
+
+
+// Task 4. Create a new array of objects where each object has the user's name and their averageMark (calculated from the marks array).
+
+// const users = [
+//     { id: 101, name: "Alice", age: 25, role: "admin", marks: [80, 90, 85] },
+//     { id: 102, name: "Bob", age: 17, role: "guest", marks: [60, 70, 65] },
+//     { id: 103, name: "Charlie", age: 30, role: "admin", marks: [95, 98, 92] },
+//     { id: 104, name: "Daisy", age: 22, role: "editor", marks: [70, 72, 75] }
+// ];
+// const avgMarks = users.map((value, index) => {
+//     let { marks } = value
+//     const total = marks.reduce((acc, cuu) => (acc + cuu), 0)
+//     const avg = Math.floor((total / marks.length));
+//     delete value.marks
+//     return { ...value, avgMarks: avg }
+// })
+// console.log(avgMarks);
+
+// Task 5. Use .reduce() to create an object that counts how many users have each role.
+
+// const users = [
+//     { id: 101, name: "Alice", age: 25, role: "admin", marks: [80, 90, 85] },
+//     { id: 102, name: "Bob", age: 17, role: "guest", marks: [60, 70, 65] },
+//     { id: 103, name: "Charlie", age: 30, role: "admin", marks: [95, 98, 92] },
+//     { id: 104, name: "Daisy", age: 22, role: "editor", marks: [70, 72, 75] }
+// ];
+
+// const countRoleOfUser = users.reduce((acc, value, index) => {
+//     acc[value.role] = (acc[value.role] || 0) + 1;
+//     return acc
+// }, {})
+// console.log(countRoleOfUser);
+
+// or
+
+// let obj = {}
+// const grpObj = Object.groupBy(users, (val) => val.role)
+// for (const [k, v] of Object.entries(grpObj)) {
+//     obj[k] = v.length
+// }
+// console.log(obj);
+
+// Task 6.Sort the users by age in descending order (oldest to youngest).
+
+// const userAge = users.sort((a, b) => b.ag - a.age).map((value) => `${value.name} (${value.age})`).join(",")
+// console.log(userAge);
 

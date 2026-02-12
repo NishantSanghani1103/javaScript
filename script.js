@@ -582,6 +582,12 @@
 // console.log(citrus);
 
 
+// from()
+
+const ary = [1, 2, 5, 8]
+const myArry = Array.from(ary, (val) => val * 2)
+console.log(myArry);
+
 // Reverse String
 
 // const str = "nishant"
@@ -620,9 +626,15 @@
 
 // reduce
 
-// const ary = [10, 5, 7, 20]
+// const ary = [10, 5, "abc", 7, 20]
 // const s = ary.reduce((sum, current) => {
-//     return sum += current
+//     if (!isNaN(current)) {
+//         sum += current
+//     }
+//     else {
+//         sum
+//     }
+//     return sum
 // }, 0)
 // console.log(s);
 
@@ -2066,3 +2078,25 @@ const orders = [
 // console.log(Array.from(map));
 
 
+const users = [
+    { id: 1, name: "Amit", hobbies: ["reading", "playing"] },
+    { id: 2, name: "Virat", hobbies: ["dancing", "gaming"] },
+    { id: 3, name: "Kohli", hobbies: ["reading", "playing"] },   // duplicate
+    { id: 4, name: "Sachin", hobbies: ["singing", "reading"] },
+    { id: 5, name: "Rahul", hobbies: ["dancing", "playing", "singing"] }    // duplicate   // duplicate
+];
+const map = new Map()
+for (const val of users) {
+    for (const hby of val.hobbies) {
+        if (!map.has(hby)) {
+            map.set(hby, {
+                hobbies: hby,
+                user: []
+            })
+        }
+        map.get(hby).user.push({ ...val });
+    }
+}
+for (const val of map.values()) {
+    console.log(val);
+}

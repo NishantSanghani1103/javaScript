@@ -336,14 +336,14 @@
 
 // const set = new Set()
 
-const str = "Nishant"
-const res = str.split("").map((value, index) => index == 0 ? value.at(0) : value.replace(value, "*")).join("")
-console.log(res);
+// const str = "Nishant"
+// const res = str.split("").map((value, index) => index == 0 ? value.at(0) : value.replace(value, "*")).join("")
+// console.log(res);
 
 
-const ary = ["read", "write", "listen"]
-const result = ary.copyWithin(0, 1, 2)
-console.log(result);
+// const ary = ["read", "write", "listen"]
+// const result = ary.copyWithin(0, 1, 2)
+// console.log(result);
 
 
 

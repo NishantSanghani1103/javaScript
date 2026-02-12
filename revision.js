@@ -234,24 +234,19 @@
 //         return this.a;
 //     }
 // };
-
 // const obj2 = {
 //     a: 20,
 // };
-
 // obj2.getA = obj.getA;
-
 // console.log(obj2.getA());
 
 // const obj = {
 //     a: 1
 // };
-
 // Object.defineProperty(obj, "b", {
 //     value: 2,
 //     writable: false
 // });
-
 // obj.b = 10;
 // console.log(obj.b);
 
@@ -289,11 +284,8 @@
 
 // const obj = { a: 1 };
 // const copy = Object.assign({}, obj);
-// // console.log(copy);
-
 // copy.a = 5;
-// // console.log(copy);
-
+// console.log(copy);
 // console.log(obj.a);
 
 // const obj = { a: 1 };
@@ -368,7 +360,6 @@
 //         return this.a;
 //     }
 // };
-
 // const getA = obj.getA.bind({ a: 10 });
 // console.log(getA());
 
@@ -394,10 +385,7 @@
 
 // console.log(obj.a);
 
-
-// const obj = { a: 1 };
-// const { a = 10, b = 20 } = obj;
-
+ 
 // console.log(a, b);
 
 
@@ -683,7 +671,6 @@
 // let cloneUserDetails = { ...userDetails };
 // userDetails.age = 22;
 // console.log(userDetails);
-
 // userDetails.address.city = "Banglore";
 // console.log(cloneUserDetails.age);
 // console.log(cloneUserDetails.address.city);
@@ -1052,10 +1039,10 @@
 // console.log(obj.brand);
 
 
-const letters = new Set();
+// const letters = new Set();
 
-letters.add("a");
-letters.add("b");
-letters.add("c");
+// letters.add("a");
+// letters.add("b");
+// letters.add("c");
 
-console.log(letters);
+// console.log(letters);

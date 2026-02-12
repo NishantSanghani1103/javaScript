@@ -258,7 +258,7 @@ Calls the function immediately and passes arguments one by one
     =>The second parameter defines how many elements should be removed.
     =>The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
 
-    II.toSpliced():- The difference between the new toSpliced() method and the old splice() method is that the new method creates a new array, keeping the original array unchanged, while the old method altered the original array.
+    II.toSpliced():- The difference between the new toSpliced() method and the splice() method is that the new method creates a new array, keeping the original array unchanged, while the old method altered the original array.
 
     III.slice():-The slice() method slices out a piece of an array into a new array. (517)
     =>The slice() method creates a new array.
@@ -278,11 +278,26 @@ Calls the function immediately and passes arguments one by one
 
     IV.find():-The find() method returns the value of the first array element that passes a test function.and find() have a callBack function (532)
 
-    V.findIndex():-The findIndex() method returns the index of the first array element.
+    V.findIndex():-The findIndex() method returns the index of the first array element.which have a callBack function for specific condition.
 
     VI.findLast():-the findLast() method that will start from the end of an array and return the value of the first element that satisfies a condition.
 
     VII.findLastIndex():-The findLastIndex() method finds the index of the last element that satisfies a condition.
+
+    VIII. fill():- The fill() method fills specified elements in an array with a value.
+    -The fill() method overwrites the original array.
+    -Start and end position can be specified. If not, all elements will be filled.
+    -3 parameter value,start index,end index.
+
+    IX. Array.from():- The Array.from() method returns an array from any iterable object.
+    - 3 parameters :- Array.from(object, mapFunction, thisValue)
+    -const myNumbers = [1,2,3,4];
+    -const myArr = Array.from(myNumbers, (x) => x * 2);
+
+    X. with():- The with() method updates a specified array element. The with() method returns a new array.
+    - array.with(index, value)
+    -const months = ["Januar", "Februar", "Mar", "April"];
+    -const myMonths = months.with(2, "March");
 
 => Array Sort:
 
