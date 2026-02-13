@@ -85,39 +85,102 @@ const hobbies = [
     { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b3", hobby: "coading" }
 ]
 const users = [
-    { id: 1, name: "Amit", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b0", ""] },
-    { id: 2, name: "Neha", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b1", ""] },
+    { id: 1, name: "Amit", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b0", "1b451981-2f77-43e7-b9e1-8c4d5c3d69b12"] },
+    { id: 2, name: "Neha", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b1"] },
     { id: 3, name: "Virat", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b12", "1b451981-2f77-43e7-b9e1-8c4d5c3d69b12"] },
-    { id: 4, name: "Kohli", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b3", ""] },
+    { id: 4, name: "Kohli", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b3"] },
 ];
-let ary = []
-const map = new Map()
-for (const val of hobbies) {
-    map.set(val.id, val.hobby)
-}
-for (const val of users) {
-    for (const v of val.hobbies) {
-        if (map.has(v)) {
-            
-            const obj = { id: val.id, name: val.name, hobbies: [{id:v}] }
-            ary.push(obj)
-        }
-    }
-}
-console.log(ary);
 
-console.log(map);
+// let ary = []
+// const map = new Map()
+
+// for (const val of hobbies) {
+//     map.set(val.id, val.hobby)
+// }
+// console.log(map);
+// let obj={};
+// for (const val of users) {
+//     const set = new Set()
+//     const userHobbies = []
+//     const uHby = val.hobbies.filter((value, index) => {
+//         if (set.has(value)) {
+//             return false
+//         }
+//         set.add(value)
+//         return true
+//     })
+//     console.log(uHby);
+
+//     for (const v of uHby) {
+//         console.log(v);
+
+//         if (map.has(v)) {
+//             userHobbies.push({
+//                 id:map.get(v)
+//             })
+//         }
+//     }
+//     console.log(userHobbies);
+
+//     ary.push({
+//         id: val.id,
+//         name: val.name,
+//         hobbies: userHobbies
+//     });
+//     // console.log(uHby);
+
+// }
+// console.log(ary);
 
 
+// for (const val of users) {
+//     for (const v of val.hobbies) {
+//         if (map.has(v)) {
+
+//             const obj = { id: val.id, name: val.name, hobbies: [{id:v}] }
+//             ary.push(obj)
+//         }
+//     }
+// }
+// console.log(ary);
+
+// console.log(map);
 
 
-// const output = [
+// or
+
+// const map = new Map()
+// for (const val of hobbies) {
+//     map.set(val.id, val)
+// }
+// console.log(map);
+
+// const changeHby = users.map((val, index) => {
+//     return {
+//         ...val,
+//         hobbies: val.hobbies.map((value, indx) => {
+//             return map.get(value)
+//         })
+//     }
+// })
+// console.log(changeHby);
+
+
+// [
 //     {
-//         id: 1, name: "Amit",
+//         id: 1,
+//         name: "Amit",
 //         hobbies: [
 //             { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b0", hobby: "reading" }
 //         ]
 //     },
+//     ...
 // ]
+
+
+// Task 2 : -
+
+
+
 
 

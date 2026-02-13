@@ -584,9 +584,9 @@
 
 // from()
 
-const ary = [1, 2, 5, 8]
-const myArry = Array.from(ary, (val) => val * 2)
-console.log(myArry);
+// const ary = [1, 2, 5, 8]
+// const myArry = Array.from(ary, (val) => val * 2)
+// console.log(myArry);
 
 // Reverse String
 
@@ -2032,11 +2032,6 @@ const f = new Map([
 
 // console.log(Math.floor(Math.floor(Math.floor((d1 - d3) / 1000) / 60) / 60));
 
-
-
-
-
-
 // const users = [
 //     { name: "Amit", role: "developer", exp: 4, salary: 50000 },
 //     { name: "Neha", role: "tester", exp: 5, salary: 40000 }
@@ -2045,24 +2040,24 @@ const f = new Map([
 // const userGroup = Object.groupBy(users, (value) => value.role == "developer" && value.exp > 3)
 // console.log(userGroup);
 
-const orders = [
-    {
-        id: 1,
-        customer: "Alice",
-        items: [
-            { name: "Laptop", price: 1000 },
-            { name: "Mouse", price: 50 }
-        ]
-    },
-    {
-        id: 2,
-        customer: "Bob",
-        items: [
-            { name: "Phone", price: 800 },
-            { name: "Charger", price: 20 }
-        ]
-    }
-];
+// const orders = [
+//     {
+//         id: 1,
+//         customer: "Alice",
+//         items: [
+//             { name: "Laptop", price: 1000 },
+//             { name: "Mouse", price: 50 }
+//         ]
+//     },
+//     {
+//         id: 2,
+//         customer: "Bob",
+//         items: [
+//             { name: "Phone", price: 800 },
+//             { name: "Charger", price: 20 }
+//         ]
+//     }
+// ];
 
 // const map = new Map()
 // for (const val of orders) {
@@ -2078,25 +2073,173 @@ const orders = [
 // console.log(Array.from(map));
 
 
+// const users = [
+//     { id: 1, name: "Amit", hobbies: ["reading", "playing"] },
+//     { id: 2, name: "Virat", hobbies: ["dancing", "gaming"] },
+//     { id: 3, name: "Kohli", hobbies: ["reading", "playing"] },   // duplicate
+//     { id: 4, name: "Sachin", hobbies: ["singing", "reading"] },
+//     { id: 5, name: "Rahul", hobbies: ["dancing", "playing", "singing"] }    // duplicate   // duplicate
+// ];
+// const map = new Map()
+// for (const val of users) {
+//     for (const hby of val.hobbies) {
+//         if (!map.has(hby)) {
+//             map.set(hby, {
+//                 hobbies: hby,
+//                 user: []
+//             })
+//         }
+//         map.get(hby).user.push({ ...val });
+//     }
+// }
+// for (const val of map.values()) {
+//     console.log(val);
+// }
+
+const hobbies = [
+    { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b0", hobby: "reading" },
+    { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b1", hobby: "writting" },
+    { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b12", hobby: "listining" },
+    { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b3", hobby: "coading" }
+]
 const users = [
-    { id: 1, name: "Amit", hobbies: ["reading", "playing"] },
-    { id: 2, name: "Virat", hobbies: ["dancing", "gaming"] },
-    { id: 3, name: "Kohli", hobbies: ["reading", "playing"] },   // duplicate
-    { id: 4, name: "Sachin", hobbies: ["singing", "reading"] },
-    { id: 5, name: "Rahul", hobbies: ["dancing", "playing", "singing"] }    // duplicate   // duplicate
+    { id: 1, name: "Amit", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b0", "1b451981-2f77-43e7-b9e1-8c4d5c3d69b3"] },
+    { id: 2, name: "Neha", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b1"] },
+    { id: 3, name: "Virat", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b12"] },
+    { id: 4, name: "Kohli", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b3"] },
 ];
+
+// let ary = []
+// const map = new Map()
+// for (const val of hobbies) {
+//     map.set(val.id, val)
+// }
+// console.log(map);
+// let obj = {};
+// for (const val of users) {
+//     const userHobbies = []
+//     for (const v of val.hobbies) {
+//         // console.log(v);
+//         if (map.has(v)) {
+//             userHobbies.push({
+//                 id: map.get(v).id,
+//                 hobbies:map.get(v).hobby
+//             })
+//         }
+//     }
+//     // console.log(userHobbies);
+//     ary.push({
+//         id: val.id,
+//         name: val.name,
+//         hobbies: userHobbies
+//     });
+//     // console.log(uHby);
+
+// }
+// console.log(ary);
+
+
+// OR
+
+// const map = new Map()
+// for (const val of hobbies) {
+//     map.set(val.id, val)
+// }
+// console.log(map);
+
+// const changeHby = users.map((val, index) => {
+//     return {
+//         ...val,
+//         hobbies: val.hobbies.map((value, indx) => {
+//             return map.get(value)
+//         })
+//     }
+// })
+// console.log(changeHby);
+
+
+// const products = [
+//     { id: "p1", name: "Laptop", price: 50000 },
+//     { id: "p2", name: "Mobile", price: 20000 },
+//     { id: "p3", name: "Keyboard", price: 1000 },
+//     { id: "p4", name: "Mouse", price: 500 }
+// ];
+
+// const orders = [
+//     { orderId: 1, customer: "Amit", products: ["p1", "p2", "p2"] },
+//     { orderId: 2, customer: "Neha", products: ["p3"] },
+//     { orderId: 3, customer: "Virat", products: ["p2", "p4", "p4"] }
+// ];
+
+// const map = new Map()
+// for (const val of products) {
+//     map.set(val.id, val)
+// }
+// const updatedData = orders.map((value, index) => {
+//     const set = new Set()
+//     let total = 0
+//     const filteredData = value.products.filter((val, ind) => {
+//         if (set.has(val)) {
+//             return false
+//         }
+//         set.add(val)
+//         return true
+//     })
+//     const fData = filteredData.map((v, i) => {
+//         return map.get(v)
+//     })
+//     return {
+//         ...value,
+//         products: fData,
+//         totalPrice: fData.reduce((acc, cuu) => acc += cuu.price, 0)
+//     }
+// })
+// console.log(updatedData);
+
+
+
+const courses = [
+    { id: "c1", title: "JavaScript", fee: 5000 },
+    { id: "c2", title: "React", fee: 7000 },
+    { id: "c3", title: "Node.js", fee: 6000 },
+    { id: "c4", title: "MongoDB", fee: 4000 }
+];
+
+const students = [
+    { id: 1, name: "Amit", courses: ["c1", "c2", "c2"] },
+    { id: 2, name: "Neha", courses: ["c3"] },
+    { id: 3, name: "Virat", courses: ["c4", "c1", "c4"] },
+    { id: 4, name: "Kohli", courses: [] }
+];
+
 const map = new Map()
-for (const val of users) {
-    for (const hby of val.hobbies) {
-        if (!map.has(hby)) {
-            map.set(hby, {
-                hobbies: hby,
-                user: []
-            })
+for (const val of courses) {
+    map.set(val.id, val)
+}
+console.log(map);
+
+const courseChange = students.map((value, index) => {
+    const set = new Set()
+    let count = 1
+    const filteredData = value.courses.filter((val, ind) => {
+        if (set.has(val)) {
+            count++
+            return false
         }
-        map.get(hby).user.push({ ...val });
+        set.add(val)
+        return true
+    })
+   console.log(filteredData);
+    const course = filteredData.map((v) => {
+        return {
+            ...map.get(v),
+            count: count
+        }
+    })
+    return {
+        ...value,
+        courses: course,
+        totalPrice: course.reduce((acc, cuu) => acc += cuu.fee, 0),
     }
-}
-for (const val of map.values()) {
-    console.log(val);
-}
+})
+console.log(courseChange);

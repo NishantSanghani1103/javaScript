@@ -350,4 +350,15 @@
 
 
 
-
+// [
+//   {
+//     orderId: 1,
+//     customer: "Amit",
+//     products: [
+//       { id: "p1", name: "Laptop", price: 50000 },
+//       { id: "p2", name: "Mobile", price: 20000 }
+//     ],
+//     totalAmount: 70000
+//   },
+//   ...
+// ]

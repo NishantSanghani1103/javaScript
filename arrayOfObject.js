@@ -952,3 +952,90 @@
 // const userAge = users.sort((a, b) => b.ag - a.age).map((value) => `${value.name} (${value.age})`).join(",")
 // console.log(userAge);
 
+
+
+// Q :- 2 
+
+// Task Update
+
+// const products = [
+//     { id: "p1", name: "Laptop", price: 50000 },
+//     { id: "p2", name: "Mobile", price: 20000 },
+//     { id: "p3", name: "Keyboard", price: 1000 },
+//     { id: "p4", name: "Mouse", price: 500 }
+// ];
+
+// const orders = [
+//     { orderId: 1, customer: "Amit", products: ["p1", "p2", "p2"] },
+//     { orderId: 2, customer: "Neha", products: ["p3"] },
+//     { orderId: 3, customer: "Virat", products: ["p2", "p4", "p4"] }
+// ];
+
+// const map = new Map()
+// for (const val of products) {
+//     map.set(val.id, val)
+// }
+// const updatedData = orders.map((value, index) => {
+//     const set = new Set()
+//     let total = 0
+//     let qty = 1
+//     const filteredData = value.products.filter((val, ind) => {
+//         if (set.has(val)) {
+//             qty = qty + 1
+//             return false
+//         }
+//         set.add(val)
+//         return true
+//     })
+//     const fData = filteredData.map((v, i) => {
+//         return map.get(v)
+//     })
+//     return {
+//         ...value,
+//         products: fData,
+//         totalPrice: fData.reduce((acc, cuu) => acc += cuu.price, 0)
+//     }
+// })
+// console.log(updatedData);
+
+
+// another task
+
+const courses = [
+    { id: "c1", title: "JavaScript", fee: 5000 },
+    { id: "c2", title: "React", fee: 7000 },
+    { id: "c3", title: "Node.js", fee: 6000 },
+    { id: "c4", title: "MongoDB", fee: 4000 }
+];
+
+const students = [
+    { id: 1, name: "Amit", courses: ["c1", "c2", "c2"] },
+    { id: 2, name: "Neha", courses: ["c3"] },
+    { id: 3, name: "Virat", courses: ["c4", "c1", "c4"] },
+    { id: 4, name: "Kohli", courses: [] }
+];
+
+const map = new Map()
+for (const val of courses) {
+    map.set(val.id, val)
+}
+console.log(map);
+
+const courseChange = students.map((value, index) => {
+    const set = new Set()
+    let count = 1
+    const filteredData = value.courses.filter((val, ind) => {
+        if (set.has(val)) {
+            count++
+            return false
+        }
+        set.add(val)
+        return true
+    })
+    return{
+        ...value,
+        courses:value.courses.map((v)=>map.get(v))
+    }
+})
+console.log(courseChange);
+
