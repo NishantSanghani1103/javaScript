@@ -2096,18 +2096,18 @@ const f = new Map([
 //     console.log(val);
 // }
 
-const hobbies = [
-    { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b0", hobby: "reading" },
-    { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b1", hobby: "writting" },
-    { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b12", hobby: "listining" },
-    { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b3", hobby: "coading" }
-]
-const users = [
-    { id: 1, name: "Amit", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b0", "1b451981-2f77-43e7-b9e1-8c4d5c3d69b3"] },
-    { id: 2, name: "Neha", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b1"] },
-    { id: 3, name: "Virat", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b12"] },
-    { id: 4, name: "Kohli", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b3"] },
-];
+// const hobbies = [
+//     { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b0", hobby: "reading" },
+//     { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b1", hobby: "writting" },
+//     { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b12", hobby: "listining" },
+//     { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b3", hobby: "coading" }
+// ]
+// const users = [
+//     { id: 1, name: "Amit", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b0", "1b451981-2f77-43e7-b9e1-8c4d5c3d69b3"] },
+//     { id: 2, name: "Neha", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b1"] },
+//     { id: 3, name: "Virat", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b12"] },
+//     { id: 4, name: "Kohli", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b3"] },
+// ];
 
 // let ary = []
 // const map = new Map()
@@ -2198,48 +2198,183 @@ const users = [
 
 
 
-const courses = [
-    { id: "c1", title: "JavaScript", fee: 5000 },
-    { id: "c2", title: "React", fee: 7000 },
-    { id: "c3", title: "Node.js", fee: 6000 },
-    { id: "c4", title: "MongoDB", fee: 4000 }
+// const courses = [
+//     { id: "c1", title: "JavaScript", fee: 5000 },
+//     { id: "c2", title: "React", fee: 7000 },
+//     { id: "c3", title: "Node.js", fee: 6000 },
+//     { id: "c4", title: "MongoDB", fee: 4000 }
+// ];
+
+// const students = [
+//     { id: 1, name: "Amit", courses: ["c1", "c2", "c2"] },
+//     { id: 2, name: "Neha", courses: ["c3"] },
+//     { id: 3, name: "Virat", courses: ["c4", "c1", "c4"] },
+//     { id: 4, name: "Kohli", courses: [] }
+// ];
+
+// const map = new Map()
+// for (const val of courses) {
+//     map.set(val.id, val)
+// }
+// console.log(map);
+
+// const courseChange = students.map((value, index) => {
+//     const set = new Set()
+//     let count = 1
+//     const filteredData = value.courses.filter((val, ind) => {
+//         if (set.has(val)) {
+//             count++
+//             return false
+//         }
+//         set.add(val)
+//         return true
+//     })
+//    console.log(filteredData);
+//     const course = filteredData.map((v) => {
+//         return {
+//             ...map.get(v),
+//             count: count
+//         }
+//     })
+//     return {
+//         ...value,
+//         courses: course,
+//         totalPrice: course.reduce((acc, cuu) => acc += cuu.fee, 0),
+//     }
+// })
+// console.log(courseChange);
+
+
+
+// const courses = [
+//     { id: "c1", title: "JavaScript", fee: 5000 },
+//     { id: "c2", title: "React", fee: 7000 },
+//     { id: "c3", title: "Node.js", fee: 6000 },
+//     { id: "c4", title: "MongoDB", fee: 4000 }
+// ];
+
+// const students = [
+//     { id: 1, name: "Amit", courses: ["c1", "c2", "c2"] },
+//     { id: 2, name: "Neha", courses: ["c3"] },
+//     { id: 3, name: "Virat", courses: ["c4", "c1", "c4"] },
+//     { id: 4, name: "Kohli", courses: [] }
+// ];
+
+// const map = new Map()
+// for (const value of courses) {
+//     map.set(value.id, value)
+// }
+// console.log(map);
+
+// const modified = students.map((value, index) => {
+//     const set = new Set()
+//     const filterdData = value.courses.filter((value, ind) => {
+//         if (set.has(value)) {
+//             return false
+//         }
+//         set.add(value)
+//         return true
+//     })
+//     const courseUpdate = filterdData.map((v) => map.get(v))
+//     return {
+//         ...value,
+//         courses: courseUpdate,
+//         totalFees: courseUpdate.reduce((acc, cuu) => acc += cuu.fee,0)
+//     }
+// })
+
+// console.log(modified);
+
+// const orders = [
+//     { id: 1, customer: "John", total: 200 },
+//     { id: 2, customer: "Jane", total: 500 },
+//     { id: 3, customer: "John", total: 300 }
+// ];
+
+// // Q.1 Calculate total spending per customer
+// const grp = Map.groupBy(orders, (val) => val.customer)
+// console.log(grp);
+// let obj = {}
+// for (const [k, v] of grp.entries()) {
+//     let t = v.reduce((acc, cuu) => acc += cuu.total, 0)
+//     obj[k] = t
+
+// }
+// console.log(obj);
+
+// const users = [
+//     { id: 1, name: "John", posts: [{ id: 1, title: "Post 1" }] },
+//     { id: 2, name: "Jane", posts: [] },
+//       { id: 2, name: "Jane", posts: [] }
+// ];
+
+// // Q.1 Get users who have at least one post.
+
+// const atLeastOnePost = users.filter((value, index) => {
+//     return value.posts.length >= 1
+// })
+// console.log(atLeastOnePost);
+
+// const users = [
+//     {
+//         id: 1, name: "Alice",
+//         orders: [
+//             { id: 1, amount: 200 },
+//             { id: 2, amount: 150 }
+//         ]
+//     },
+//     {
+//         id: 2, name: "Bob",
+//         orders: [
+//             { id: 3, amount: 50 }
+//         ]
+//     },
+//     { id: 3, name: "Charlie", orders: [{ id: 4, amount: 250 }] }
+// ];
+
+// Get all users who have orders above 100.
+
+// const orderFilter = users.filter((value, index) => {
+//     return value.orders.some((val) => val.amount > 100)
+// })  
+// console.log(orderFilter);
+
+// const orderFlatten = users.flatMap((value, index) => value.orders)
+// console.log(orderFlatten);
+
+
+const employees = [
+    { id: 1, name: "Aman", projects: ["p1", "p2"] },
+    { id: 2, name: "Riya", projects: ["p2"] },
+    { id: 3, name: "Kabir", projects: [] }
 ];
 
-const students = [
-    { id: 1, name: "Amit", courses: ["c1", "c2", "c2"] },
-    { id: 2, name: "Neha", courses: ["c3"] },
-    { id: 3, name: "Virat", courses: ["c4", "c1", "c4"] },
-    { id: 4, name: "Kohli", courses: [] }
+const projects = [
+    { id: "p1", name: "Website", budget: 50000 },
+    { id: "p2", name: "Mobile App", budget: 80000 }
 ];
-
 const map = new Map()
-for (const val of courses) {
-    map.set(val.id, val)
+for (const v of projects) {
+    map.set(v.id, {
+        name: v.name,
+        budget: v.budget
+    })
 }
 console.log(map);
 
-const courseChange = students.map((value, index) => {
-    const set = new Set()
-    let count = 1
-    const filteredData = value.courses.filter((val, ind) => {
-        if (set.has(val)) {
-            count++
-            return false
-        }
-        set.add(val)
-        return true
-    })
-   console.log(filteredData);
-    const course = filteredData.map((v) => {
-        return {
-            ...map.get(v),
-            count: count
-        }
-    })
+const modified = employees.map((value, index) => {
+    const { projects, ...rest } = value
     return {
-        ...value,
-        courses: course,
-        totalPrice: course.reduce((acc, cuu) => acc += cuu.fee, 0),
+        ...rest,
+        totalBudget: value.projects.map((val) => map.get(val)).reduce((acc, cuu) => acc += cuu.budget, 0)
     }
 })
-console.log(courseChange);
+console.log(modified);
+
+
+// [
+//   { id: 1, name: "Aman", totalBudget: 130000 },  // 50000 + 80000
+//   { id: 2, name: "Riya", totalBudget: 80000 },
+//   { id: 3, name: "Kabir", totalBudget: 0 }
+// ]
+
