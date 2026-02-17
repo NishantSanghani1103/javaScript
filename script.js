@@ -2343,33 +2343,33 @@ const f = new Map([
 // console.log(orderFlatten);
 
 
-const employees = [
-    { id: 1, name: "Aman", projects: ["p1", "p2"] },
-    { id: 2, name: "Riya", projects: ["p2"] },
-    { id: 3, name: "Kabir", projects: [] }
-];
+// const employees = [
+//     { id: 1, name: "Aman", projects: ["p1", "p2"] },
+//     { id: 2, name: "Riya", projects: ["p2"] },
+//     { id: 3, name: "Kabir", projects: [] }
+// ];
 
-const projects = [
-    { id: "p1", name: "Website", budget: 50000 },
-    { id: "p2", name: "Mobile App", budget: 80000 }
-];
-const map = new Map()
-for (const v of projects) {
-    map.set(v.id, {
-        name: v.name,
-        budget: v.budget
-    })
-}
-console.log(map);
+// const projects = [
+//     { id: "p1", name: "Website", budget: 50000 },
+//     { id: "p2", name: "Mobile App", budget: 80000 }
+// ];
+// const map = new Map()
+// for (const v of projects) {
+//     map.set(v.id, {
+//         name: v.name,
+//         budget: v.budget
+//     })
+// }
+// console.log(map);
 
-const modified = employees.map((value, index) => {
-    const { projects, ...rest } = value
-    return {
-        ...rest,
-        totalBudget: value.projects.map((val) => map.get(val)).reduce((acc, cuu) => acc += cuu.budget, 0)
-    }
-})
-console.log(modified);
+// const modified = employees.map((value, index) => {
+//     const { projects, ...rest } = value
+//     return {
+//         ...rest,
+//         totalBudget: value.projects.map((val) => map.get(val)).reduce((acc, cuu) => acc += cuu.budget, 0)
+//     }
+// })
+// console.log(modified);
 
 
 // [
@@ -2378,3 +2378,109 @@ console.log(modified);
 //   { id: 3, name: "Kabir", totalBudget: 0 }
 // ]
 
+// const hobbies = [
+//     { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b0", hobby: "reading" },
+//     { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b1", hobby: "writting" },
+//     { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b12", hobby: "listining" },
+//     { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b3", hobby: "coading" }
+// ]
+// const users = [
+//     { id: 1, name: "Amit", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b0", "1b451981-2f77-43e7-b9e1-8c4d5c3d69b12"] },
+//     { id: 2, name: "Neha", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b1"] },
+//     { id: 3, name: "Virat", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b12", "1b451981-2f77-43e7-b9e1-8c4d5c3d69b12"] },
+//     { id: 4, name: "Kohli", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b3"] },
+// ];
+
+// const usersMap = users.map((value, index) => {
+//     const hFilter = hobbies.filter((val, ind) => {
+//         return value.hobbies.includes(val.id)
+//     })
+//     return {
+//         ...value,
+//         hobbies: hFilter
+//     }
+
+
+// })
+// console.log(usersMap);
+
+
+// const users = [
+//     { id: 1, name: "Amit", hobbies: ["reading", "playing"] },
+//     { id: 2, name: "Virat", hobbies: ["dancing", "gaming"] },
+//     { id: 3, name: "Kohli", hobbies: ["reading", "playing"] },   // duplicate
+//     { id: 4, name: "Sachin", hobbies: ["singing", "reading"] },
+//     { id: 5, name: "Rahul", hobbies: ["dancing", "playing", "singing"] }    // duplicate   // duplicate
+// ];
+// const map = new Map()
+// for (const val of users) {
+//     for (const hby of val.hobbies) {
+//         if (!map.has(hby)) {
+//             map.set(hby, {
+//                 hobbies: hby,
+//                 user: []
+//             })
+//         }
+//         map.get(hby).user.push({ ...val });
+//     }
+// }
+// for (const val of map.values()) {
+//     console.log(val);
+
+// }
+
+
+
+// const employees = [
+//     { id: 1, name: "Amit", departmentId: "d1", salary: 50000 },
+//     { id: 2, name: "Neha", departmentId: "d2", salary: 60000 },
+//     { id: 3, name: "Rahul", departmentId: "d1", salary: 70000 },
+// ];
+
+// const departments = [
+//     { id: "d1", name: "Engineering" },
+//     { id: "d2", name: "HR" },
+// ];
+
+// const res = employees.map((value, index) => {
+//     const filter = departments.filter((val, ind) => {
+//         return val.id == value.departmentId
+//     })
+//     console.log(filter);
+
+// })
+
+
+
+
+
+const companies = [
+    { id: 1, name: "TechX", employees: ["e1", "e2"] },
+    { id: 2, name: "BizY", employees: ["e3"] }
+];
+
+const employees = [
+    { id: "e1", projects: ["p1"] },
+    { id: "e2", projects: ["p2"] },
+    { id: "e3", projects: ["p1", "p2"] }
+];
+
+const projects = [
+    { id: "p1", budget: 100000 },
+    { id: "p2", budget: 200000 }
+];
+
+const res = companies.map((cValue, cIndex) => {
+    const filterEmp = employees.filter((val, ind) => {
+        return cValue.employees.includes(val.id)
+    })
+
+    console.log(filterEmp);
+
+    return {
+        id: cValue.id,
+        name: cValue.name,
+        filterEmp
+    }
+})
+console.log(res);

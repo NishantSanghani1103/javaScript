@@ -569,18 +569,18 @@
 
 //  Find the author who has written the most expensive book.
 
-const authors = [
-    { id: "a1", name: "Robert" },
-    { id: "a2", name: "Sophia" },
-    { id: "a3", name: "Daniel" }
-];
+// const authors = [
+//     { id: "a1", name: "Robert" },
+//     { id: "a2", name: "Sophia" },
+//     { id: "a3", name: "Daniel" }
+// ];
 
-const books = [
-    { id: "b1", title: "JS Basics", price: 500, authorId: "a1" },
-    { id: "b2", title: "Advanced JS", price: 800, authorId: "a1" },
-    { id: "b3", title: "React Guide", price: 600, authorId: "a2" },
-    { id: "b4", title: "Node Mastery", price: 700, authorId: "a3" }
-];
+// const books = [
+//     { id: "b1", title: "JS Basics", price: 500, authorId: "a1" },
+//     { id: "b2", title: "Advanced JS", price: 800, authorId: "a1" },
+//     { id: "b3", title: "React Guide", price: 600, authorId: "a2" },
+//     { id: "b4", title: "Node Mastery", price: 700, authorId: "a3" }
+// ];
 
 
 // Find the author who has written the most expensive book.
