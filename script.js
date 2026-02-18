@@ -2454,33 +2454,96 @@ const f = new Map([
 
 
 
-const companies = [
-    { id: 1, name: "TechX", employees: ["e1", "e2"] },
-    { id: 2, name: "BizY", employees: ["e3"] }
+// const companies = [
+//     { id: 1, name: "TechX", employees: ["e1", "e2"] },
+//     { id: 2, name: "BizY", employees: ["e3"] }
+// ];
+
+// const employees = [
+//     { id: "e1", projects: ["p1"] },
+//     { id: "e2", projects: ["p2"] },
+//     { id: "e3", projects: ["p1", "p2"] }
+// ];
+
+// const projects = [
+//     { id: "p1", budget: 100000 },
+//     { id: "p2", budget: 200000 }
+// ];
+
+// const res = companies.map((cValue, cIndex) => {
+//     const filterEmp = employees.filter((val, ind) => {
+//         return cValue.employees.includes(val.id)
+//     })
+
+//     console.log(filterEmp);
+
+//     return {
+//         id: cValue.id,
+//         name: cValue.name,
+//         filterEmp
+//     }
+// })
+// console.log(res);
+
+// const products = [
+//     { id: 1, name: "Laptop", category: "Electronics" },
+//     { id: 2, name: "Shirt", category: "Clothing" },
+//     { id: 3, name: "Phone", category: "Electronics" },
+//     { id: 4, name: "Jeans", category: "Clothing" }
+// ];
+
+// const grp = Map.groupBy(products, (val) => val.category)
+// console.log(grp);
+// console.log(Array.from(grp));
+
+
+
+// const state = {
+//     users: [
+//         {
+//             id: 1,
+//             posts: [
+//                 { id: 101, title: "Post A" },
+//                 { id: 102, title: "Post B" }
+//             ]
+//         }
+//     ]
+// };
+
+// // Remove post with id: 101 immutably.
+
+// const res = structuredClone(state)
+// res.users = res.users.map((value) => {
+//     const r = value.posts.filter((val) => val.id != 101)
+//     return {
+//         ...value,
+//         posts: r
+//     }
+// })
+// console.log(state);
+
+// console.log(res);
+
+
+const orders = [
+    { userId: 1, amount: 200 },
+    { userId: 2, amount: 300 },
+    { userId: 1, amount: 150 },
+    { userId: 3, amount: 400 }
 ];
+const set = new Set()
 
-const employees = [
-    { id: "e1", projects: ["p1"] },
-    { id: "e2", projects: ["p2"] },
-    { id: "e3", projects: ["p1", "p2"] }
-];
-
-const projects = [
-    { id: "p1", budget: 100000 },
-    { id: "p2", budget: 200000 }
-];
-
-const res = companies.map((cValue, cIndex) => {
-    const filterEmp = employees.filter((val, ind) => {
-        return cValue.employees.includes(val.id)
-    })
-
-    console.log(filterEmp);
-
-    return {
-        id: cValue.id,
-        name: cValue.name,
-        filterEmp
+const filter = orders.filter((val, ind) => {
+    if (set.has(val.userId)) {
+        return false
     }
+    set.add(val.userId)
+    return true
+}).map((value, index) => {
+    const ans = orders.filter((v, i) => v.userId == value.userId)
+    console.log(ans);
+    
 })
-console.log(res);
+
+
+
