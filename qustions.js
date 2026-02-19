@@ -110,10 +110,8 @@
 //         return true
 //     })
 //     console.log(uHby);
-
 //     for (const v of uHby) {
 //         console.log(v);
-
 //         if (map.has(v)) {
 //             userHobbies.push({
 //                 id:map.get(v)
@@ -121,14 +119,12 @@
 //         }
 //     }
 //     console.log(userHobbies);
-
 //     ary.push({
 //         id: val.id,
 //         name: val.name,
 //         hobbies: userHobbies
 //     });
 //     // console.log(uHby);
-
 // }
 // console.log(ary);
 
@@ -136,7 +132,6 @@
 // for (const val of users) {
 //     for (const v of val.hobbies) {
 //         if (map.has(v)) {
-
 //             const obj = { id: val.id, name: val.name, hobbies: [{id:v}] }
 //             ary.push(obj)
 //         }
@@ -271,7 +266,6 @@
 // const users = [
 //     { id: 1, name: "John", posts: [{ id: 1, title: "Post 1" }] },
 //     { id: 1, name: "John", posts: [{ id: 1, title: "Post 1" }] },
-
 // ];
 
 // Q.1 Get users who have at least one post.
@@ -436,32 +430,32 @@
 // const orderFlatten = users.flatMap((value, index) => value.orders)
 // console.log(orderFlatten);
 
-// const orders = [
-//     {
-//         id: 1, customer: "Alice",
-//         items: [
-//             { product: "Laptop", qty: 1 },
-//             { product: "Mouse", qty: 2 }
-//         ]
-//     },
-//     {
-//         id: 2, customer: "Bob",
-//         items: [
-//             { product: "Keyboard", qty: 1 }
-//         ]
-//     },
-//     {
-//         id: 3, customer: "Alice",
-//         items: [
-//             { product: "Monitor", qty: 2 }
-//         ]
-//     }
-// ];
+const orders = [
+    {
+        id: 1, customer: "Alice",
+        items: [
+            { product: "Laptop", qty: 1 },
+            { product: "Mouse", qty: 2 }
+        ]
+    },
+    {
+        id: 2, customer: "Bob",
+        items: [
+            { product: "Keyboard", qty: 1 }
+        ]
+    },
+    {
+        id: 3, customer: "Alice",
+        items: [
+            { product: "Monitor", qty: 2 }
+        ]
+    }
+];
 
-// const totalQtyPerUser = orders.reduce((acc, cuu) => {
-//     acc[cuu.customer] = (acc[cuu.customer] || 0) + cuu.items.reduce((a, c) => a += c.qty, 0)
-//     return acc
-// }, {})
+const totalQtyPerUser = orders.reduce((acc, cuu) => {
+    acc[cuu.customer] = (acc[cuu.customer] || 0) + cuu.items.reduce((a, c) => a += c.qty, 0)
+    return acc
+}, {})
 
 // or
 
@@ -501,8 +495,8 @@
 //     map.set(value.id, value)
 // }
 // console.log(map);
-
 // console.log(map);
+
 // const rebortBook = books.map((value, index) => {
 //         return{
 //             ...value,
@@ -697,7 +691,7 @@
 //     { id: "p2", name: "Mobile App", budget: 80000 }
 // ];
 
-// Get project names assigned to each employee.
+// // Get project names assigned to each employee.
 
 // const map = new Map()
 // for (const value of projects) {
@@ -711,32 +705,32 @@
 // })
 // console.log(project);
 
-const employees = [
-    { id: 1, name: "Aman", projects: ["p1", "p2"] },
-    { id: 2, name: "Riya", projects: ["p2"] },
-    { id: 3, name: "Kabir", projects: [] }
-];
+// const employees = [
+//     { id: 1, name: "Aman", projects: ["p1", "p2"] },
+//     { id: 2, name: "Riya", projects: ["p2"] },
+//     { id: 3, name: "Kabir", projects: [] }
+// ];
 
-const projects = [
-    { id: "p1", name: "Website", budget: 50000 },
-    { id: "p2", name: "Mobile App", budget: 80000 }
-];
-const map = new Map()
-for (const v of projects) {
-    map.set(v.id, {
-        name: v.name,
-        budget: v.budget
-    })
-}
-console.log(map);
+// const projects = [
+//     { id: "p1", name: "Website", budget: 50000 },
+//     { id: "p2", name: "Mobile App", budget: 80000 }
+// ];
+// const map = new Map()
+// for (const v of projects) {
+//     map.set(v.id, {
+//         name: v.name,
+//         budget: v.budget
+//     })
+// }
+// console.log(map);
 
-const modified = employees.map((value, index) => {
-    return {
-        ...value,
-        projects:value.projects.map((val)=>map.get(val))
-    }
-})
-console.log(modified);
+// const modified = employees.map((value, index) => {
+//     return {
+//         ...value,
+//         projects:value.projects.map((val)=>map.get(val))
+//     }
+// })
+// console.log(modified);
 
 // Calculate total project budget handled by each employee
 
@@ -746,3 +740,13 @@ console.log(modified);
 //   { id: 3, name: "Kabir", totalBudget: 0 }
 // ]
 
+
+let ary = [4, 5, 2]
+const map = ary.join("")
+const newV = Number(map) + 1;
+const numberToString = newV.toString()
+const ans=numberToString.split("")
+console.log(ans);
+
+// const newVal = newV.split("")
+// console.log(newVal);

@@ -625,13 +625,13 @@
 // console.log(map);
 
 
-const order = [
-    { orderId: 101, customer: "Alice", amount: 250, status: "Delivered" },
-    { orderId: 102, customer: "Bob", amount: 450, status: "Pending" },
-    { orderId: 103, customer: "Alice", amount: 150, status: "Delivered" },
-    { orderId: 104, customer: "Charlie", amount: 3000, status: "Cancelled" },
-    { orderId: 105, customer: "Bob", amount: 350, status: "Pending" }
-]
+// const order = [
+//     { orderId: 101, customer: "Alice", amount: 250, status: "Delivered" },
+//     { orderId: 102, customer: "Bob", amount: 450, status: "Pending" },
+//     { orderId: 103, customer: "Alice", amount: 150, status: "Delivered" },
+//     { orderId: 104, customer: "Charlie", amount: 3000, status: "Cancelled" },
+//     { orderId: 105, customer: "Bob", amount: 350, status: "Pending" }
+// ]
 
 // const ans = order.reduce((acc, cuu) => {
 //     acc[cuu.customer] = (acc[cuu.customer || 0]) + cuu.amount
@@ -639,18 +639,18 @@ const order = [
 // })
 // console.log(ans);
 
-const map = new Map()
-for (const v of order) {
-    if (map.has(v.customer)) {
-        map.get(v.customer).amount += v.amount;
-    }
-    else {
-        map.set(v.customer, {
-            amount: v.amount
-        })
-    }
-}
-console.log(map);
+// const map = new Map()
+// for (const v of order) {
+//     if (map.has(v.customer)) {
+//         map.get(v.customer).amount += v.amount;
+//     }
+//     else {
+//         map.set(v.customer, {
+//             amount: v.amount
+//         })
+//     }
+// }
+// console.log(map);
 
 // const users = [
 //     { id: 1, name: "Alice" },
@@ -1241,12 +1241,14 @@ console.log(map);
 //     { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b12", hobby: "listining" },
 //     { id: "1b451981-2f77-43e7-b9e1-8c4d5c3d69b3", hobby: "coading" }
 // ]
+
 // const users = [
 //     { id: 1, name: "Amit", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b0", "1b451981-2f77-43e7-b9e1-8c4d5c3d69b12"] },
 //     { id: 2, name: "Neha", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b1"] },
 //     { id: 3, name: "Virat", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b12", "1b451981-2f77-43e7-b9e1-8c4d5c3d69b12"] },
 //     { id: 4, name: "Kohli", hobbies: ["1b451981-2f77-43e7-b9e1-8c4d5c3d69b3"] },
 // ];
+
 // const usersMap = users.map((value, index) => {
 //     const hFilter = hobbies.filter((val, ind) => {
 //         return value.hobbies.includes(val.id)
@@ -1258,32 +1260,32 @@ console.log(map);
 // })
 // console.log(usersMap);
 
-// const employees = [
-//     { id: 1, name: "Amit", departmentId: "d1", salary: 60000 },
-//     { id: 2, name: "Neha", departmentId: "d2", salary: 60000 },
-//     { id: 3, name: "Rahul", departmentId: "d1", salary: 70000 },
-// ];
+var employees = [
+    { id: 1, name: "Amit", departmentId: "d1", salary: 60000 },
+    { id: 2, name: "Neha", departmentId: "d2", salary: 60000 },
+    { id: 3, name: "Rahul", departmentId: "d1", salary: 70000 },
+];
 
-// const departments = [
-//     { id: "d1", name: "Engineering" },
-//     { id: "d2", name: "HR" },
-// ];
+const departments = [
+    { id: "d1", name: "Engineering" },
+    { id: "d2", name: "HR" },
+];
 
-// const res = departments.map((value, index) => {
-//     const filter = employees.filter((val, ind) => {
-//         return val.departmentId == value.id
-//     })
-//     const toatal = filter.reduce((acc, cuu) => {
-//         return acc + cuu.salary / filter.length
-//     }, 0)
-//     console.log(toatal);
-//     return {
-//         name: value.name,
-//         avgSalary: toatal
-//     }
+const res = departments.map((value, index) => {
+    const filter = employees.filter((val, ind) => {
+        return val.departmentId == value.id
+    })
+    const toatal = filter.reduce((acc, cuu) => {
+        return acc + cuu.salary / filter.length
+    }, 0)
+    console.log(toatal);
+    return {
+        name: value.name,
+        avgSalary: toatal
+    }
 
-// }).sort((a, b) => b.avgSalary - a.avgSalary)[0]
-// console.log(res);
+}).sort((a, b) => b.avgSalary - a.avgSalary)[0]
+console.log(res);
 
 
 // const teams = [
@@ -1310,21 +1312,21 @@ console.log(map);
 // console.log(res);
 
 
-const companies = [
-    { id: 1, name: "TechX", employees: ["e1", "e2"] },
-    { id: 2, name: "BizY", employees: ["e3"] }
-];
+// const companies = [
+//     { id: 1, name: "TechX", employees: ["e1", "e2"] },
+//     { id: 2, name: "BizY", employees: ["e3"] }
+// ];
 
-const employees = [
-    { id: "e1", projects: ["p1"] },
-    { id: "e2", projects: ["p2"] },
-    { id: "e3", projects: ["p1", "p2"] }
-];
+// const employees = [
+//     { id: "e1", projects: ["p1"] },
+//     { id: "e2", projects: ["p2"] },
+//     { id: "e3", projects: ["p1", "p2"] }
+// ];
 
-const projects = [
-    { id: "p1", budget: 100000 },
-    { id: "p2", budget: 200000 }
-];
+// const projects = [
+//     { id: "p1", budget: 100000 },
+//     { id: "p2", budget: 200000 }
+// ];
 
 // [
 //     { id: 2, name: "BizY", totalBudgetHandled: 300000 },
@@ -1424,3 +1426,19 @@ const projects = [
 // );
 
 // console.log(result);
+
+const orders = [
+    { id: 1, customer: "John" },
+    { id: 2, customer: "Jane" },
+    { id: 3, customer: "John" },
+    { id: 4, customer: "Jane" },
+    { id: 5, customer: "John" }
+];
+const ans = orders.reduce((acc, cuu) => {
+    if (!acc[cuu.customer]) {
+        acc[cuu.customer] = 0
+    }
+    acc[cuu.customer] += 1
+    return acc
+}, {})
+console.log(ans);  

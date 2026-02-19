@@ -80,6 +80,7 @@
 //         }, 2000)
 //     })
 // }
+
 // function xyz() {
 //     return new Promise((resolve, reject) => {
 //         console.log("P2 Data Fatching...!!");
