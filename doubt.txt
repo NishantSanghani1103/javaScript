@@ -37,3 +37,19 @@ const c = { key: 'c' };
 a[b] = 123;
 a[c] = 456;
 console.log(a[b]);
+
+
+const tree = {
+    value: 1,
+    children: [
+        { value: 2, children: [] },
+        { value: 3, children: [] }
+    ]
+};
+function traverse(node) {
+    console.log(node.value);
+
+    for (let child of node.children) {
+        traverse(child);
+    }
+}

@@ -2849,9 +2849,11 @@ function flattenComments(comments) {
     ];
   });
 }
-
 const flatArray = flattenComments(ary);
 console.log(flatArray);
+
+
+
 
 
 // function abc(n) {
