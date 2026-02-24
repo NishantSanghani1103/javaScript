@@ -2604,6 +2604,9 @@ const f = new Map([
 //         console.log(error);
 //     }
 // })()
+
+
+
 const ary = [
     {
         "commentId": "3fe8bdf0-8a7a-4846-a699-9dbca5a40653",
@@ -2838,31 +2841,132 @@ const ary = [
         "isVerify": true
     }
 ]
-
-function flattenComments(comments) {
-  return comments.flatMap(comment => {
-    const { replies, ...rest } = comment;
-
-    return [
-      rest,
-      ...(replies ? flattenComments(replies) : [])
-    ];
-  });
+console.log(ary);
+function flatternReplies(replies, result = []) {
+    for (const val of replies) {
+        result.push(val)
+        if (val.replies && val.replies.length > 0) {
+            flatternReplies(val.replies, result)
+        }
+    }
+    return result
+} 
+function comments(ary) {
+    return ary.map((value, index) => {
+        let res = flatternReplies(value.replies ?? [])
+        return {
+            ...value,
+            replies: res
+        }
+    })
 }
-const flatArray = flattenComments(ary);
-console.log(flatArray);
+console.log(comments(ary));
 
 
 
 
 
-// function abc(n) {
-//     if(n == 0) return 0
 
-//     console.log(n);
-//     abc(n-1)
+
+
+// function flattenReplies(replies, result = []) {
+//     for (const val of replies) {
+//         result.push(val)
+//         if (val.replies && val.replies.length > 0) {
+//             flattenReplies(val.replies, result)
+//         }
+//     }
+//     return result
 // }
-// abc(5)
+
+// function commentValue(ary) {
+//     return ary.map((value, index) => {
+//         let res = flattenReplies(value.replies ?? [])
+//         return {
+//             ...value,
+//             replies: res
+//         }
+//     })
+// }
+// console.log(commentValue(ary));
+
+
+
+
+// function flattenReplies(replies, result = []) {
+//     for (const val of replies) {
+//         result.push(val)
+//         if (val.replies && val.replies.length > 0) {
+//             flattenReplies(val.replies, result)
+//         }
+//     }
+//     return result
+// }
+// function commentMap(comment) {
+//     return comment.map((value, index) => {
+//         let flattenReply = flattenReplies(value.replies ?? [])
+//         return {
+//             ...value,
+//             replies: flattenReply
+//         }
+//     })
+// }
+// console.log(commentMap(ary));
+
+
+
+// function flattenReplies(replies, result = []) {
+//     for (let reply of replies) {
+//         result.push(reply);
+
+//         if (reply.replies && reply.replies.length > 0) {
+//             flattenReplies(reply.replies, result);
+//         }
+//     }
+//     return result;
+// }
+
+// function transformComments(comments) {
+//     return comments.map(comment => {
+//         let flatReplies = flattenReplies(comment.replies || []);
+//         return {
+//             ...comment,
+//             replies: flatReplies
+//         };
+//     });
+// }
+
+// const updated = transformComments(ary);
+
+// console.log(updated);
+
+// const flatArray = flattenComments(ary);
+
+// console.log(flatArray);
+// function flattenComments(comments) {
+//     return comments.flatMap(comment => {
+//         const { replies, ...rest } = comment;
+
+//         return [
+//             rest,
+//             ...(replies ? flattenComments(replies) : [])
+//         ];
+//     });
+// }
+// const flatArray = flattenComments(ary);
+// console.log(flatArray);
+
+
+
+
+// const ary = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+// const res = []
+// for (let i = 0; i < ary.length; i = i + 3) {
+//     res.push(ary.slice(i, i + 3))
+// }
+// console.log(res);
+
+
 
 
 

@@ -337,7 +337,7 @@
 //     }
 // ];
 
-// expected op 
+// expected op
 
 // [
 //   { id: 1 },
@@ -358,30 +358,646 @@
 // }
 // console.log(flattenObjects(data));
 
-let data = [
-    { id: 1 },
-    {
-        id: 2,
-        children: [
-            { id: 3 },
-            {
-                id: 4,
-                children: [
-                    { id: 5 }
-                ]
-            }
-        ]
-    }
-];
+// let data = [
+//     { id: 1 },
+//     {
+//         id: 2,
+//         children: [
+//             { id: 3 },
+//             {
+//                 id: 4,
+//                 children: [
+//                     { id: 5 }
+//                 ]
+//             }
+//         ]
+//     }
+// ];
+// function addLevel(ary, level = 1) {
+//     return ary.map((value, index) => {
+//         let newObj = { ...value, level }
+//         if (value.children) {
+//             newObj.children = addLevel(value.children, level + 1)
+//         }
+//         return newObj
+//     })
+// }
+// console.log(addLevel(data));
 
-function addLevel(ary, level = 1) {
-    return ary.map((value, index) => {
-        let newObj = { ...value, level }
-        if (value.children) {
-            newObj.children = addLevel(value.children, level + 1)
-        }
-        return newObj
-    })
 
-}
-console.log(addLevel(data));
+// let data = [
+//     { id: 1 },
+//     {
+//         id: 2,
+//         children: [
+//             { id: 3 },
+//             {
+//                 id: 4,
+//                 children: [
+//                     { id: 5 }
+//                 ]
+//             },
+//             {
+//                 id: 6,
+//                 children: [
+//                     { id: 7 }
+//                 ]
+//             }
+//         ]
+//     }
+// ];
+
+// // find leaf node using recursion.
+
+// function leafNode(ary, res = []) {
+//     for (const val of ary) {
+//         if (val.children) {
+//             leafNode(val.children, res)
+//         }
+//         else{
+//             res.push(val)
+//         }
+//     }
+//     return res
+// }
+// console.log(leafNode(data));
+
+
+// let data = {
+//     a: 10,
+//     b: {
+//         c: 20,
+//         d: {
+//             e: 30,
+//             f: 40
+//         }
+//     },
+//     g: 50
+// };
+
+// function sumOfNumber(obj) {
+//     let total = 0
+
+//     for (const v in obj) {
+//         let val = obj[v]
+//         if (typeof (val) === "object") {
+//             total += sumOfNumber(val)
+//         }
+//         else {
+//             total += val
+//         }
+
+//     }
+//     return total
+
+// }
+// console.log(sumOfNumber(data));
+
+
+// let arr = [1, [2, [3, 4], 5], [6]];
+
+// // count the element of the array.
+
+// function countElement(ary) {
+//     let count = 0
+//     for (const val of ary) {
+//         if (Array.isArray(val)) {
+//             count += countElement(val)
+//         }
+//         else {
+//             count++
+//         }
+//     }
+//     return count
+// }
+// console.log(countElement(arr));
+
+
+// let obj = {
+//     a: 1,
+//     b: {
+//         c: 2,
+//         d: {
+//             e: 3
+//         }
+//     }
+// };
+
+// // count total keys in nested object.
+
+// function countKey(obj) {
+//     let count = 0
+//     for (const val in obj) {
+//         count++
+//         if (typeof (obj[val]) == "object") {
+//             count += countKey(obj[val])
+//         }
+//     }
+//     return count
+// }
+// console.log(countKey(obj));
+
+
+// let users = [
+//     { id: 1 },
+//     {
+//         id: 2,
+//         children: [
+//             { id: 3 },
+//             { id: 4 }
+//         ]
+//     }
+// ];
+
+// // find the total user.
+
+// function totalUser(ary) {
+//     let total = 0
+//     for (const val of ary) {
+//         total++
+//         if (val.children) {
+//             total += totalUser(val.children)
+//         }
+//     }
+//     return total
+// }
+// console.log(totalUser(users));
+
+
+// let data = {
+//     a: 10,
+//     b: [20, 30],
+//     c: {
+//         d: [40, { e: 50 }]
+//     },
+//     h: 50,
+// };
+
+// sum of all the number
+
+// function sumOfNumber(obj) {
+//     let sum = 0
+//     for (const v in obj) {
+//         let value = obj[v]
+//         // console.log(value);
+//         if (typeof value == "number") {
+//             sum += value
+//         }
+//         else if (Array.isArray(value) && typeof value == "number") {
+//                 sum += value.reduce((acc, cuu) => acc += cuu, 0)
+//         }
+//         else if (typeof value === "object") {
+//             sum += sumOfNumber(value)
+//         }
+//     }
+//     return sum
+// }
+// console.log(sumOfNumber(data));
+
+
+// let complex = {
+//     name: "John",
+//     skills: ["JS", "React"],
+//     projects: [
+//         {
+//             title: "App",
+//             tech: ["Node", "MongoDB"]
+//         }
+//     ]
+// };
+
+// // store all the string value in the array.
+
+// function arryString(obj, result = []) {
+//     for (const val in obj) {
+//         let value = obj[val]
+//         if (Array.isArray(value)) {
+//             for (const items of value) {
+//                 if (typeof items == "string")
+//                     result.push(items)
+//                 if (typeof items == "object") {
+//                     arryString(items, result)
+//                 }
+//             }
+//         }
+//         else{
+//             result.push(value)
+//         }
+//     }
+//     return result
+// }
+// console.log(arryString(complex));
+
+
+// let data = {
+//     a: 5,
+//     b: [10, { c: 25 }, [30]],
+//     d: {
+//         e: 100,
+//         f: [3, 7]
+//     }
+// };
+
+// // find the maximum number
+
+// function findMaxNumber(obj, max = 0) {
+//     for (const val in obj) {
+//         let value = obj[val]
+//         // console.log(value);
+//         if (typeof value == "number") {
+//             if (value > max) {
+//                 max = value
+//             }
+//         }
+//         else if (Array.isArray(value)) {
+//             for (const v of value) {
+//                 // console.log(v);
+
+//                 if (typeof v == "number") {
+//                     if (v > max) {
+//                         max = v
+//                     }
+//                     // console.log(max);
+//                 }
+//                 else {
+//                     max = findMaxNumber(v, max)
+//                 }
+//             }
+//         }
+//         else if (typeof value == "object") {
+//             max = findMaxNumber(value, max)
+//         }
+
+//     }
+//     return max
+// }
+// console.log(findMaxNumber(data));
+
+
+// let data = {
+//     a: true,
+//     b: [false, true, { c: false }],
+//     d: {
+//         e: false,
+//         f: [false, true]
+//     }
+// };
+
+// // count boolean true value.
+
+// function countTrueValue(obj) {
+//     let count = 0
+//     for (const val in obj) {
+//         let value = obj[val]
+
+//         if (value == true) {
+//             count++
+//         }
+//         else if (Array.isArray(value)) {
+//             for (const items of value) {
+//                 if (items == true) {
+//                     count++
+//                 }
+//                 else if (typeof value == "object") {
+//                     count += countTrueValue(items)
+//                 }
+//             }
+//         }
+//         else {
+//             count += countTrueValue(value)
+//         }
+//     }
+//     return count
+// }
+// console.log(countTrueValue(data));
+
+
+// let data = {
+//     a: 10,
+//     b: [20, { c: 30 }],
+//     d: {
+//         e: 40, f: [50, 60, 4]
+//     }
+// };
+
+// // replace all the value with 0. Deep clone=
+// let deep = JSON.parse(JSON.stringify(data))
+
+// function replaceWith0(obj, zero = 0) {
+
+//     for (const v in obj) {
+//         let value = obj[v]
+//         if (typeof value == "number")
+//             obj[v] = zero
+//         else if (Array.isArray(value)) {
+//             zero = replaceWith0(value)
+//         }
+//         else {
+//             zero = replaceWith0(value)
+//         }
+//     }
+//     return obj
+// }
+// console.log(replaceWith0(deep));
+// console.log(data);
+
+// const data = [
+//     {
+//         type: "folder",
+//         name: "src",
+//         children: [
+//             {
+//                 type: "file",
+//                 name: "index.js"
+//             },
+//             {
+//                 type: "folder",
+//                 name: "components",
+//                 children: [
+//                     { type: "file", name: "App.js" }
+//                 ]
+//             }
+//         ]
+//     }
+// ];
+
+// // if type=="file" then return that object in array.
+
+// function fileReturn(ary, result = []) {
+//     for (const value of ary) {
+//         if (value.type == "file") {
+//             result.push(value)
+//         }
+//         if (value.children) {
+//             fileReturn(value.children, result)
+//         }
+//     }
+//     return result
+// }
+// console.log(fileReturn(data));
+
+// let data = {
+//     a: {
+//         b: {
+//             c: {
+//                 d: 60
+//             }
+//         }
+//     }
+// };
+
+// // find the path of the value.
+
+// function findPath(obj, result = []) {
+//     for (const val in obj) {
+//         let value = obj[val]
+//         if (typeof value == "object") {
+//             result.push(val)
+//             findPath(value, result)
+//         }
+//         else if (typeof value == "number") {
+//             result.push(val)
+//         }
+//     }
+//     return result
+// }
+// console.log(findPath(data));
+
+// let data = {
+//     a: null,
+//     b: [1, null, { c: null, d: 5 }],
+//     e: {
+//         f: null
+//     },
+//     g: null
+// };
+
+
+// // remove all the null values
+
+// function removeNull(obj) {
+//     for (const val in obj) {
+//         let value = obj[val]
+//         if (value == null) {
+//             delete obj[val]
+//         }
+//         else if (Array.isArray(value)) {
+//             for (let i = 0; i < value.length; i++) {
+//                 if (value[i] == null) {
+//                     value.splice(i, 1)
+//                 }
+//                 else if (typeof value == "object") {
+//                     removeNull(value)
+//                 }
+//             }
+//         }
+//         else if (typeof value == "object") {
+//             removeNull(value)
+//         }
+//     }
+//     return obj
+// }
+// console.log(removeNull(data));
+
+// let data = {
+//     a: 1,
+//     b: [2, { c: 3 }, [4, 5]],
+//     d: {
+//         e: 6
+//     }
+// };
+
+// store all the value in one array.
+
+// function flltenToAry(obj, result = []) {
+//     for (const val in obj) {
+//         let value = obj[val]
+//         if (typeof value == "number") {
+//             result.push(value)
+//         }
+//         else if (Array.isArray(value)) {
+//             flltenToAry(value, result)
+//         }
+//         else if (typeof value == "object") {
+//             flltenToAry(value, result)
+//         }
+//     }
+//     return result
+// }
+// console.log(flltenToAry(data));
+
+// let data = {
+//     name: "john",
+//     skills: ["js", "react"],
+//     projects: [
+//         { title: "app" }
+//     ]
+// };
+
+// function upperCaseValue(obj) {
+//     for (const val in obj) {
+//         let value = obj[val]
+//         if (typeof value == "string") {
+//             obj[val] = value.toUpperCase()
+//         }
+//         else {
+//             obj[val] = upperCaseValue(value)
+//         }
+//     }
+//     return obj
+// }
+// console.log(upperCaseValue(data));
+
+// let data = {
+//     a: 1,
+//     b: [2, 3, { c: 4 }],
+//     d: { e: 6 }
+// };
+
+// // find all even number.
+
+// function evenNumber(obj, result = []) {
+//     for (const val in obj) {
+//         let value = obj[val]
+//         if (typeof value == "number") {
+//             if (value % 2 == 0) {
+//                 result.push(value)
+//             }
+//         }
+//         else {
+//             evenNumber(value, result)
+//         }
+//     }
+//     return result
+// }
+// console.log(evenNumber(data));
+
+
+// let data = {
+//     a: 1,
+//     b: {
+//         a: 2,
+//         d: [{ a: 60 }],
+//         c: {
+//             a: 3
+//         }
+//     }
+// };
+
+// // count how many time key "a" occure.
+
+// function keyCount(obj) {
+//     let count = 0
+//     for (const key in obj) {
+//         let value = obj[key]
+//         if (key == "a") {
+//             count++
+//         }
+//         else if (typeof value == "object") {
+//             count += keyCount(value)
+//         }
+//     }
+//     return count
+// }
+// console.log(keyCount(data));
+
+
+// let data = {
+//     a: [1, 2, 2, 3],
+//     b: {
+//         c: [3, 4, 4]
+//     }
+// };
+
+// // remove duplicates value from the array.
+
+// function removeDuplicate(obj) {
+//     for (const val in obj) {
+//         let value = obj[val]
+//         if (Array.isArray(value)) {
+//             let res = value.filter((val, ind) => {
+//                 return value.indexOf(val) === ind
+//             })
+//             obj[val] = res
+//         }
+//         else if (typeof value == "object") {
+//             removeDuplicate(value)
+//         }
+//     }
+//     return obj
+// }
+// console.log(removeDuplicate(data));
+
+
+// let data = {
+//     a: "hi",
+//     b: ["hello world", { c: "javascript" }]
+// };
+
+// // return longest string from array
+
+// function longestString(obj, len = "") {
+//     for (const val in obj) {
+//         let value = obj[val]
+//         if (value.length > len.length) {
+//             len = value
+//         }
+//         else if (Array.isArray(value)) {
+//             len = longestString(value, len)
+//         }
+//         else if (typeof value == "object") {
+//             len = longestString(value, len)
+//         }
+//     }
+//     return len
+// }
+// console.log(longestString(data));
+
+
+// let obj1 = { a: 1, b: { c: 2 } };
+// let obj2 = { a: 1, b: { c: 3 } };
+
+// // return tru if both obj are same
+
+// function checkSame(obj) {
+//     let ans = obj2
+//     // console.log(ans);
+
+//     for (const val in obj) {
+//         let value = obj[val]
+//         console.log(value);
+//         for (const val2 in ans) {
+//             let value2=ans[val2]
+//             console.log(value2);
+
+
+
+//         }
+
+
+//     }
+// }
+// console.log(checkSame(obj1));
+
+// let arr = [1, [2, [3, 4]]];
+
+// // reverse array without flatten.
+
+// function reveArray(ary, result = []) {
+//     for (let i = ary.length - 1; i >= 0; i--) {
+//         if (Array.isArray(ary[i])) {
+//             result.push(reveArray(ary[i]))
+//         }
+//         else {
+//             result.push(ary[i])
+//         }
+//     }
+//     return result
+// }
+// console.log(reveArray(arr));
+
+
+
+
+
+
