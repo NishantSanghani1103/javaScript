@@ -2842,6 +2842,7 @@ const ary = [
     }
 ]
 console.log(ary);
+
 function flatternReplies(replies, result = []) {
     for (const val of replies) {
         result.push(val)
@@ -2850,7 +2851,7 @@ function flatternReplies(replies, result = []) {
         }
     }
     return result
-} 
+}
 function comments(ary) {
     return ary.map((value, index) => {
         let res = flatternReplies(value.replies ?? [])
@@ -2968,6 +2969,39 @@ console.log(comments(ary));
 
 
 
+// const comments = [
+//     {
+//         id: 1,
+//         text: "First comment",
+//         replies: [
+//             {
+//                 id: 2,
+//                 text: "Reply 1",
+//                 replies: [{ id: 3, text: "Reply 1.1", replies: [] }],
+//             },
+//             { id: 4, text: "Reply 2", replies: [] },
+//         ],
+//     },
+//     {
+//         id: 5,
+//         text: "Second comment",
+//         replies: [],
+//     },
+// ];
 
+// // Delete a comment by ID
+
+// function deleteComment(ary, id) {
+//     for (const val of ary) {
+//         if (val.id == id) {
+//             delete val.id
+//         }
+//         if (val.replies && val.replies.length > 0) {
+//             deleteComment(val.replies,id)
+//         }
+//     }
+//     return ary
+// }
+// console.log(deleteComment(comments, 3));
 
 

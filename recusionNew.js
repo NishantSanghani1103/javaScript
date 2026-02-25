@@ -4,7 +4,6 @@
 // }
 // console.log(fact(5));
 
-
 // function fibbo(n) {
 //     if (n <= 1) return 1
 //     return fibbo(n - 1) + fibbo(n - 2)
@@ -21,7 +20,6 @@
 //     number(n + 1)
 // }
 // number(1)
-
 
 // binary search using normal function.
 
@@ -45,8 +43,6 @@
 // }
 // console.log(binarySearch());
 
-
-
 // binary search using recursion.
 
 // let ary = [5, 7, 9, 25, 98, 100]
@@ -66,7 +62,6 @@
 // }
 // console.log(binarySearch(ary, 0, ary.length - 1));
 
-
 // sum of digits using noraml function.
 
 // function sumOfDigits(n) {
@@ -80,7 +75,6 @@
 // }
 // console.log(sumOfDigits(123));
 
-
 // sumOfDigits using Recusion.
 
 // function sumOfDigits(n) {
@@ -88,7 +82,6 @@
 //     return Math.floor((n % 10)) + sumOfDigits(n / 10)
 // }
 // console.log(sumOfDigits(123));
-
 
 // reverse number using recursion.
 
@@ -110,7 +103,6 @@
 // }
 // console.log(sumOfArray(ary));
 
-
 // const tree = {
 //     value: 1,
 //     children: [
@@ -126,7 +118,6 @@
 //     }
 // }
 // traverse(tree);
-
 
 // flateMap using recusrion.
 
@@ -158,7 +149,6 @@
 // }
 // console.log(max(ary));
 
-
 // maximum element from flaten array. using recursion.
 
 // let ary = [1, [5, [3, 20]], 4]
@@ -181,15 +171,12 @@
 // }
 // console.log(maxFlatten(ary));
 
-
-
 // let ary = [2, 59, 3, 8, 5, 63]
 // let count = 0
 // for (let i = 0; i < ary.length; i++) {
 //     count++
 // }
 // console.log(count);
-
 
 // let ary = [1, [2, [3, 4]], 5]
 
@@ -207,7 +194,6 @@
 // }
 // console.log(countElementFlatten(ary));
 
-
 // find how many leval of the nested array using recusrion.
 
 // let ary = [1, [2, [3, [4]]], 5]
@@ -224,7 +210,6 @@
 //     return depth
 // }
 // console.log(findDepthOfNestedArry(ary));
-
 
 // find the total price using recusrion.
 
@@ -320,7 +305,6 @@
 // }
 // console.log(findNestedId(data));
 
-
 // let data = [
 //     { id: 1 },
 //     {
@@ -384,7 +368,6 @@
 // }
 // console.log(addLevel(data));
 
-
 // let data = [
 //     { id: 1 },
 //     {
@@ -422,7 +405,6 @@
 // }
 // console.log(leafNode(data));
 
-
 // let data = {
 //     a: 10,
 //     b: {
@@ -453,7 +435,6 @@
 // }
 // console.log(sumOfNumber(data));
 
-
 // let arr = [1, [2, [3, 4], 5], [6]];
 
 // // count the element of the array.
@@ -471,7 +452,6 @@
 //     return count
 // }
 // console.log(countElement(arr));
-
 
 // let obj = {
 //     a: 1,
@@ -497,7 +477,6 @@
 // }
 // console.log(countKey(obj));
 
-
 // let users = [
 //     { id: 1 },
 //     {
@@ -522,7 +501,6 @@
 //     return total
 // }
 // console.log(totalUser(users));
-
 
 // let data = {
 //     a: 10,
@@ -554,7 +532,6 @@
 // }
 // console.log(sumOfNumber(data));
 
-
 // let complex = {
 //     name: "John",
 //     skills: ["JS", "React"],
@@ -566,7 +543,7 @@
 //     ]
 // };
 
-// // store all the string value in the array.
+// store all the string value in the array.
 
 // function arryString(obj, result = []) {
 //     for (const val in obj) {
@@ -580,14 +557,13 @@
 //                 }
 //             }
 //         }
-//         else{
+//         else {
 //             result.push(value)
 //         }
 //     }
 //     return result
 // }
 // console.log(arryString(complex));
-
 
 // let data = {
 //     a: 5,
@@ -633,7 +609,6 @@
 // }
 // console.log(findMaxNumber(data));
 
-
 // let data = {
 //     a: true,
 //     b: [false, true, { c: false }],
@@ -670,7 +645,6 @@
 //     return count
 // }
 // console.log(countTrueValue(data));
-
 
 // let data = {
 //     a: 10,
@@ -772,7 +746,6 @@
 //     g: null
 // };
 
-
 // // remove all the null values
 
 // function removeNull(obj) {
@@ -872,7 +845,6 @@
 // }
 // console.log(evenNumber(data));
 
-
 // let data = {
 //     a: 1,
 //     b: {
@@ -901,7 +873,6 @@
 // }
 // console.log(keyCount(data));
 
-
 // let data = {
 //     a: [1, 2, 2, 3],
 //     b: {
@@ -928,7 +899,6 @@
 // }
 // console.log(removeDuplicate(data));
 
-
 // let data = {
 //     a: "hi",
 //     b: ["hello world", { c: "javascript" }]
@@ -953,7 +923,6 @@
 // }
 // console.log(longestString(data));
 
-
 // let obj1 = { a: 1, b: { c: 2 } };
 // let obj2 = { a: 1, b: { c: 3 } };
 
@@ -970,10 +939,7 @@
 //             let value2=ans[val2]
 //             console.log(value2);
 
-
-
 //         }
-
 
 //     }
 // }
@@ -996,8 +962,420 @@
 // }
 // console.log(reveArray(arr));
 
+// let ary = [1, 2, 3, 4]
+
+// sum of the arry using recursion.
+
+// function sumOfAry(ary) {
+//     if (ary.length == 0) {
+//         return 0
+//     }
+//     return ary[0] + sumOfAry(ary.slice(1))
+// }
+// console.log(sumOfAry(ary));
+
+// let ary = [1, 5, [3, 20], 4]
+
+// // sum of nested arry
+
+// function sumNested(ary) {
+//     let total = 0
+//     for (const v of ary) {
+//         if (Array.isArray(v)) {
+//             total += sumNested(v)
+//         }
+//         else {
+//             total += v
+//         }
+//     }
+//     return total
+// }
+// console.log(sumNested(ary));
+
+// let ary = [5, 7, 9, 100, 30, 8]
+
+// function findMax(ary, max = 0) {
+//     if (ary.length == 0) {
+//         return max
+//     }
+//     if (ary[0] > max) {
+//         max = ary[0]
+//     }
+//     let inner = findMax(ary.slice(1), max)
+//     if (inner > max) {
+//         max = inner
+//     }
+//     return max
+// }
+// console.log(findMax(ary));
+
+// let ary = [1, [[[630]]], [3, 20, [98]], 4]
+
+// // find max value from the nested array.
+
+// function findMaxNested(ary, max = 0) {
+//     for (const val of ary) {
+//         if (Array.isArray(val)) {
+//             max = findMaxNested(val, max)
+//         }
+//         else {
+//             if (val > max) {
+//                 max = val
+//             }
+//         }
+//     }
+//     return max
+// }
+// console.log(findMaxNested(ary));
+
+// const obj = {
+//     a: 1,
+//     b: { a: 2, c: { a: 3 } }
+// };
+
+// // count how many time of key occure.
+
+// function keyCount(obj, target) {
+//     let count = 0
+//     for (const val in obj) {
+//         let value = obj[val]
+//         if (typeof value == "object") {
+//             count += keyCount(value, target)
+//         }
+//         if (val == target) {
+//             count++
+//         }
+//     }
+//     return count
+// }
+// console.log(keyCount(obj, "a"));
+
+// let obj = {
+//     a: 1,
+//     b: [2, { c: 3, d: [4, 5] }],
+//     e: 9,
+//     g: [10, 65, { i: 10 }]
+// }
+// function countNumbers(obj) {
+//     let count = 0
+//     for (const v in obj) {
+//         let value = obj[v]
+//         if (typeof value == "object") {
+//             count += countNumbers(value)
+//         }
+//         else {
+//             count++
+//         }
+//     }
+//     return count
+// }
+// console.log(countNumbers(obj));
+
+// find how many leval of the nested array using recusrion.
+
+// let ary = [1, [2, [[3, [4]]]], [5]]
+
+// function flattenCount(ary) {
+//     let level = 1
+//     for (const val of ary) {
+//         if (Array.isArray(val)) {
+//             level += flattenCount(val)
+//         }
+//     }
+//     return level
+// }
+// console.log(flattenCount(ary));
+
+// let str = "nishant"
+
+// function reveString(str, res = "") {
+//     if (str.length == 0) {
+//         return ""
+//     }
+//     res += reveString(str.slice(1), res) + str[0]
+
+//     return res
+// }
+// console.log(reveString(str));
+
+// let ans = 0
+// while (num != 0) {
+//     let rem = num % 10
+//     ans = ans + rem
+//     num = Math.floor(num / 10)
+// }
+// console.log(ans);
+
+// let num = 123412
+
+// sum of the digits using recursion.
+
+// function sumOfDigits(n) {
+//     let ans = 0
+//     if (n == 0) {
+//         return n
+//     }
+//     let rem = n % 10
+//     ans = ans + rem
+//     ans += sumOfDigits(Math.floor(n / 10))
+//     return ans
+// }
+// console.log(sumOfDigits(num));
+
+// const orders = [
+//     {
+//         id: 1,
+//         customer: "John",
+//         items: [
+//             { name: "Laptop", price: 1000 },
+//             { name: "Mouse", price: 50 },
+//             { name: "Mouse", price: 50 }
+//         ]
+//     },
+//     {
+//         id: 2,
+//         customer: "Alice",
+//         items: [
+//             { name: "Phone", price: 800 },
+//             { name: "Headphones", price: 20 }
+//         ]
+//     }
+// ];
+
+// // find the total price using recusion.
+
+// function totalPrice(ary) {
+//     let total = 0
+//     for (const val of ary) {
+//         if (val.items) {
+//             total += totalPrice(val.items)
+//         }
+//         else {
+//             total += val.price
+//         }
+//     }
+//     return total
+// }
+// console.log(totalPrice(orders));
+
+// const comments = [
+//     {
+//         id: 1,
+//         text: "First comment",
+//         replies: [
+//             {
+//                 id: 2,
+//                 text: "Reply 1",
+//                 replies: [
+//                     { id: 3, text: "Reply 1.1", replies: [] }
+//                 ]
+//             }
+//         ]
+//     },
+//     {
+//         id: 4,
+//         text: "Second comment",
+//         replies: []
+//     }
+// ];
+
+// // Count Total Comments (Including Replies)
+
+// function totalComment(ary) {
+//     let total = 0
+//     for (const val of ary) {
+//         total++
+//         if (val.replies && val.replies.length > 0) {
+//             total += totalComment(val.replies)
+//         }
+//     }
+//     return total
+// }
+// console.log(totalComment(comments));
+
+// const categories = [
+//     {
+//         id: 1,
+//         name: "Electronics",
+//         children: [
+//             {
+//                 id: 2,
+//                 name: "Laptops",
+//                 children: []
+//             },
+//             {
+//                 id: 3,
+//                 name: "Phones",
+//                 children: [
+//                     {
+//                         id: 4,
+//                         name: "Android",
+//                         children: []
+//                     }
+//                 ]
+//             }
+//         ]
+//     }
+// ];
+
+// return object for the specific category.
+
+// function findCategory(ary, categoryName) {
+//     let ans = {}
+//     for (const val of ary) {
+//         if (val.name == categoryName) {
+//             return val
+//         }
+//         if (val.children && val.children.length > 0) {
+//             let res = findCategory(val.children, categoryName)
+//             if (res) {
+//                 return res
+//             }
+//         }
+//     }
+
+// }
+// console.log(findCategory(categories, "Android"));
+
+// const employees = [
+//     {
+//         id: 1,
+//         name: "CEO",
+//         subordinates: [
+//             {
+//                 id: 2,
+//                 name: "Manager 1",
+//                 subordinates: [
+//                     { id: 4, name: "Developer", subordinates: [] }
+//                 ]
+//             },
+//             {
+//                 id: 3,
+//                 name: "Manager 2",
+//                 subordinates: []
+//             }
+//         ]
+//     }
+// ]
+
+// // Print All Employee Names
+
+// function empNames(ary) {
+//     for (const val of ary) {
+//         console.log(val.name);
+//         if (val.subordinates && val.subordinates.length > 0) {
+//             empNames(val.subordinates)
+//         }
+//     }
+// }
+// empNames(employees)
+
+// const orders = [
+//   {
+//     id: 1,
+//     customer: "John",
+//     items: [
+//       { name: "Laptop", price: 1000 },
+//       { name: "Mouse", price: 50 },
+//     ],
+//   },
+//   {
+//     id: 2,
+//     customer: "Alice",
+//     items: [
+//       { name: "Phone", price: 800 },
+//       { name: "Headphones", price: 200 },
+//     ],
+//   },
+//   {
+//     id: 3,
+//     customer: "Bob",
+//     items: [
+//       { name: "Monitor", price: 300 },
+//       { name: "Keyboard", price: 100 },
+//       { name: "Mousepad", price: 20 },
+//     ],
+//   },
+// ];
+
+// // Flatten all product names into an array
+
+// function flattenProduct(ary, result = []) {
+//   for (const val of ary) {
+//     if (val.items && val.items.length > 0) {
+//       flattenProduct(val.items, result);
+//     } else {
+//       result.push(val);
+//     }
+//   }
+//   return result;
+// }
+// console.log(flattenProduct(orders));
+
+// // Most expensive product
+
+// function mostExpensiveProduct(ary, expensive = 0) {
+//     for (const val of ary) {
+//         if (val.items) {
+//             expensive = mostExpensiveProduct(val.items, expensive)
+//         }
+//         else {
+//             if (val.price > expensive) {
+//                 expensive = val.price
+//             }
+
+//         }
+//     }
+//     return expensive
+
+// }
+// console.log(mostExpensiveProduct(orders));
+
+const comments = [
+    {
+        id: 1,
+        text: "First comment",
+        replies: [
+            {
+                id: 2,
+                text: "Reply 1",
+                replies: [{ id: 3, text: "Reply 1.1", replies: [] }],
+            },
+            { id: 4, text: "Reply 2", replies: [] },
+        ],
+    },
+    {
+        id: 5,
+        text: "Second comment",
+        replies: [],
+    },
+];
+
+// Delete a comment by ID
+
+function deleteComment(ary, id) {
+    for (const val of ary) {
+        if (val.id == id) {
+            delete val.id
+        }
+        if (val.replies && val.replies.length > 0) {
+            deleteComment(val.replies,id)
+        }
+    }
+    return ary
+}
+console.log(deleteComment(comments, 3));
 
 
+// Flatten all comment texts into an array
 
-
-
+// function flattenComment(ary, result = []) {
+//     for (const value of ary) {
+//         result.push(value.text)
+//         if (value.replies && value.replies.length > 0) {
+//             result = flattenComment(value.replies, result)
+//         }
+//     }
+//     return result
+// }
+// console.log(flattenComment(comments));
